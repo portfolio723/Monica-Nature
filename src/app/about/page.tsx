@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <div className="bg-background text-foreground">
       <main>
-        <section className="relative h-[60vh] w-full md:h-[70vh]">
+        <section className="relative h-[75vh] w-full">
           {aboutImages.hero && (
             <Image
               src={aboutImages.hero.imageUrl}
@@ -28,7 +28,7 @@ export default function AboutPage() {
         <section className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-              <div className="relative h-80 w-full md:h-[500px]">
+              <div className="relative h-96 w-full md:h-[550px]">
                 {aboutImages.traveler && (
                   <Image
                     src={aboutImages.traveler.imageUrl}
@@ -67,7 +67,7 @@ export default function AboutPage() {
                   and fosters personal growth.
                 </p>
               </div>
-              <div className="relative h-80 w-full md:h-[500px]">
+              <div className="relative h-96 w-full md:h-[550px]">
                 {aboutImages.vision && (
                   <Image
                     src={aboutImages.vision.imageUrl}
@@ -85,7 +85,7 @@ export default function AboutPage() {
         <section className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-              <div className="relative order-last h-80 w-full md:order-first md:h-[500px]">
+              <div className="relative order-last h-96 w-full md:order-first md:h-[550px]">
                 {aboutImages.mission && (
                   <Image
                     src={aboutImages.mission.imageUrl}
