@@ -83,6 +83,12 @@
       "description": "Machu Picchu in Peru.",
       "imageUrl": "https://images.unsplash.com/photo-1526392060635-9d6019884377?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb3V0aCUyMGFtZXJpY2ElMjBsYW5kbWFya3xlbnwwfHx8fDE3NTkyMTIzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "south america landmark"
+    },
+    {
+      "id": "destination-north-america",
+      "description": "The Golden Gate Bridge in San Francisco.",
+      "imageUrl": "https://images.unsplash.com/photo-1501594943916-19e9a0ed3536?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxub3J0aCUyMGFtZXJpY2ElMjBsYW5kbWFya3xlbnwwfHx8fDE3NTkyMTU4Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "north america landmark"
     }
   ]
 }

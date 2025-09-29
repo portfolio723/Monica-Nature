@@ -15,6 +15,9 @@ const destinationImages = {
   southAmerica: placeholderImages.find(
     (img) => img.id === 'destination-south-america'
   ),
+  northAmerica: placeholderImages.find(
+    (img) => img.id === 'destination-north-america'
+  ),
 };
 
 export default function DestinationsPage() {
@@ -138,6 +141,24 @@ export default function DestinationsPage() {
             <div className="absolute top-4 -right-20 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
               <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
                 SOUTH AMERICA
+              </h3>
+            </div>
+          </div>
+
+          <div className="group relative overflow-hidden">
+            {destinationImages.northAmerica && (
+              <Image
+                src={destinationImages.northAmerica.imageUrl}
+                alt={destinationImages.northAmerica.description}
+                width={600}
+                height={400}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                data-ai-hint={destinationImages.northAmerica.imageHint}
+              />
+            )}
+            <div className="absolute top-4 -right-20 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
+              <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
+                NORTH AMERICA
               </h3>
             </div>
           </div>
