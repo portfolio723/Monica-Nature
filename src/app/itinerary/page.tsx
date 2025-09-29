@@ -65,6 +65,7 @@ import {
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
 import { Slider } from '@/components/ui/slider';
+import React from 'react';
 
 const formSchema = z.object({
   pronouns: z.string().optional(),
@@ -117,7 +118,10 @@ const interests = [
     { id: 'other_interest', label: 'Other' },
 ]
 
-export default function ItineraryPage() {
+function MultiStepForm() {
+  const [step, setStep] = React.useState(0);
+  const [formData, setFormData] = React.useState({});
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -131,10 +135,516 @@ export default function ItineraryPage() {
     },
   });
 
+  const nextStep = () => setStep((prev) => prev + 1);
+  const prevStep = () => setStep((prev) => prev - 1);
+
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    nextStep();
   }
 
+  const steps = [
+    // Step 1: Personal Information
+    <div key="step-1" className="space-y-4">
+      <h3 className="text-xl font-semibold border-b pb-2">
+        Personal Information
+      </h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <FormField
+          control={form.control}
+          name="pronouns"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Pronouns</FormLabel>
+              <FormControl>
+                <Input placeholder="They/Them, She/Her, He/Him" {...field} />
+              </FormControl>
+              <FormDescription>Help us address you correctly.</FormDescription>
+            </FormItem>
+          )}
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <FormField
+          control={form.control}
+          name="firstName"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>First Name *</FormLabel>
+              <FormControl>
+                <Input placeholder="Your first name" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="lastName"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Last Name *</FormLabel>
+              <FormControl>
+                <Input placeholder="Your last name" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+      <FormField
+        control={form.control}
+        name="email"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Email Address *</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="your.email@example.com"
+                {...field}
+              />
+            </FormControl>
+            <FormDescription>
+              We'll send your custom itinerary here within 24
+              hours.
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
+        name="phone"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Phone Number</FormLabel>
+            <FormControl>
+              <Input placeholder="+1 (555) 123-4567" {...field} />
+            </FormControl>
+            <FormDescription>For urgent trip updates and WhatsApp communication.</FormDescription>
+          </FormItem>
+        )}
+      />
+    </div>,
+
+    // Step 2: Travel Preferences
+    <div key="step-2" className="space-y-4">
+      <h3 className="text-xl font-semibold border-b pb-2">
+        Travel Preferences
+      </h3>
+      <FormField
+        control={form.control}
+        name="countryOfResidence"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Current Country of Residence *</FormLabel>
+            <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <FormControl>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select your country" />
+                </SelectTrigger>
+              </FormControl>
+              <SelectContent>
+                <SelectItem value="usa">United States</SelectItem>
+                <SelectItem value="canada">Canada</SelectItem>
+                <SelectItem value="uk">United Kingdom</SelectItem>
+                <SelectItem value="australia">Australia</SelectItem>
+              </SelectContent>
+            </Select>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
+        name="countryToVisit"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Country You Want to Visit *</FormLabel>
+            <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <FormControl>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select a destination" />
+                </SelectTrigger>
+              </FormControl>
+              <SelectContent>
+                <SelectItem value="norway">Norway</SelectItem>
+                <SelectItem value="costa-rica">Costa Rica</SelectItem>
+                <SelectItem value="canada">Canada</SelectItem>
+                <SelectItem value="argentina">Argentina</SelectItem>
+                <SelectItem value="chile">Chile</SelectItem>
+                <SelectItem value="iceland">Iceland</SelectItem>
+                <SelectItem value="new-zealand">New Zealand</SelectItem>
+              </SelectContent>
+            </Select>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
+        name="specificPlaces"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Specific Places You Want to Visit *</FormLabel>
+            <FormControl>
+              <Textarea
+                placeholder="Norwegian Fjords, Patagonian wilderness, specific cities, landmarks, or regions you're excited to explore..."
+                {...field}
+              />
+            </FormControl>
+            <FormDescription>Be as specific as you'd like.</FormDescription>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
+        name="travelDates"
+        render={({ field }) => (
+          <FormItem className="flex flex-col">
+            <FormLabel>Travel Dates</FormLabel>
+            <Popover>
+              <PopoverTrigger asChild>
+                <FormControl>
+                  <Button
+                    variant={"outline"}
+                    className={cn(
+                      "w-full justify-start text-left font-normal",
+                      !field.value?.from && "text-muted-foreground"
+                    )}
+                  >
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {field.value?.from ? (
+                      field.value.to ? (
+                        <>
+                          {format(field.value.from, "LLL dd, y")} -{" "}
+                          {format(field.value.to, "LLL dd, y")}
+                        </>
+                      ) : (
+                        format(field.value.from, "LLL dd, y")
+                      )
+                    ) : (
+                      <span>Pick a date range</span>
+                    )}
+                  </Button>
+                </FormControl>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0" align="start">
+                <Calendar
+                  mode="range"
+                  selected={{ from: field.value?.from!, to: field.value?.to }}
+                  onSelect={(range) => field.onChange(range || { from: undefined, to: undefined })}
+                  numberOfMonths={2}
+                />
+              </PopoverContent>
+            </Popover>
+            <FormDescription>
+              Flexible dates? Let us know in the additional info section.
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>,
+
+    // Step 3: Travel Style & Companions
+    <div key="step-3" className="space-y-4">
+      <h3 className="text-xl font-semibold border-b pb-2">Travel Style & Companions</h3>
+      <FormField
+        control={form.control}
+        name="travelCompanion"
+        render={({ field }) => (
+          <FormItem className="space-y-3">
+            <FormLabel>Who you'll be traveling with? *</FormLabel>
+            <FormControl>
+              <RadioGroup
+                onValueChange={field.onChange}
+                defaultValue={field.value}
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+              >
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="solo" />
+                  </FormControl>
+                  <FormLabel className="font-normal">Solo</FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="partner" />
+                  </FormControl>
+                  <FormLabel className="font-normal">With Partner</FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="friends" />
+                  </FormControl>
+                  <FormLabel className="font-normal">With Friends</FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="family" />
+                  </FormControl>
+                  <FormLabel className="font-normal">With Family</FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="colleagues" />
+                  </FormControl>
+                  <FormLabel className="font-normal">With Colleagues</FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="pet" />
+                  </FormControl>
+                  <FormLabel className="font-normal">With Pet</FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="other" />
+                  </FormControl>
+                  <FormLabel className="font-normal">Other</FormLabel>
+                </FormItem>
+              </RadioGroup>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>,
+
+    // Step 4: Interests
+    <div key="step-4" className="space-y-4">
+      <h3 className="text-xl font-semibold border-b pb-2">What Interests You? *</h3>
+      <FormField
+        control={form.control}
+        name="interests"
+        render={() => (
+          <FormItem>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {interests.map((item) => (
+                <FormField
+                  key={item.id}
+                  control={form.control}
+                  name="interests"
+                  render={({ field }) => {
+                    return (
+                      <FormItem
+                        key={item.id}
+                        className="flex flex-row items-start space-x-3 space-y-0"
+                      >
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value?.includes(item.id)}
+                            onCheckedChange={(checked) => {
+                              return checked
+                                ? field.onChange([...field.value, item.id])
+                                : field.onChange(
+                                  field.value?.filter(
+                                    (value) => value !== item.id
+                                  )
+                                )
+                            }}
+                          />
+                        </FormControl>
+                        <FormLabel className="font-normal">
+                          {item.label}
+                        </FormLabel>
+                      </FormItem>
+                    )
+                  }}
+                />
+              ))}
+            </div>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>,
+
+    // Step 5: Budget & Travel Style
+    <div key="step-5" className="space-y-4">
+      <h3 className="text-xl font-semibold border-b pb-2">Budget & Travel Style</h3>
+      <FormField
+        control={form.control}
+        name="travelStyle"
+        render={({ field }) => (
+          <FormItem className="space-y-3">
+            <FormLabel>Travel Style *</FormLabel>
+            <FormControl>
+              <RadioGroup
+                onValueChange={field.onChange}
+                defaultValue={field.value}
+                className="flex flex-col space-y-1"
+              >
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="luxury" />
+                  </FormControl>
+                  <FormLabel className="font-normal">Luxury Travel</FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="mid-range" />
+                  </FormControl>
+                  <FormLabel className="font-normal">Mid-range Travel</FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="budget" />
+                  </FormControl>
+                  <FormLabel className="font-normal">Budget Travel</FormLabel>
+                </FormItem>
+              </RadioGroup>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
+        name="budget"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Budget Estimation (Per Person)</FormLabel>
+            <div className="flex gap-4 items-center">
+              <FormField
+                control={form.control}
+                name="currency"
+                render={({ field: currencyField }) => (
+                  <Select onValueChange={currencyField.onChange} defaultValue={currencyField.value}>
+                    <FormControl>
+                      <SelectTrigger className="w-1/4">
+                        <SelectValue placeholder="USD" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="usd">USD</SelectItem>
+                      <SelectItem value="eur">EUR</SelectItem>
+                      <SelectItem value="gbp">GBP</SelectItem>
+                      <SelectItem value="cad">CAD</SelectItem>
+                      <SelectItem value="aud">AUD</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+              <FormControl>
+                <Slider
+                  defaultValue={[1000, 5000]}
+                  max={50000}
+                  min={500}
+                  step={250}
+                  onValueChange={field.onChange}
+                  className={cn("w-3/4", field.className)}
+                />
+              </FormControl>
+            </div>
+            <FormDescription>
+              From ${field.value?.[0] ?? 1000} to ${field.value?.[1] ?? 5000}
+            </FormDescription>
+          </FormItem>
+        )}
+      />
+    </div>,
+
+    // Step 6: Additional Info
+    <div key="step-6" className="space-y-4">
+      <h3 className="text-xl font-semibold border-b pb-2">Additional Information</h3>
+      <FormField
+        control={form.control}
+        name="additionalInfo"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Share More About Your Trip</FormLabel>
+            <FormControl>
+              <Textarea
+                placeholder="Special dietary requirements, accessibility needs, celebration occasions..."
+                className="resize-none"
+                {...field}
+              />
+            </FormControl>
+            <FormDescription>
+              Tell us anything else that would help us create your perfect itinerary.
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>,
+    // Step 7: Confirmation
+     <div key="step-7" className="text-center">
+        <h3 className="text-2xl font-bold mb-4">Thank You!</h3>
+        <p className="text-muted-foreground">Your travel preferences have been submitted. We will reach out to you on your email within 24 hours.</p>
+      </div>
+  ];
+
+  const handleNext = async () => {
+    let fieldsToValidate: (keyof z.infer<typeof formSchema>)[] = [];
+    switch (step) {
+      case 0:
+        fieldsToValidate = ['firstName', 'lastName', 'email'];
+        break;
+      case 1:
+        fieldsToValidate = ['countryOfResidence', 'countryToVisit', 'specificPlaces'];
+        break;
+      case 2:
+        fieldsToValidate = ['travelCompanion'];
+        break;
+      case 3:
+        fieldsToValidate = ['interests'];
+        break;
+      case 4:
+        fieldsToValidate = ['travelStyle'];
+        break;
+    }
+    const result = await form.trigger(fieldsToValidate);
+    if (result) {
+      nextStep();
+    }
+  };
+
+  return (
+    <Form {...form}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-8"
+      >
+        {steps[step]}
+
+        <div className="flex justify-between">
+          {step > 0 && step < steps.length - 1 && (
+            <Button type="button" onClick={prevStep} variant="outline">
+              Previous
+            </Button>
+          )}
+          {step < steps.length - 2 && (
+             <Button type="button" onClick={handleNext}>
+              Next
+            </Button>
+          )}
+          {step === steps.length - 2 && (
+            <Button type="submit" size="lg" className="w-full bg-[#1B4332] hover:bg-[#1B4332]/90">
+                Start Planning My Adventure
+            </Button>
+          )}
+        </div>
+
+        {step < steps.length - 1 && (
+          <div className="text-center text-xs text-muted-foreground space-y-2">
+            <p>Note: I will reach out to you on your email within 24 hours.</p>
+            <p>By submitting this form, you agree to our Privacy Policy. We'll never share your information.</p>
+            <div className="flex justify-center items-center gap-4 pt-2">
+              <span className='flex items-center gap-1'><Lock size={12} /> Your information is secure</span>
+              <span className='flex items-center gap-1'><Zap size={12} /> 24-hour response guarantee</span>
+            </div>
+          </div>
+        )}
+      </form>
+    </Form>
+  )
+}
+
+export default function ItineraryPage() {
   return (
     <div className="bg-background text-foreground">
       <main>
@@ -221,453 +731,7 @@ export default function ItineraryPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Form {...form}>
-                  <form
-                    onSubmit={form.handleSubmit(onSubmit)}
-                    className="space-y-8"
-                  >
-                    {/* Personal Info */}
-                    <div className="space-y-4">
-                      <h3 className="text-xl font-semibold border-b pb-2">
-                        Personal Information
-                      </h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <FormField
-                          control={form.control}
-                          name="pronouns"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Pronouns</FormLabel>
-                              <FormControl>
-                                <Input placeholder="They/Them, She/Her, He/Him" {...field} />
-                              </FormControl>
-                              <FormDescription>Help us address you correctly.</FormDescription>
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <FormField
-                          control={form.control}
-                          name="firstName"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>First Name *</FormLabel>
-                              <FormControl>
-                                <Input placeholder="Your first name" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="lastName"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Last Name *</FormLabel>
-                              <FormControl>
-                                <Input placeholder="Your last name" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email Address *</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="your.email@example.com"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormDescription>
-                              We'll send your custom itinerary here within 24
-                              hours.
-                            </FormDescription>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                       <FormField
-                          control={form.control}
-                          name="phone"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Phone Number</FormLabel>
-                              <FormControl>
-                                <Input placeholder="+1 (555) 123-4567" {...field} />
-                              </FormControl>
-                              <FormDescription>For urgent trip updates and WhatsApp communication.</FormDescription>
-                            </FormItem>
-                          )}
-                        />
-                    </div>
-
-                    {/* Travel Preferences */}
-                    <div className="space-y-4">
-                      <h3 className="text-xl font-semibold border-b pb-2">
-                        Travel Preferences
-                      </h3>
-                      <FormField
-                        control={form.control}
-                        name="countryOfResidence"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Current Country of Residence *</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
-                              <FormControl>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Select your country" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                <SelectItem value="usa">United States</SelectItem>
-                                <SelectItem value="canada">Canada</SelectItem>
-                                <SelectItem value="uk">United Kingdom</SelectItem>
-                                <SelectItem value="australia">Australia</SelectItem>
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="countryToVisit"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Country You Want to Visit *</FormLabel>
-                             <Select onValueChange={field.onChange} defaultValue={field.value}>
-                              <FormControl>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Select a destination" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                <SelectItem value="norway">Norway</SelectItem>
-                                <SelectItem value="costa-rica">Costa Rica</SelectItem>
-                                <SelectItem value="canada">Canada</SelectItem>
-                                <SelectItem value="argentina">Argentina</SelectItem>
-                                <SelectItem value="chile">Chile</SelectItem>
-                                <SelectItem value="iceland">Iceland</SelectItem>
-                                <SelectItem value="new-zealand">New Zealand</SelectItem>
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                          control={form.control}
-                          name="specificPlaces"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Specific Places You Want to Visit *</FormLabel>
-                              <FormControl>
-                                <Textarea
-                                  placeholder="Norwegian Fjords, Patagonian wilderness, specific cities, landmarks, or regions you're excited to explore..."
-                                  {...field}
-                                />
-                              </FormControl>
-                              <FormDescription>Be as specific as you'd like.</FormDescription>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                         <FormField
-                            control={form.control}
-                            name="travelDates"
-                            render={({ field }) => (
-                                <FormItem className="flex flex-col">
-                                <FormLabel>Travel Dates</FormLabel>
-                                <Popover>
-                                    <PopoverTrigger asChild>
-                                    <FormControl>
-                                        <Button
-                                        variant={"outline"}
-                                        className={cn(
-                                            "w-full justify-start text-left font-normal",
-                                            !field.value?.from && "text-muted-foreground"
-                                        )}
-                                        >
-                                        <CalendarIcon className="mr-2 h-4 w-4" />
-                                        {field.value?.from ? (
-                                            field.value.to ? (
-                                            <>
-                                                {format(field.value.from, "LLL dd, y")} -{" "}
-                                                {format(field.value.to, "LLL dd, y")}
-                                            </>
-                                            ) : (
-                                            format(field.value.from, "LLL dd, y")
-                                            )
-                                        ) : (
-                                            <span>Pick a date range</span>
-                                        )}
-                                        </Button>
-                                    </FormControl>
-                                    </PopoverTrigger>
-                                    <PopoverContent className="w-auto p-0" align="start">
-                                    <Calendar
-                                        mode="range"
-                                        selected={{from: field.value?.from!, to: field.value?.to}}
-                                        onSelect={(range) => field.onChange(range || { from: undefined, to: undefined })}
-                                        numberOfMonths={2}
-                                    />
-                                    </PopoverContent>
-                                </Popover>
-                                <FormDescription>
-                                    Flexible dates? Let us know in the additional info section.
-                                </FormDescription>
-                                <FormMessage />
-                                </FormItem>
-                            )}
-                            />
-                    </div>
-
-                    {/* Travel Style & Companions */}
-                     <div className="space-y-4">
-                        <h3 className="text-xl font-semibold border-b pb-2">Travel Style & Companions</h3>
-                        <FormField
-                        control={form.control}
-                        name="travelCompanion"
-                        render={({ field }) => (
-                            <FormItem className="space-y-3">
-                            <FormLabel>Who you'll be traveling with? *</FormLabel>
-                            <FormControl>
-                                <RadioGroup
-                                onValueChange={field.onChange}
-                                defaultValue={field.value}
-                                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-                                >
-                                <FormItem className="flex items-center space-x-3 space-y-0">
-                                    <FormControl>
-                                    <RadioGroupItem value="solo" />
-                                    </FormControl>
-                                    <FormLabel className="font-normal">Solo</FormLabel>
-                                </FormItem>
-                                 <FormItem className="flex items-center space-x-3 space-y-0">
-                                    <FormControl>
-                                    <RadioGroupItem value="partner" />
-                                    </FormControl>
-                                    <FormLabel className="font-normal">With Partner</FormLabel>
-                                </FormItem>
-                                <FormItem className="flex items-center space-x-3 space-y-0">
-                                    <FormControl>
-                                    <RadioGroupItem value="friends" />
-                                    </FormControl>
-                                    <FormLabel className="font-normal">With Friends</FormLabel>
-                                </FormItem>
-                                 <FormItem className="flex items-center space-x-3 space-y-0">
-                                    <FormControl>
-                                    <RadioGroupItem value="family" />
-                                    </FormControl>
-                                    <FormLabel className="font-normal">With Family</FormLabel>
-                                </FormItem>
-                                 <FormItem className="flex items-center space-x-3 space-y-0">
-                                    <FormControl>
-                                    <RadioGroupItem value="colleagues" />
-                                    </FormControl>
-                                    <FormLabel className="font-normal">With Colleagues</FormLabel>
-                                </FormItem>
-                                 <FormItem className="flex items-center space-x-3 space-y-0">
-                                    <FormControl>
-                                    <RadioGroupItem value="pet" />
-                                    </FormControl>
-                                    <FormLabel className="font-normal">With Pet</FormLabel>
-                                </FormItem>
-                                <FormItem className="flex items-center space-x-3 space-y-0">
-                                    <FormControl>
-                                    <RadioGroupItem value="other" />
-                                    </FormControl>
-                                    <FormLabel className="font-normal">Other</FormLabel>
-                                </FormItem>
-                                </RadioGroup>
-                            </FormControl>
-                            <FormMessage />
-                            </FormItem>
-                        )}
-                        />
-                    </div>
-
-                    {/* Interests */}
-                    <div className="space-y-4">
-                        <h3 className="text-xl font-semibold border-b pb-2">What Interests You? *</h3>
-                        <FormField
-                            control={form.control}
-                            name="interests"
-                            render={() => (
-                                <FormItem>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                                    {interests.map((item) => (
-                                    <FormField
-                                        key={item.id}
-                                        control={form.control}
-                                        name="interests"
-                                        render={({ field }) => {
-                                        return (
-                                            <FormItem
-                                            key={item.id}
-                                            className="flex flex-row items-start space-x-3 space-y-0"
-                                            >
-                                            <FormControl>
-                                                <Checkbox
-                                                checked={field.value?.includes(item.id)}
-                                                onCheckedChange={(checked) => {
-                                                    return checked
-                                                    ? field.onChange([...field.value, item.id])
-                                                    : field.onChange(
-                                                        field.value?.filter(
-                                                        (value) => value !== item.id
-                                                        )
-                                                    )
-                                                }}
-                                                />
-                                            </FormControl>
-                                            <FormLabel className="font-normal">
-                                                {item.label}
-                                            </FormLabel>
-                                            </FormItem>
-                                        )
-                                        }}
-                                    />
-                                    ))}
-                                </div>
-                                <FormMessage />
-                                </FormItem>
-                            )}
-                        />
-                    </div>
-
-                    {/* Budget & Travel Style */}
-                    <div className="space-y-4">
-                        <h3 className="text-xl font-semibold border-b pb-2">Budget & Travel Style</h3>
-                         <FormField
-                            control={form.control}
-                            name="travelStyle"
-                            render={({ field }) => (
-                                <FormItem className="space-y-3">
-                                <FormLabel>Travel Style *</FormLabel>
-                                <FormControl>
-                                    <RadioGroup
-                                    onValueChange={field.onChange}
-                                    defaultValue={field.value}
-                                    className="flex flex-col space-y-1"
-                                    >
-                                    <FormItem className="flex items-center space-x-3 space-y-0">
-                                        <FormControl>
-                                        <RadioGroupItem value="luxury" />
-                                        </FormControl>
-                                        <FormLabel className="font-normal">Luxury Travel</FormLabel>
-                                    </FormItem>
-                                    <FormItem className="flex items-center space-x-3 space-y-0">
-                                        <FormControl>
-                                        <RadioGroupItem value="mid-range" />
-                                        </FormControl>
-                                        <FormLabel className="font-normal">Mid-range Travel</FormLabel>
-                                    </FormItem>
-                                    <FormItem className="flex items-center space-x-3 space-y-0">
-                                        <FormControl>
-                                        <RadioGroupItem value="budget" />
-                                        </FormControl>
-                                        <FormLabel className="font-normal">Budget Travel</FormLabel>
-                                    </FormItem>
-                                    </RadioGroup>
-                                </FormControl>
-                                <FormMessage />
-                                </FormItem>
-                            )}
-                        />
-                         <FormField
-                          control={form.control}
-                          name="budget"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Budget Estimation (Per Person)</FormLabel>
-                               <div className="flex gap-4 items-center">
-                                <FormField
-                                    control={form.control}
-                                    name="currency"
-                                    render={({ field: currencyField }) => (
-                                    <Select onValueChange={currencyField.onChange} defaultValue={currencyField.value}>
-                                    <FormControl>
-                                        <SelectTrigger className="w-1/4">
-                                        <SelectValue placeholder="USD" />
-                                        </SelectTrigger>
-                                    </FormControl>
-                                    <SelectContent>
-                                        <SelectItem value="usd">USD</SelectItem>
-                                        <SelectItem value="eur">EUR</SelectItem>
-                                        <SelectItem value="gbp">GBP</SelectItem>
-                                        <SelectItem value="cad">CAD</SelectItem>
-                                        <SelectItem value="aud">AUD</SelectItem>
-                                    </SelectContent>
-                                    </Select>
-                                    )}
-                                />
-                                <FormControl>
-                                  <Slider
-                                    defaultValue={[1000, 5000]}
-                                    max={50000}
-                                    min={500}
-                                    step={250}
-                                    onValueChange={field.onChange}
-                                    className={cn("w-3/4", field.className)}
-                                    />
-                                </FormControl>
-                               </div>
-                                <FormDescription>
-                                    From ${field.value?.[0] ?? 1000} to ${field.value?.[1] ?? 5000}
-                                </FormDescription>
-                            </FormItem>
-                          )}
-                        />
-                    </div>
-                    
-                    {/* Additional Info */}
-                    <div className="space-y-4">
-                        <h3 className="text-xl font-semibold border-b pb-2">Additional Information</h3>
-                        <FormField
-                            control={form.control}
-                            name="additionalInfo"
-                            render={({ field }) => (
-                                <FormItem>
-                                <FormLabel>Share More About Your Trip</FormLabel>
-                                <FormControl>
-                                    <Textarea
-                                    placeholder="Special dietary requirements, accessibility needs, celebration occasions..."
-                                    className="resize-none"
-                                    {...field}
-                                    />
-                                </FormControl>
-                                <FormDescription>
-                                    Tell us anything else that would help us create your perfect itinerary.
-                                </FormDescription>
-                                <FormMessage />
-                                </FormItem>
-                            )}
-                            />
-                    </div>
-
-                    <Button type="submit" size="lg" className="w-full bg-[#1B4332] hover:bg-[#1B4332]/90">
-                      Start Planning My Adventure
-                    </Button>
-
-                    <div className="text-center text-xs text-muted-foreground space-y-2">
-                        <p>Note: I will reach out to you on your email within 24 hours.</p>
-                        <p>By submitting this form, you agree to our Privacy Policy. We'll never share your information.</p>
-                         <div className="flex justify-center items-center gap-4 pt-2">
-                            <span className='flex items-center gap-1'><Lock size={12}/> Your information is secure</span>
-                            <span className='flex items-center gap-1'><Zap size={12}/> 24-hour response guarantee</span>
-                         </div>
-                    </div>
-                  </form>
-                </Form>
+                <MultiStepForm />
               </CardContent>
             </Card>
           </div>
