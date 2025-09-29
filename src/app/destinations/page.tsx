@@ -138,8 +138,8 @@ export default function DestinationsPage() {
                 data-ai-hint={destinationImages.southAmerica.imageHint}
               />
             )}
-            <div className="absolute top-4 -right-20 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
-              <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
+            <div className="absolute top-4 -right-16 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
+              <h3 className="whitespace-nowrap text-lg font-semibold [transform:rotate(-15deg)]">
                 SOUTH AMERICA
               </h3>
             </div>
@@ -156,8 +156,8 @@ export default function DestinationsPage() {
                 data-ai-hint={destinationImages.northAmerica.imageHint}
               />
             )}
-            <div className="absolute top-4 -right-20 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
-              <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
+            <div className="absolute top-4 -right-16 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
+              <h3 className="whitespace-nowrap text-lg font-semibold [transform:rotate(-15deg)]">
                 NORTH AMERICA
               </h3>
             </div>
