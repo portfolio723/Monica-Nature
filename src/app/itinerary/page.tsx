@@ -433,8 +433,6 @@ export default function ItineraryPage() {
 
           {/* Form Section */}
           <section className="w-full max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-bold text-center text-[--forest-primary] mb-2">NatureWander</h1>
-            <p className="text-center text-[--text-muted] mb-8">Craft your dream nature-focused itinerary</p>
             
             {isSubmitted ? (
                 <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg text-center">
