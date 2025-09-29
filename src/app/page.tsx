@@ -8,12 +8,16 @@ const MediaDetails = () => {
   const currentMedia = sampleMediaContent.video;
 
   return (
-    <div className="max-w-4xl mx-auto text-foreground">
-      <h2 className="text-3xl font-bold mb-6 font-headline">
+    <div className="max-w-4xl mx-auto text-foreground p-4 md:p-8">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline text-center">
         {currentMedia.title}
       </h2>
-      <p className="text-lg mb-8">{currentMedia.about.overview}</p>
-      <p className="text-lg mb-8">{currentMedia.about.conclusion}</p>
+      <p className="text-base md:text-lg mb-6 text-center">
+        {currentMedia.about.overview}
+      </p>
+      <p className="text-base md:text-lg text-center">
+        {currentMedia.about.conclusion}
+      </p>
     </div>
   );
 };
@@ -37,7 +41,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-background relative top-[-80px]">
+    <main className="min-h-screen bg-background relative">
       <ScrollExpandMedia
         key="video"
         mediaType="video"
