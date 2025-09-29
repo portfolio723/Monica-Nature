@@ -39,7 +39,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="hidden md:block">
-            <Button variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button>
               Contact
             </Button>
           </div>
@@ -67,7 +67,7 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Button variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button>
               Contact
             </Button>
           </nav>
