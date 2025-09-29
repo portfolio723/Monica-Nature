@@ -2,7 +2,100 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Check, Mail, Phone } from 'lucide-react';
+import { Check } from 'lucide-react';
+
+// --- TYPE DEFINITIONS ---
+interface FormData {
+  pronouns: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  residence: string;
+  destination: string;
+  places: string;
+  startDate: string;
+  endDate: string;
+  companion: string;
+  interests: string[];
+  travelStyle: string;
+  budgetMin: number;
+  budgetMax: number;
+  currency: string;
+  details: string;
+}
+
+interface FormErrors {
+  pronouns?: string;
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  phone?: string;
+  residence?: string;
+  destination?: string;
+  places?: string;
+  startDate?: string;
+  endDate?: string;
+  companion?: string;
+  interests?: string;
+  travelStyle?: string;
+  budgetMin?: string;
+  budgetMax?: string;
+  currency?: string;
+  details?: string;
+}
+
+interface InputFieldProps {
+  id: string;
+  label: string;
+  type: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  error?: string;
+  placeholder?: string;
+  required?: boolean;
+}
+
+interface SelectFieldProps {
+  id: string;
+  label: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  error?: string;
+  required?: boolean;
+  children: React.ReactNode;
+}
+
+interface TextAreaFieldProps {
+  id: string;
+  label: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  error?: string;
+  placeholder?: string;
+  rows?: number;
+}
+
+interface StepProps {
+    data: FormData;
+    handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
+    errors: FormErrors;
+}
+
+interface Step4Props extends StepProps {
+    handleSliderChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+interface Step3Props {
+    data: FormData;
+    handleInterestChange: (interestId: string) => void;
+    errors: FormErrors;
+}
+
+interface Step5Props {
+    data: FormData;
+    handleChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+}
 
 
 // --- ICONS (Inline SVGs to replace Lucide React) ---
@@ -10,7 +103,7 @@ const UserIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height
 const MapPinIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>;
 const HeartIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>;
 const DollarSignIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>;
-const CheckCircleIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>;
+const CheckCircleIcon = (props: React.SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>;
 const ArrowLeftIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>;
 const CheckIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>;
 
@@ -36,7 +129,7 @@ const INTEREST_CATEGORIES = [
   { id: 'other', label: 'Other' },
 ];
 
-const INITIAL_FORM_DATA = {
+const INITIAL_FORM_DATA: FormData = {
   pronouns: '',
   firstName: '',
   lastName: '',
@@ -58,7 +151,7 @@ const INITIAL_FORM_DATA = {
 
 // --- REUSABLE UI COMPONENTS ---
 
-const InputField = ({ id, label, type, value, onChange, error, placeholder, required }) => (
+const InputField: React.FC<InputFieldProps> = ({ id, label, type, value, onChange, error, placeholder, required }) => (
   <div>
     <label htmlFor={id} className="block text-sm font-medium text-[--text-dark] mb-1">
       {label} {required && <span className="text-[--error]">*</span>}
@@ -76,7 +169,7 @@ const InputField = ({ id, label, type, value, onChange, error, placeholder, requ
   </div>
 );
 
-const SelectField = ({ id, label, value, onChange, error, required, children }) => (
+const SelectField: React.FC<SelectFieldProps> = ({ id, label, value, onChange, error, required, children }) => (
     <div>
       <label htmlFor={id} className="block text-sm font-medium text-[--text-dark] mb-1">
         {label} {required && <span className="text-[--error]">*</span>}
@@ -94,7 +187,7 @@ const SelectField = ({ id, label, value, onChange, error, required, children }) 
     </div>
 );
 
-const TextAreaField = ({ id, label, value, onChange, error, placeholder, rows = 4 }) => (
+const TextAreaField: React.FC<TextAreaFieldProps> = ({ id, label, value, onChange, error, placeholder, rows = 4 }) => (
     <div>
         <label htmlFor={id} className="block text-sm font-medium text-[--text-dark] mb-1">{label}</label>
         <textarea
@@ -113,7 +206,7 @@ const TextAreaField = ({ id, label, value, onChange, error, placeholder, rows = 
 
 // --- FORM STEP COMPONENTS ---
 
-const Step1 = ({ data, handleChange, errors }) => (
+const Step1: React.FC<StepProps> = ({ data, handleChange, errors }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     <SelectField id="pronouns" label="Pronouns" value={data.pronouns} onChange={handleChange}>
         <option value="">Select...</option>
@@ -130,10 +223,10 @@ const Step1 = ({ data, handleChange, errors }) => (
   </div>
 );
 
-const Step2 = ({ data, handleChange, errors }) => (
+const Step2: React.FC<StepProps> = ({ data, handleChange, errors }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <InputField id="residence" label="Current country of residence" type="text" value={data.residence} onChange={handleChange} error={errors.residence} required />
-    <InputField id="destination" label="Country to visit" type="text" value={data.destination} onChange={handleChange} error={errors.destination} required />
+    <InputField id="residence" label="Current country of residence" type="text" value={data.residence} onChange={handleChange} error={errors.residence} placeholder="e.g., United States" required />
+    <InputField id="destination" label="Country to visit" type="text" value={data.destination} onChange={handleChange} error={errors.destination} placeholder="e.g., Italy" required />
     <div className="md:col-span-2">
       <InputField id="places" label="Specific places to visit" type="text" value={data.places} onChange={handleChange} error={errors.places} placeholder="e.g., Rome, Florence, Amalfi Coast" required />
     </div>
@@ -153,7 +246,7 @@ const Step2 = ({ data, handleChange, errors }) => (
   </div>
 );
 
-const Step3 = ({ data, handleInterestChange, errors }) => (
+const Step3: React.FC<Step3Props> = ({ data, handleInterestChange, errors }) => (
   <div>
     <label className="block text-sm font-medium text-[--text-dark] mb-2">Select your interests {errors.interests && <span className="text-[--error]">*</span>}</label>
     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -172,7 +265,7 @@ const Step3 = ({ data, handleInterestChange, errors }) => (
   </div>
 );
 
-const Step4 = ({ data, handleChange, handleSliderChange, errors }) => (
+const Step4: React.FC<Step4Props> = ({ data, handleChange, handleSliderChange, errors }) => (
     <div className="space-y-8">
         <div>
             <label className="block text-sm font-medium text-[--text-dark] mb-2">Select your travel style {errors.travelStyle && <span className="text-[--error]">*</span>}</label>
@@ -211,7 +304,7 @@ const Step4 = ({ data, handleChange, handleSliderChange, errors }) => (
 );
 
 
-const Step5 = ({ data, handleChange }) => (
+const Step5: React.FC<Step5Props> = ({ data, handleChange }) => (
     <div className="space-y-6">
         <div>
             <h3 className="text-lg font-semibold text-[--text-dark] border-b pb-2 mb-3">Review Your Details</h3>
@@ -240,16 +333,16 @@ const Step5 = ({ data, handleChange }) => (
 
 export default function ItineraryPage() {
   const [currentStep, setCurrentStep] = useState(1);
-  const [formData, setFormData] = useState(INITIAL_FORM_DATA);
-  const [errors, setErrors] = useState({});
+  const [formData, setFormData] = useState<FormData>(INITIAL_FORM_DATA);
+  const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleInterestChange = (interestId) => {
+  const handleInterestChange = (interestId: string) => {
       setFormData(prev => {
           const newInterests = prev.interests.includes(interestId)
               ? prev.interests.filter(i => i !== interestId)
@@ -258,7 +351,7 @@ export default function ItineraryPage() {
       });
   };
 
-  const handleSliderChange = (e) => {
+  const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const { name, value } = e.target;
       let { budgetMin, budgetMax } = formData;
 
@@ -272,7 +365,7 @@ export default function ItineraryPage() {
   };
 
   const validateStep = () => {
-    const newErrors = {};
+    const newErrors: FormErrors = {};
     switch (currentStep) {
       case 1:
         if (!formData.firstName) newErrors.firstName = 'First name is required.';
@@ -312,7 +405,7 @@ export default function ItineraryPage() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
       if(validateStep()){
           console.log("Form Submitted:", formData);
@@ -413,7 +506,7 @@ export default function ItineraryPage() {
           <section>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[--forest-primary] mb-8 sm:mb-12">Your Journey to the Perfect Trip</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {processSteps.slice(0,5).map((step, index) => (
+              {processSteps.map((step, index) => (
                 <div key={index} className={`p-6 rounded-lg bg-white shadow-lg ${index >= 3 ? 'lg:col-span-1' : ''} ${index === 3 ? 'md:col-span-2 lg:col-start-1' : ''} ${index === 4 ? 'md:col-span-2 lg:col-start-2' : ''}`}>
                   <h3 className="text-lg sm:text-xl font-bold text-[--forest-dark]">{index + 1}. {step.title}</h3>
                   <p className="text-sm sm:text-base text-[--warm-accent] font-semibold mb-3">{step.subtitle}</p>
@@ -459,7 +552,7 @@ export default function ItineraryPage() {
                       </div>
                   </div>
 
-                  <h2 className="text-xl sm:text-2xl font-bold text-[--forest-dark] mb-4">{currentStepConfig.header}</h2>
+                  <h2 className="text-xl sm:text-2xl font-bold text-[--forest-dark] mb-4">{currentStepConfig?.header}</h2>
                   <div className="min-h-[300px] mb-8">
                       {currentStep === 1 && <Step1 data={formData} handleChange={handleChange} errors={errors} />}
                       {currentStep === 2 && <Step2 data={formData} handleChange={handleChange} errors={errors} />}
