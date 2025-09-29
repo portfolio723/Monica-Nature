@@ -10,7 +10,6 @@ import {
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { lockScroll } from '@/ai/flows/context-aware-scroll-lock';
 
 interface ScrollExpandMediaProps {
   mediaType?: 'video' | 'image';
@@ -55,18 +54,19 @@ const ScrollExpandMedia = ({
   }, [mediaFullyExpanded]);
 
   useEffect(() => {
-    const manageScrollLock = async () => {
-      const { scrollLocked } = await lockScroll({
-        isLoading,
-        isExpanded: mediaFullyExpanded,
-      });
-      document.body.style.overflow = scrollLocked ? 'hidden' : '';
+    const manageScrollLock = () => {
+      const scrollLocked = isLoading || !mediaFullyExpanded;
+      if (typeof document !== 'undefined' && document.body) {
+        document.body.style.overflow = scrollLocked ? 'hidden' : '';
+      }
     };
 
     manageScrollLock();
 
     return () => {
-      document.body.style.overflow = '';
+      if (typeof document !== 'undefined' && document.body) {
+        document.body.style.overflow = '';
+      }
     };
   }, [isLoading, mediaFullyExpanded]);
 

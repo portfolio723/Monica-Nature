@@ -25,7 +25,9 @@ export default function Home() {
   const [currentMedia, setCurrentMedia] = useState<MediaContent>(sampleMediaContent.video);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
     setCurrentMedia(sampleMediaContent[mediaType]);
   }, [mediaType]);
 
