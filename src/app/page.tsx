@@ -19,9 +19,7 @@ const MediaDetails = () => {
 };
 
 export default function Home() {
-  const [currentMedia] = useState<MediaContent>(
-    sampleMediaContent.video
-  );
+  const [currentMedia] = useState<MediaContent>(sampleMediaContent.video);
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -39,7 +37,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background relative top-[-80px]">
       <ScrollExpandMedia
         key="video"
         mediaType="video"
