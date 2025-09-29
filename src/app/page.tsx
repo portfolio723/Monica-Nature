@@ -61,7 +61,7 @@ export default function Home() {
           )}
         />
         <h1 className="text-center text-4xl font-bold">
-          Scroll Down for Zoom Parallax
+          From Nature to Breathtaking
         </h1>
       </div>
       <ZoomParallax images={images} />
