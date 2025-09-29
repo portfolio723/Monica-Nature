@@ -401,7 +401,7 @@ export default function ItineraryPage() {
 
   const handlePrev = () => {
     if (currentStep > 1) {
-      setCurrentStep(prev => prev + 1);
+      setCurrentStep(prev => prev - 1);
     }
   };
 
@@ -589,3 +589,5 @@ export default function ItineraryPage() {
     </>
   );
 }
+
+    
