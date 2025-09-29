@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Feather, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
@@ -19,28 +19,36 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-transparent text-white absolute top-0 left-0 right-0 z-50">
+    <header className="bg-transparent text-black absolute top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold">
-              Monica's Nature
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="p-2 bg-cyan-400 rounded-md">
+                <Feather className="text-white" />
+              </div>
+              <span className="text-xl font-bold text-gray-800">
+                Monica's Nature
+              </span>
             </Link>
           </div>
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium hover:underline"
+                className="text-sm font-medium text-gray-600 hover:text-gray-900"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
           <div className="hidden md:block">
-            <Button>
+            <Button className="bg-black text-white rounded-full pl-6 pr-2 py-2.5 flex items-center gap-2 hover:bg-gray-800">
               Contact
+              <span className="bg-white text-black rounded-full p-1.5">
+                <ArrowRight size={16} />
+              </span>
             </Button>
           </div>
           <div className="md:hidden">
@@ -48,6 +56,7 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               variant="ghost"
               size="icon"
+              className="text-black"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
@@ -55,20 +64,23 @@ export default function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-black/80 backdrop-blur-sm">
+        <div className="md:hidden bg-white/90 backdrop-blur-sm">
           <nav className="flex flex-col items-center space-y-4 py-8">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-lg font-medium"
+                className="text-lg font-medium text-gray-800"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Button>
+            <Button className="bg-black text-white rounded-full pl-6 pr-2 py-2.5 flex items-center gap-2 hover:bg-gray-800">
               Contact
+              <span className="bg-white text-black rounded-full p-1.5">
+                <ArrowRight size={16} />
+              </span>
             </Button>
           </nav>
         </div>
