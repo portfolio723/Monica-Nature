@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -28,7 +29,7 @@ export default function Header() {
                 <Feather className="text-white" />
               </div>
               <span className="text-xl font-bold text-gray-800">
-                Monica's Nature
+                Monica&apos;s Nature
               </span>
             </Link>
           </div>

@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -58,7 +59,7 @@ export default function AntarcticaPage() {
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">Antarctica: The Last Frontier</h1>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">Journey to the world's most pristine wilderness, where penguins rule and glaciers tell ancient stories.</p>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">Journey to the world&apos;s most pristine wilderness, where penguins rule and glaciers tell ancient stories.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {antarcticaDestinations.map((dest) => (

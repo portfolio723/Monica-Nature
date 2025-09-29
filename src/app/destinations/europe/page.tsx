@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -72,8 +73,8 @@ export default function EuropePage() {
     <div className="bg-background text-foreground">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">Europe's Natural Heritage & Cultural Tapestry</h1>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">From Nordic fjords to Mediterranean coastlines, discover Europe's pristine national parks and timeless landscapes.</p>
+          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">Europe&apos;s Natural Heritage & Cultural Tapestry</h1>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">From Nordic fjords to Mediterranean coastlines, discover Europe&apos;s pristine national parks and timeless landscapes.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {europeDestinations.map((dest) => (

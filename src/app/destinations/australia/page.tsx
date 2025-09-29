@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -72,8 +73,8 @@ export default function AustraliaPage() {
     <div className="bg-background text-foreground">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">Oceania's Island Paradise & Unique Wildlife</h1>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">Discover the world's most isolated continent with its endemic species and pristine marine environments.</p>
+          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">Oceania&apos;s Island Paradise & Unique Wildlife</h1>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">Discover the world&apos;s most isolated continent with its endemic species and pristine marine environments.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {oceaniaDestinations.map((dest) => (

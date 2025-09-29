@@ -282,7 +282,7 @@ const Step4: React.FC<Step4Props> = ({ data, handleChange, handleSliderChange, e
 
         <div>
             <label className="block text-sm font-medium text-[--text-dark] mb-2">
-                What's your estimated budget?
+                What&apos;s your estimated budget?
             </label>
              <div className="flex items-center justify-between font-bold text-lg text-[--forest-primary] mb-4">
                 <span>{new Intl.NumberFormat('en-US', { style: 'currency', currency: data.currency, minimumFractionDigits: 0 }).format(data.budgetMin)}</span>
@@ -401,7 +401,7 @@ export default function ItineraryPage() {
 
   const handlePrev = () => {
     if (currentStep > 1) {
-      setCurrentStep(prev => prev - 1);
+      setCurrentStep(prev => prev + 1);
     }
   };
 

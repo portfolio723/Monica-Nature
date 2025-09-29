@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -72,8 +73,8 @@ export default function AsiaPage() {
     <div className="bg-background text-foreground">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">Discover Asia's Natural & Cultural Treasures</h1>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">From the Himalayas to tropical islands, Asia offers the world's most diverse landscapes and richest cultural heritage.</p>
+          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">Discover Asia&apos;s Natural & Cultural Treasures</h1>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">From the Himalayas to tropical islands, Asia offers the world&apos;s most diverse landscapes and richest cultural heritage.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {asiaDestinations.map((dest) => (
