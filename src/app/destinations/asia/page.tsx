@@ -68,20 +68,20 @@ const asiaDestinations = [
   },
 ];
 
-export default function AsiaPage() {
+export default function AsiaPage({ params }: { params: { slug: string } }) {
   return (
     <div className="bg-background text-foreground">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">Discover Asia&apos;s Natural & Cultural Treasures</h1>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">From the Himalayas to tropical islands, Asia offers the world&apos;s most diverse landscapes and richest cultural heritage.</p>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">From the Himalayas to tropical islands, Asia offers the world&apos;s most diverse landscapes and richest cultural heritage.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {asiaDestinations.map((dest) => (
-            <div key={dest.name} className="bg-card p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow flex flex-col">
-              <h2 className="text-2xl font-bold mb-2">{dest.flag} {dest.name}</h2>
-              <p className="text-sm font-semibold text-primary mb-2">{dest.tagline}</p>
-              <p className="text-xs text-muted-foreground mb-4"><strong>Best Season:</strong> {dest.bestSeason}</p>
+            <div key={dest.name} className="flex flex-col rounded-lg bg-card p-6 shadow-md transition-shadow hover:shadow-xl">
+              <h2 className="mb-2 text-2xl font-bold">{dest.flag} {dest.name}</h2>
+              <p className="mb-2 text-sm font-semibold text-primary">{dest.tagline}</p>
+              <p className="mb-4 text-xs text-muted-foreground"><strong>Best Season:</strong> {dest.bestSeason}</p>
               <div className="flex-grow">
                 <p className="mb-2"><strong>Highlights:</strong> {dest.highlights}</p>
                 <p><strong>Nature Focus:</strong> {dest.natureFocus}</p>
