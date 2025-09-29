@@ -1,59 +1,71 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import ScrollExpandMedia from '@/components/blocks/scroll-expansion-hero';
-import { sampleMediaContent, type MediaContent } from '@/lib/media-data';
-
-const MediaDetails = () => {
-  const currentMedia = sampleMediaContent.video;
-
-  return (
-    <div className="max-w-4xl mx-auto text-foreground p-4 md:p-8">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline text-center">
-        {currentMedia.title}
-      </h2>
-      <p className="text-base md:text-lg mb-6 text-left">
-        {currentMedia.about.overview}
-      </p>
-      <p className="text-base md:text-lg text-left">
-        {currentMedia.about.conclusion}
-      </p>
-    </div>
-  );
-};
+import React from 'react';
+import { cn } from '@/lib/utils';
+import Lenis from '@studio-freight/lenis';
+import { ZoomParallax } from '@/components/ui/zoom-parallax';
 
 export default function Home() {
-  const [currentMedia] = useState<MediaContent>(sampleMediaContent.video);
-  const [isClient, setIsClient] = useState(false);
+  React.useEffect(() => {
+    const lenis = new Lenis();
 
-  useEffect(() => {
-    setIsClient(true);
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
   }, []);
 
-  useEffect(() => {
-    if (isClient) {
-      window.scrollTo(0, 0);
-    }
-  }, [isClient]);
-
-  if (!isClient) {
-    return null;
-  }
+  const images = [
+    {
+      src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
+      alt: 'Modern architecture building',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
+      alt: 'Urban cityscape at sunset',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1557683316-973673baf926?w=800&h=800&fit=crop&crop=entropy&auto=format&q=80',
+      alt: 'Abstract geometric pattern',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
+      alt: 'Mountain landscape',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=800&fit=crop&crop=entropy&auto=format&q=80',
+      alt: 'Minimalist design elements',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
+      alt: 'Ocean waves and beach',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
+      alt: 'Forest trees and sunlight',
+    },
+  ];
 
   return (
-    <main className="min-h-screen bg-background relative">
-      <ScrollExpandMedia
-        key="video"
-        mediaType="video"
-        mediaSrc={currentMedia.src}
-        posterSrc={currentMedia.poster}
-        bgImageSrc={currentMedia.background}
-        title={currentMedia.title}
-        date={currentMedia.date}
-        scrollToExpand={currentMedia.scrollToExpand}
-      >
-        <MediaDetails />
-      </ScrollExpandMedia>
+    <main className="min-h-screen w-full bg-background">
+      <div className="relative flex h-[50vh] items-center justify-center">
+        {/* Radial spotlight */}
+        <div
+          aria-hidden="true"
+          className={cn(
+            'pointer-events-none absolute -top-1/2 left-1/2 h-[120vmin] w-[120vmin] -translate-x-1/2 rounded-full',
+            'bg-[radial-gradient(ellipse_at_center,hsl(var(--foreground))_/_0.1,transparent_50%)]',
+            'blur-[30px]'
+          )}
+        />
+        <h1 className="text-center text-4xl font-bold">
+          Scroll Down for Zoom Parallax
+        </h1>
+      </div>
+      <ZoomParallax images={images} />
+      <div className="h-[50vh]" />
     </main>
   );
 }
