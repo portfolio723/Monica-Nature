@@ -159,7 +159,7 @@ const ScrollExpandMedia = ({
 
   return (
     <div ref={sectionRef} className="overflow-x-hidden">
-      <section className="relative flex flex-col items-center justify-start min-h-[calc(100dvh-5rem)]">
+      <section className="relative flex flex-col items-center justify-start min-h-screen pt-20">
         <motion.div
           className="fixed inset-0 z-0 h-screen"
           initial={{ opacity: 0 }}
@@ -191,41 +191,41 @@ const ScrollExpandMedia = ({
               }}
             >
               <div className="relative w-full h-full pointer-events-none">
-                {mediaType === 'video' ? (
-                  isYoutube ? (
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src={embedSrc}
-                      className="w-full h-full"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      onLoad={() => setIsLoading(false)}
-                    />
-                  ) : (
-                    <video
-                      src={mediaSrc}
-                      poster={posterSrc}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      preload="auto"
-                      className="w-full h-full object-cover"
-                      controls={false}
-                      disablePictureInPicture
-                      onLoadedData={() => setIsLoading(false)}
-                    />
-                  )
-                ) : (
-                  <Image
-                    src={mediaSrc}
-                    alt={title || 'Media content'}
-                    fill
-                    className="object-cover"
+                {mediaType === 'video' && isYoutube ? (
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={embedSrc}
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                     onLoad={() => setIsLoading(false)}
                   />
+                ) : mediaType === 'video' && !isYoutube ? (
+                  <video
+                    src={mediaSrc}
+                    poster={posterSrc}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    className="w-full h-full object-cover"
+                    controls={false}
+                    disablePictureInPicture
+                    onLoadedData={() => setIsLoading(false)}
+                  />
+                ) : (
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={mediaSrc}
+                      alt={title || 'Media content'}
+                      fill
+                      className="object-cover"
+                      onLoad={() => setIsLoading(false)}
+                    />
+                  </div>
                 )}
                 <div className="absolute inset-0 z-10 pointer-events-none"></div>
                 <motion.div
@@ -234,25 +234,6 @@ const ScrollExpandMedia = ({
                   animate={{ opacity: 0.5 - scrollProgress * 0.3 }}
                   transition={{ duration: 0.2 }}
                 />
-              </div>
-
-              <div className="flex flex-col items-center text-center absolute bottom-4 left-0 right-0 z-10 transition-none p-4">
-                {date && (
-                  <p
-                    className="text-lg md:text-xl text-white/80"
-                    style={{ transform: `translateX(-${textTranslateX}vw)` }}
-                  >
-                    {date}
-                  </p>
-                )}
-                {scrollToExpand && (
-                  <p
-                    className="text-white/80 font-medium text-center text-sm md:text-base"
-                    style={{ transform: `translateX(${textTranslateX}vw)` }}
-                  >
-                    {scrollToExpand}
-                  </p>
-                )}
               </div>
             </div>
 
