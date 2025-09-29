@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, type ReactNode } from 'react';
+import { useState, useEffect } from 'react';
 import ScrollExpandMedia from '@/components/blocks/scroll-expansion-hero';
 import { Button } from '@/components/ui/button';
 import { sampleMediaContent, type MediaContent } from '@/lib/media-data';
@@ -11,10 +11,9 @@ const MediaDetails = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
   return (
     <div className="max-w-4xl mx-auto text-foreground">
       <h2 className="text-3xl font-bold mb-6 font-headline">
-        About This Component
+        {currentMedia.title}
       </h2>
       <p className="text-lg mb-8">{currentMedia.about.overview}</p>
-
       <p className="text-lg mb-8">{currentMedia.about.conclusion}</p>
     </div>
   );
@@ -25,11 +24,22 @@ export default function Home() {
   const [currentMedia, setCurrentMedia] = useState<MediaContent>(
     sampleMediaContent.video
   );
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (isClient) {
+      window.scrollTo(0, 0);
+    }
     setCurrentMedia(sampleMediaContent[mediaType]);
-  }, [mediaType]);
+  }, [mediaType, isClient]);
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <main className="min-h-screen bg-background">

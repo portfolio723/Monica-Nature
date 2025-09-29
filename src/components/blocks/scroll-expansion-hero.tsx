@@ -174,7 +174,7 @@ const ScrollExpandMedia = ({
               className="w-screen h-screen"
               style={{ objectFit: 'cover', objectPosition: 'center' }}
               priority
-              onLoad={() => mediaType === 'image' && setIsLoading(false)}
+              onLoad={() => setIsLoading(false)}
             />
             <div className="absolute inset-0 bg-black/10" />
           </motion.div>
@@ -191,7 +191,7 @@ const ScrollExpandMedia = ({
                   boxShadow: '0px 0px 50px rgba(0, 0, 0, 0.3)',
                 }}
               >
-                {mediaType === 'video' ? (
+                {mediaType === 'video' && (
                   <div className="relative w-full h-full pointer-events-none">
                     {isYoutube ? (
                       <iframe
@@ -227,7 +227,8 @@ const ScrollExpandMedia = ({
                       transition={{ duration: 0.2 }}
                     />
                   </div>
-                ) : (
+                )}
+                {mediaType === 'image' && (
                   <div className="relative w-full h-full">
                     <Image
                       src={mediaSrc}
