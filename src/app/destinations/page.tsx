@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { placeholderImages } from '@/lib/placeholder-images';
@@ -88,13 +89,6 @@ export default function DestinationsPage() {
           <p className="text-lg italic text-muted-foreground mb-8">
             &quot;The world is a book, and those who do not travel read only one
             page.&quot;
-          </p>
-          <p className="max-w-4xl mx-auto text-base text-muted-foreground">
-            Each continent holds its own treasures waiting to be discovered.
-            Whether you seek the thunderous wildlife of Africa, the ancient
-            cultures of Asia, or the dramatic landscapes of Patagonia, our
-            carefully curated destinations offer authentic experiences that
-            connect you deeply with nature and local communities.
           </p>
         </div>
 
