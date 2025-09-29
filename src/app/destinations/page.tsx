@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { placeholderImages } from '@/lib/placeholder-images';
@@ -79,7 +78,7 @@ export default function DestinationsPage() {
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8 sm:py-16">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl mb-4">
-            Explore Nature&apos;s Wonders Across 7 Continents
+            Explore Nature's Wonders Across 7 Continents
           </h1>
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-muted-foreground mb-6">
             From the mystical temples of Asia to the pristine wilderness of
