@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { placeholderImages } from '@/lib/placeholder-images';
@@ -39,7 +38,7 @@ const continents = [
   {
     name: 'AUSTRALIA & OCEANIA',
     image: destinationImages.australia,
-    quote: "Witness nature's artistry in the land down under",
+    quote: 'Witness nature&apos;s artistry in the land down under',
     cta: 'Experience Oceania',
     href: '/destinations/australia',
   },
@@ -60,7 +59,7 @@ const continents = [
   {
     name: 'SOUTH AMERICA',
     image: destinationImages.southAmerica,
-    quote: "Experience the rhythm of the world's most diverse continent",
+    quote: 'Experience the rhythm of the world&apos;s most diverse continent',
     cta: 'Adventure in South America',
     href: '/destinations/south-america',
   },
@@ -102,13 +101,12 @@ export default function DestinationsPage() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {continents.map((continent) => (
             <Link key={continent.name} href={continent.href}>
-              <div className="group relative block overflow-hidden rounded-lg shadow-lg">
+              <div className="group relative block h-80 w-full overflow-hidden rounded-lg shadow-lg">
                 {continent.image && (
                   <Image
                     src={continent.image.imageUrl}
                     alt={continent.image.description}
-                    width={600}
-                    height={400}
+                    fill
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                     data-ai-hint={continent.image.imageHint}
                   />
