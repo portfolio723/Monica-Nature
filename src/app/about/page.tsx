@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <div className="bg-background text-foreground">
       <main>
-        <section className="relative h-[60vh] w-full">
+        <section className="relative h-[40vh] w-full md:h-[50vh]">
           {aboutImages.hero && (
             <Image
               src={aboutImages.hero.imageUrl}
