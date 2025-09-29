@@ -68,9 +68,9 @@
     },
     {
       "id": "destination-europe",
-      "description": "A scenic view of the Eiffel Tower in Paris.",
-      "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760c0341?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxldXJvcGUlMjBsYW5kbWFya3xlbnwwfHx8fDE3NTkyMTIzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "europe landmark"
+      "description": "A scenic view of a European street.",
+      "imageUrl": "https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxFdXJvcGV8ZW58MHx8fHwxNzU5MTI3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "europe street"
     },
     {
       "id": "destination-australia",
