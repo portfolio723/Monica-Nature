@@ -190,8 +190,8 @@ const ScrollExpandMedia = ({
                 }}
               >
                 {mediaType === 'video' ? (
-                  isYoutube ? (
-                    <div className="relative w-full h-full pointer-events-none">
+                  <div className="relative w-full h-full pointer-events-none">
+                    {isYoutube ? (
                       <iframe
                         width="100%"
                         height="100%"
@@ -202,16 +202,7 @@ const ScrollExpandMedia = ({
                         allowFullScreen
                         onLoad={() => setIsLoading(false)}
                       />
-                      <div className="absolute inset-0 z-10 pointer-events-none"></div>
-                      <motion.div
-                        className="absolute inset-0 bg-black/30"
-                        initial={{ opacity: 0.7 }}
-                        animate={{ opacity: 0.5 - scrollProgress * 0.3 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    </div>
-                  ) : (
-                    <div className="relative w-full h-full pointer-events-none">
+                    ) : (
                       <video
                         src={mediaSrc}
                         poster={posterSrc}
@@ -225,15 +216,15 @@ const ScrollExpandMedia = ({
                         disablePictureInPicture
                         onLoadedData={() => setIsLoading(false)}
                       />
-                      <div className="absolute inset-0 z-10 pointer-events-none"></div>
-                      <motion.div
-                        className="absolute inset-0 bg-black/30"
-                        initial={{ opacity: 0.7 }}
-                        animate={{ opacity: 0.5 - scrollProgress * 0.3 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    </div>
-                  )
+                    )}
+                    <div className="absolute inset-0 z-10 pointer-events-none"></div>
+                    <motion.div
+                      className="absolute inset-0 bg-black/30"
+                      initial={{ opacity: 0.7 }}
+                      animate={{ opacity: 0.5 - scrollProgress * 0.3 }}
+                      transition={{ duration: 0.2 }}
+                    />
+                  </div>
                 ) : (
                   <div className="relative w-full h-full">
                     <Image
