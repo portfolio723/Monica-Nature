@@ -22,12 +22,12 @@ const MediaDetails = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
 
 export default function Home() {
   const [mediaType, setMediaType] = useState<'video' | 'image'>('video');
-  const [currentMedia, setCurrentMedia] = useState<MediaContent>(sampleMediaContent.video);
+  const [currentMedia, setCurrentMedia] = useState<MediaContent>(
+    sampleMediaContent.video
+  );
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo(0, 0);
-    }
+    window.scrollTo(0, 0);
     setCurrentMedia(sampleMediaContent[mediaType]);
   }, [mediaType]);
 

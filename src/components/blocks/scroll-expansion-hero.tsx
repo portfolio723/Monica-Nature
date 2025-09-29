@@ -127,7 +127,7 @@ const ScrollExpandMedia = ({
         window.scrollTo(0, 0);
       }
     };
-    
+
     window.addEventListener('wheel', handleWheel, { passive: false });
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('touchstart', handleTouchStart, { passive: false });
@@ -150,10 +150,12 @@ const ScrollExpandMedia = ({
   const titleParts = title ? title.split(' ') : [''];
   const firstWord = titleParts[0];
   const restOfTitle = titleParts.slice(1).join(' ');
-  
+
   const isYoutube = mediaSrc.includes('youtube.com');
   const youtubeId = isYoutube ? mediaSrc.split('v=')[1]?.split('&')[0] : '';
-  const embedSrc = isYoutube ? `https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playlist=${youtubeId}`: '';
+  const embedSrc = isYoutube
+    ? `https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playlist=${youtubeId}`
+    : '';
 
   return (
     <div ref={sectionRef} className="overflow-x-hidden">
@@ -233,6 +235,7 @@ const ScrollExpandMedia = ({
                       fill
                       className="w-full h-full object-cover"
                       onLoad={() => setIsLoading(false)}
+                      priority
                     />
                     <motion.div
                       className="absolute inset-0 bg-black/50"
