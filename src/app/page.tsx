@@ -12,10 +12,10 @@ const MediaDetails = () => {
       <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline text-center">
         {currentMedia.title}
       </h2>
-      <p className="text-base md:text-lg mb-6 text-center">
+      <p className="text-base md:text-lg mb-6 text-left">
         {currentMedia.about.overview}
       </p>
-      <p className="text-base md:text-lg text-center">
+      <p className="text-base md:text-lg text-left">
         {currentMedia.about.conclusion}
       </p>
     </div>

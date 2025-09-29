@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 @layer base {
@@ -14,13 +14,13 @@ body {
     --card-foreground: 224 71.4% 4.1%;
     --popover: 210 100% 97%;
     --popover-foreground: 224 71.4% 4.1%;
-    --primary: 216 100% 81%;
+    --primary: 216 84% 83%; /* #A0C4FF */
     --primary-foreground: 220 15% 25%;
     --secondary: 215 28% 90%;
     --secondary-foreground: 224 71.4% 4.1%;
     --muted: 215 28% 90%;
     --muted-foreground: 223 13% 45%;
-    --accent: 36 100% 63%;
+    --accent: 30 100% 64%; /* #FFB347 */
     --accent-foreground: 24 9.8% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -49,13 +49,13 @@ body {
     --card-foreground: 210 20% 98%;
     --popover: 224 71.4% 4.1%;
     --popover-foreground: 210 20% 98%;
-    --primary: 216 100% 81%;
+    --primary: 216 84% 83%; /* #A0C4FF */
     --primary-foreground: 224 71.4% 4.1%;
     --secondary: 215 28% 17%;
     --secondary-foreground: 210 20% 98%;
     --muted: 215 28% 17%;
     --muted-foreground: 217 19% 45%;
-    --accent: 36 100% 63%;
+    --accent: 30 100% 64%; /* #FFB347 */
     --accent-foreground: 24 9.8% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
