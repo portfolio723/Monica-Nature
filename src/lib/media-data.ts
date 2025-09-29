@@ -1,4 +1,4 @@
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { placeholderImages } from '@/lib/placeholder-images';
 
 interface MediaAbout {
   overview: string;
@@ -19,7 +19,7 @@ interface MediaContentCollection {
   [key: string]: MediaContent;
 }
 
-const getImage = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
+const getImage = (id: string) => placeholderImages.find(img => img.id === id)?.imageUrl || '';
 
 export const sampleMediaContent: MediaContentCollection = {
   video: {
