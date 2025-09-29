@@ -23,21 +23,21 @@ const destinationImages = {
 export default function DestinationsPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8 sm:py-16">
         <div className="mb-12 text-center">
           <div className="mb-4 inline-block h-1 w-12 bg-gray-400"></div>
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <h1 className="text-5xl font-bold leading-tight md:text-6xl">
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
               Your Destinations
             </h1>
-            <p className="text-lg text-gray-400">
+            <p className="max-w-xs text-base text-gray-400 sm:text-lg">
               Pick a place to fun and enjoy with your loved ones!!!
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="group relative overflow-hidden">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
+          <div className="group relative overflow-hidden rounded-lg">
             {destinationImages.africa && (
               <Image
                 src={destinationImages.africa.imageUrl}
@@ -55,7 +55,7 @@ export default function DestinationsPage() {
             </div>
           </div>
 
-          <div className="group relative overflow-hidden">
+          <div className="group relative overflow-hidden rounded-lg">
             {destinationImages.antarctica && (
               <Image
                 src={destinationImages.antarctica.imageUrl}
@@ -73,7 +73,7 @@ export default function DestinationsPage() {
             </div>
           </div>
 
-          <div className="group relative overflow-hidden">
+          <div className="group relative overflow-hidden rounded-lg">
             {destinationImages.asia && (
               <Image
                 src={destinationImages.asia.imageUrl}
@@ -91,7 +91,7 @@ export default function DestinationsPage() {
             </div>
           </div>
 
-          <div className="group relative overflow-hidden">
+          <div className="group relative overflow-hidden rounded-lg">
             {destinationImages.europe && (
               <Image
                 src={destinationImages.europe.imageUrl}
@@ -109,7 +109,7 @@ export default function DestinationsPage() {
             </div>
           </div>
 
-          <div className="group relative overflow-hidden">
+          <div className="group relative overflow-hidden rounded-lg">
             {destinationImages.australia && (
               <Image
                 src={destinationImages.australia.imageUrl}
@@ -127,7 +127,7 @@ export default function DestinationsPage() {
             </div>
           </div>
 
-          <div className="group relative overflow-hidden">
+          <div className="group relative overflow-hidden rounded-lg">
             {destinationImages.southAmerica && (
               <Image
                 src={destinationImages.southAmerica.imageUrl}
@@ -145,7 +145,7 @@ export default function DestinationsPage() {
             </div>
           </div>
 
-          <div className="group relative overflow-hidden">
+          <div className="group relative overflow-hidden rounded-lg">
             {destinationImages.northAmerica && (
               <Image
                 src={destinationImages.northAmerica.imageUrl}

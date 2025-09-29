@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div className="col-span-1">
             <h2 className="text-2xl font-bold">Monica's Nature</h2>
             <p className="mt-2 text-gray-400">
@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-sm text-center sm:text-left">
             © {new Date().getFullYear()} Monica's Nature. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 sm:mt-0">

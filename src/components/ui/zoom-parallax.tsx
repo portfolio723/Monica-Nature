@@ -29,43 +29,70 @@ export function ZoomParallax({ images }: ZoomParallaxProps) {
 
   const scales = [scale4, scale5, scale6, scale5, scale6, scale8, scale9];
 
+  const pictures = [
+    {
+      scale: scale4,
+    },
+    {
+      scale: scale5,
+      top: '-30vh',
+      left: '5vw',
+      width: '35vw',
+      height: '30vh',
+    },
+    {
+      scale: scale6,
+      top: '-10vh',
+      left: '-25vw',
+      width: '20vw',
+      height: '45vh',
+    },
+    {
+      scale: scale5,
+      left: '27.5vw',
+      width: '25vw',
+      height: '25vh',
+    },
+    {
+      scale: scale6,
+      top: '27.5vh',
+      left: '5vw',
+      width: '20vw',
+      height: '25vh',
+    },
+    {
+      scale: scale8,
+      top: '27.5vh',
+      left: '-22.5vw',
+      width: '30vw',
+      height: '25vh',
+    },
+    {
+      scale: scale9,
+      top: '22.5vh',
+      left: '25vw',
+      width: '15vw',
+      height: '15vh',
+    },
+  ];
+
   return (
     <div ref={container} className="relative h-[300vh]">
       <div className="sticky top-0 h-screen overflow-hidden">
         {images.map(({ src, alt }, index) => {
-          const scale = scales[index % scales.length];
+          if (index >= pictures.length) return null;
+          const { scale, top, left, width, height } = pictures[index];
 
           return (
             <motion.div
               key={index}
               style={{ scale }}
-              className={`absolute top-0 flex h-full w-full items-center justify-center ${
-                index === 1
-                  ? '[&>div]:!-top-[30vh] [&>div]:!left-[5vw] [&>div]:!h-[30vh] [&>div]:!w-[35vw]'
-                  : ''
-              } ${
-                index === 2
-                  ? '[&>div]:!-top-[10vh] [&>div]:!-left-[25vw] [&>div]:!h-[45vh] [&>div]:!w-[20vw]'
-                  : ''
-              } ${
-                index === 3
-                  ? '[&>div]:!left-[27.5vw] [&>div]:!h-[25vh] [&>div]:!w-[25vw]'
-                  : ''
-              } ${
-                index === 4
-                  ? '[&>div]:!top-[27.5vh] [&>div]:!left-[5vw] [&>div]:!h-[25vh] [&>div]:!w-[20vw]'
-                  : ''
-              } ${
-                index === 5
-                  ? '[&>div]:!top-[27.5vh] [&>div]:!-left-[22.5vw] [&>div]:!h-[25vh] [&>div]:!w-[30vw]'
-                  : ''
-              } ${
-                index === 6
-                  ? '[&>div]:!top-[22.5vh] [&>div]:!left-[25vw] [&>div]:!h-[15vh] [&>div]:!w-[15vw]'
-                  : ''
-              } `}
+              className="absolute top-0 flex h-full w-full items-center justify-center"
             >
-              <div className="relative h-[25vh] w-[25vw]">
+              <div
+                style={{ top, left, width, height }}
+                className="relative h-[25vh] w-[25vw] sm:h-[25vh] sm:w-[25vw] md:h-[25vh] md:w-[25vw] lg:h-[25vh] lg:w-[25vw]"
+              >
                 <Image
                   src={src || '/placeholder.svg'}
                   alt={alt || `Parallax image ${index + 1}`}

@@ -50,7 +50,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen w-full bg-background">
-      <div className="relative flex h-[50vh] items-center justify-center">
+      <div className="relative flex h-[50vh] items-center justify-center px-4">
         {/* Radial spotlight */}
         <div
           aria-hidden="true"
@@ -60,7 +60,7 @@ export default function Home() {
             'blur-[30px]'
           )}
         />
-        <h1 className="text-center text-4xl font-bold">
+        <h1 className="text-center text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">
           From Nature to Breathtaking
         </h1>
       </div>
