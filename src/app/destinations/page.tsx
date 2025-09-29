@@ -1,5 +1,6 @@
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { placeholderImages } from '@/lib/placeholder-images';
 
 const destinationImages = {
@@ -20,148 +21,110 @@ const destinationImages = {
   ),
 };
 
+const continents = [
+  {
+    name: 'AFRICA',
+    image: destinationImages.africa,
+    quote: 'In every walk with nature, one receives far more than they seek',
+    cta: 'Discover Wild Africa',
+    href: '/destinations/africa',
+  },
+  {
+    name: 'ASIA',
+    image: destinationImages.asia,
+    quote: 'Adventure awaits where ancient wisdom meets pristine nature',
+    cta: 'Explore Mystical Asia',
+    href: '/destinations/asia',
+  },
+  {
+    name: 'AUSTRALIA & OCEANIA',
+    image: destinationImages.australia,
+    quote: "Witness nature's artistry in the land down under",
+    cta: 'Experience Oceania',
+    href: '/destinations/australia',
+  },
+  {
+    name: 'EUROPE',
+    image: destinationImages.europe,
+    quote: 'Where history and nature intertwine in perfect harmony',
+    cta: 'Journey Through Europe',
+    href: '/destinations/europe',
+  },
+  {
+    name: 'NORTH AMERICA',
+    image: destinationImages.northAmerica,
+    quote: 'From ancient forests to desert wonders',
+    cta: 'Discover North America',
+    href: '/destinations/north-america',
+  },
+  {
+    name: 'SOUTH AMERICA',
+    image: destinationImages.southAmerica,
+    quote: "Experience the rhythm of the world's most diverse continent",
+    cta: 'Adventure in South America',
+    href: '/destinations/south-america',
+  },
+  {
+    name: 'ANTARCTICA',
+    image: destinationImages.antarctica,
+    quote: 'Journey to the edge of the world',
+    cta: 'Explore Antarctica',
+    href: '/destinations/antarctica',
+  },
+];
+
 export default function DestinationsPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8 sm:py-16">
         <div className="mb-12 text-center">
-          <div className="mb-4 inline-block h-1 w-12 bg-gray-400"></div>
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
-              Your Destinations
-            </h1>
-            <p className="max-w-xs text-base text-gray-400 sm:text-lg">
-              Pick a place to fun and enjoy with your loved ones!!!
-            </p>
-          </div>
+          <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl mb-4">
+            Explore Nature&apos;s Wonders Across 7 Continents
+          </h1>
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-muted-foreground mb-6">
+            From the mystical temples of Asia to the pristine wilderness of
+            Antarctica, discover handpicked destinations where adventure meets
+            conservation.
+          </p>
+          <p className="text-lg italic text-muted-foreground mb-8">
+            &quot;The world is a book, and those who do not travel read only one
+            page.&quot;
+          </p>
+          <p className="max-w-4xl mx-auto text-base text-muted-foreground">
+            Each continent holds its own treasures waiting to be discovered.
+            Whether you seek the thunderous wildlife of Africa, the ancient
+            cultures of Asia, or the dramatic landscapes of Patagonia, our
+            carefully curated destinations offer authentic experiences that
+            connect you deeply with nature and local communities.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
-          <div className="group relative overflow-hidden rounded-lg">
-            {destinationImages.africa && (
-              <Image
-                src={destinationImages.africa.imageUrl}
-                alt={destinationImages.africa.description}
-                width={600}
-                height={400}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-ai-hint={destinationImages.africa.imageHint}
-              />
-            )}
-            <div className="absolute top-4 -right-10 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
-              <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
-                AFRICA
-              </h3>
-            </div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-lg">
-            {destinationImages.antarctica && (
-              <Image
-                src={destinationImages.antarctica.imageUrl}
-                alt={destinationImages.antarctica.description}
-                width={600}
-                height={400}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-ai-hint={destinationImages.antarctica.imageHint}
-              />
-            )}
-            <div className="absolute top-4 -right-12 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
-              <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
-                ANTARTICA
-              </h3>
-            </div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-lg">
-            {destinationImages.asia && (
-              <Image
-                src={destinationImages.asia.imageUrl}
-                alt={destinationImages.asia.description}
-                width={600}
-                height={400}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-ai-hint={destinationImages.asia.imageHint}
-              />
-            )}
-            <div className="absolute top-4 -right-6 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
-              <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
-                ASIA
-              </h3>
-            </div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-lg">
-            {destinationImages.europe && (
-              <Image
-                src={destinationImages.europe.imageUrl}
-                alt={destinationImages.europe.description}
-                width={600}
-                height={400}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-ai-hint={destinationImages.europe.imageHint}
-              />
-            )}
-            <div className="absolute top-4 -right-10 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
-              <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
-                EUROPE
-              </h3>
-            </div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-lg">
-            {destinationImages.australia && (
-              <Image
-                src={destinationImages.australia.imageUrl}
-                alt={destinationImages.australia.description}
-                width={600}
-                height={400}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-ai-hint={destinationImages.australia.imageHint}
-              />
-            )}
-            <div className="absolute top-4 -right-12 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
-              <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
-                AUSTRALIA
-              </h3>
-            </div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-lg">
-            {destinationImages.southAmerica && (
-              <Image
-                src={destinationImages.southAmerica.imageUrl}
-                alt={destinationImages.southAmerica.description}
-                width={600}
-                height={400}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-ai-hint={destinationImages.southAmerica.imageHint}
-              />
-            )}
-            <div className="absolute top-4 -right-16 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
-              <h3 className="whitespace-nowrap text-lg font-semibold [transform:rotate(-15deg)]">
-                SOUTH AMERICA
-              </h3>
-            </div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-lg">
-            {destinationImages.northAmerica && (
-              <Image
-                src={destinationImages.northAmerica.imageUrl}
-                alt={destinationImages.northAmerica.description}
-                width={600}
-                height={400}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-ai-hint={destinationImages.northAmerica.imageHint}
-              />
-            )}
-            <div className="absolute top-4 -right-16 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
-              <h3 className="whitespace-nowrap text-lg font-semibold [transform:rotate(-15deg)]">
-                NORTH AMERICA
-              </h3>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {continents.map((continent) => (
+            <Link key={continent.name} href={continent.href}>
+              <div className="group relative block overflow-hidden rounded-lg shadow-lg">
+                {continent.image && (
+                  <Image
+                    src={continent.image.imageUrl}
+                    alt={continent.image.description}
+                    width={600}
+                    height={400}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    data-ai-hint={continent.image.imageHint}
+                  />
+                )}
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{continent.name}</h3>
+                  <p className="text-sm text-gray-200 mb-4 italic">
+                    &quot;{continent.quote}&quot;
+                  </p>
+                  <div className="text-base font-semibold text-white group-hover:underline">
+                    {continent.cta} &rarr;
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
