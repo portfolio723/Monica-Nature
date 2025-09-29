@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 interface ScrollExpandMediaProps {
-  mediaType?: 'video' | 'image';
+  mediaType: 'video';
   mediaSrc: string;
   posterSrc?: string;
   bgImageSrc: string;
@@ -228,25 +228,7 @@ const ScrollExpandMedia = ({
                     />
                   </div>
                 )}
-                {mediaType === 'image' && (
-                  <div className="relative w-full h-full">
-                    <Image
-                      src={mediaSrc}
-                      alt={title || 'Media content'}
-                      fill
-                      className="w-full h-full object-cover"
-                      onLoad={() => setIsLoading(false)}
-                      priority
-                    />
-                    <motion.div
-                      className="absolute inset-0 bg-black/50"
-                      initial={{ opacity: 0.7 }}
-                      animate={{ opacity: 0.7 - scrollProgress * 0.3 }}
-                      transition={{ duration: 0.2 }}
-                    />
-                  </div>
-                )}
-
+                
                 <div className="flex flex-col items-center text-center absolute bottom-4 left-0 right-0 z-10 transition-none p-4">
                   {date && (
                     <p

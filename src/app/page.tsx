@@ -2,11 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import ScrollExpandMedia from '@/components/blocks/scroll-expansion-hero';
-import { Button } from '@/components/ui/button';
 import { sampleMediaContent, type MediaContent } from '@/lib/media-data';
 
-const MediaDetails = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
-  const currentMedia = sampleMediaContent[mediaType];
+const MediaDetails = () => {
+  const currentMedia = sampleMediaContent.video;
 
   return (
     <div className="max-w-4xl mx-auto text-foreground">
@@ -20,8 +19,7 @@ const MediaDetails = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
 };
 
 export default function Home() {
-  const [mediaType, setMediaType] = useState<'video' | 'image'>('video');
-  const [currentMedia, setCurrentMedia] = useState<MediaContent>(
+  const [currentMedia] = useState<MediaContent>(
     sampleMediaContent.video
   );
   const [isClient, setIsClient] = useState(false);
@@ -34,8 +32,7 @@ export default function Home() {
     if (isClient) {
       window.scrollTo(0, 0);
     }
-    setCurrentMedia(sampleMediaContent[mediaType]);
-  }, [mediaType, isClient]);
+  }, [isClient]);
 
   if (!isClient) {
     return null;
@@ -43,43 +40,17 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-background">
-      <div className="fixed top-4 right-4 z-50 flex gap-2">
-        <Button
-          onClick={() => setMediaType('video')}
-          variant={mediaType === 'video' ? 'secondary' : 'ghost'}
-          className={
-            mediaType !== 'video'
-              ? 'text-white border border-white/30 hover:bg-white/20 hover:text-white'
-              : ''
-          }
-        >
-          Video
-        </Button>
-
-        <Button
-          onClick={() => setMediaType('image')}
-          variant={mediaType === 'image' ? 'secondary' : 'ghost'}
-          className={
-            mediaType !== 'image'
-              ? 'text-white border border-white/30 hover:bg-white/20 hover:text-white'
-              : ''
-          }
-        >
-          Image
-        </Button>
-      </div>
-
       <ScrollExpandMedia
-        key={mediaType}
-        mediaType={mediaType}
+        key="video"
+        mediaType="video"
         mediaSrc={currentMedia.src}
-        posterSrc={mediaType === 'video' ? currentMedia.poster : undefined}
+        posterSrc={currentMedia.poster}
         bgImageSrc={currentMedia.background}
         title={currentMedia.title}
         date={currentMedia.date}
         scrollToExpand={currentMedia.scrollToExpand}
       >
-        <MediaDetails mediaType={mediaType} />
+        <MediaDetails />
       </ScrollExpandMedia>
     </main>
   );
