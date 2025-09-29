@@ -8,6 +8,13 @@ const destinationImages = {
     (img) => img.id === 'destination-antarctica'
   ),
   asia: placeholderImages.find((img) => img.id === 'destination-asia'),
+  europe: placeholderImages.find((img) => img.id === 'destination-europe'),
+  australia: placeholderImages.find(
+    (img) => img.id === 'destination-australia'
+  ),
+  southAmerica: placeholderImages.find(
+    (img) => img.id === 'destination-south-america'
+  ),
 };
 
 export default function DestinationsPage() {
@@ -77,6 +84,60 @@ export default function DestinationsPage() {
             <div className="absolute top-4 -right-6 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
               <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
                 ASIA
+              </h3>
+            </div>
+          </div>
+
+          <div className="group relative overflow-hidden">
+            {destinationImages.europe && (
+              <Image
+                src={destinationImages.europe.imageUrl}
+                alt={destinationImages.europe.description}
+                width={600}
+                height={400}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                data-ai-hint={destinationImages.europe.imageHint}
+              />
+            )}
+            <div className="absolute top-4 -right-10 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
+              <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
+                EUROPE
+              </h3>
+            </div>
+          </div>
+
+          <div className="group relative overflow-hidden">
+            {destinationImages.australia && (
+              <Image
+                src={destinationImages.australia.imageUrl}
+                alt={destinationImages.australia.description}
+                width={600}
+                height={400}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                data-ai-hint={destinationImages.australia.imageHint}
+              />
+            )}
+            <div className="absolute top-4 -right-12 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
+              <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
+                AUSTRALIA
+              </h3>
+            </div>
+          </div>
+
+          <div className="group relative overflow-hidden">
+            {destinationImages.southAmerica && (
+              <Image
+                src={destinationImages.southAmerica.imageUrl}
+                alt={destinationImages.southAmerica.description}
+                width={600}
+                height={400}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                data-ai-hint={destinationImages.southAmerica.imageHint}
+              />
+            )}
+            <div className="absolute top-4 -right-20 bg-gray-700/80 px-12 py-2 [transform:rotate(15deg)]">
+              <h3 className="text-lg font-semibold [transform:rotate(-15deg)]">
+                SOUTH AMERICA
               </h3>
             </div>
           </div>
