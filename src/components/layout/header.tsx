@@ -19,7 +19,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-transparent text-black absolute top-0 left-0 right-0 z-50">
+    <header className="bg-white text-black relative z-50 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
@@ -64,7 +64,7 @@ export default function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-white/90 backdrop-blur-sm">
+        <div className="md:hidden bg-white">
           <nav className="flex flex-col items-center space-y-4 py-8">
             {navLinks.map((link) => (
               <Link

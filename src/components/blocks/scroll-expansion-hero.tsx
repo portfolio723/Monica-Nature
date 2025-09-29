@@ -159,7 +159,7 @@ const ScrollExpandMedia = ({
 
   return (
     <div ref={sectionRef} className="overflow-x-hidden">
-      <section className="relative flex flex-col items-center justify-start min-h-[100dvh] pt-20">
+      <section className="relative flex flex-col items-center justify-start min-h-[calc(100dvh-5rem)]">
         <motion.div
           className="fixed inset-0 z-0 h-screen"
           initial={{ opacity: 0 }}
@@ -179,7 +179,7 @@ const ScrollExpandMedia = ({
         </motion.div>
 
         <div className="container mx-auto flex flex-col items-center justify-start relative z-10">
-          <div className="flex flex-col items-center justify-center w-full min-h-[calc(100vh-5rem)] relative">
+          <div className="flex flex-col items-center justify-center w-full min-h-[calc(100vh-10rem)] relative">
             <div
               className="absolute z-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-none rounded-2xl overflow-hidden"
               style={{
@@ -191,8 +191,8 @@ const ScrollExpandMedia = ({
               }}
             >
               <div className="relative w-full h-full pointer-events-none">
-                {mediaType === 'video' &&
-                  (isYoutube ? (
+                {mediaType === 'video' ? (
+                  isYoutube ? (
                     <iframe
                       width="100%"
                       height="100%"
@@ -217,15 +217,15 @@ const ScrollExpandMedia = ({
                       disablePictureInPicture
                       onLoadedData={() => setIsLoading(false)}
                     />
-                  ))}
-                {mediaType === 'image' && (
-                   <Image
-                      src={mediaSrc}
-                      alt={title || 'Media content'}
-                      fill
-                      className="object-cover"
-                      onLoad={() => setIsLoading(false)}
-                    />
+                  )
+                ) : (
+                  <Image
+                    src={mediaSrc}
+                    alt={title || 'Media content'}
+                    fill
+                    className="object-cover"
+                    onLoad={() => setIsLoading(false)}
+                  />
                 )}
                 <div className="absolute inset-0 z-10 pointer-events-none"></div>
                 <motion.div
