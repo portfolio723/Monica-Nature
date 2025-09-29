@@ -26,7 +26,7 @@ export const sampleMediaContent: MediaContentCollection = {
     src: 'https://www.youtube.com/watch?v=1La4QzGeaaQ', // "A Flight Through the Orion Nebula"
     poster: getImage('video-poster'),
     background: getImage('cosmic-background'),
-    title: 'Immersive Video Experience',
+    title: 'From Nature to Breathtaking',
     date: 'Cosmic Journey',
     scrollToExpand: 'Scroll to Expand',
     about: {
