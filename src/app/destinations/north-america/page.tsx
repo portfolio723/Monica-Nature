@@ -10,7 +10,7 @@ const northAmericaDestinations = [
     bestSeason: 'Varies by region - April-October generally best',
     highlights: 'Yellowstone, Grand Canyon, Yosemite, Great Smoky Mountains',
     natureFocus: 'Diverse ecosystems, geothermal features, iconic landscapes',
-    href: '#',
+    href: '/destinations/north-america/usa',
   },
   {
     name: 'Canada',
@@ -19,7 +19,7 @@ const northAmericaDestinations = [
     bestSeason: 'June - September',
     highlights: 'Banff, Jasper, Canadian Rockies, Niagara Falls',
     natureFocus: 'Mountain wilderness, pristine lakes, diverse wildlife',
-    href: '#',
+    href: '/destinations/north-america/canada',
   },
   {
     name: 'Costa Rica',
@@ -28,7 +28,7 @@ const northAmericaDestinations = [
     bestSeason: 'December - April (Dry), May - November (Green)',
     highlights: 'Manuel Antonio, Arenal Volcano, Monteverde Cloud Forest',
     natureFocus: 'Incredible biodiversity, rainforests, wildlife',
-    href: '#',
+    href: '/destinations/north-america/costa-rica',
   },
   {
     name: 'Mexico',
@@ -68,7 +68,7 @@ const northAmericaDestinations = [
   },
 ];
 
-export default function NorthAmericaPage({ params }: { params: { slug: string } }) {
+export default function NorthAmericaPage() {
   return (
     <div className="bg-background text-foreground">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">

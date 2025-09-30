@@ -10,7 +10,7 @@ const southAmericaDestinations = [
     bestSeason: 'May - September (Dry season)',
     highlights: 'Machu Picchu, Amazon Rainforest, Sacred Valley, Lima',
     natureFocus: 'Ancient Inca trails, diverse ecosystems, Amazon wildlife',
-    href: '#',
+    href: '/destinations/south-america/peru',
   },
   {
     name: 'Chile',
@@ -28,7 +28,7 @@ const southAmericaDestinations = [
     bestSeason: 'October - March (Summer for Patagonia)',
     highlights: 'Iguazu Falls, Perito Moreno Glacier, Buenos Aires, Mendoza',
     natureFocus: 'Dramatic glaciers, wine regions, diverse wildlife',
-    href: '#',
+    href: '/destinations/south-america/argentina',
   },
   {
     name: 'Brazil',
@@ -37,7 +37,7 @@ const southAmericaDestinations = [
     bestSeason: 'April - September (Dry season for Amazon)',
     highlights: 'Rio de Janeiro, Amazon Rainforest, Iguazu Falls, Pantanal',
     natureFocus: "World's largest rainforest, diverse wildlife, pristine beaches",
-    href: '#',
+    href: '/destinations/south-america/brazil',
   },
   {
     name: 'Ecuador',
@@ -68,7 +68,7 @@ const southAmericaDestinations = [
   },
 ];
 
-export default function SouthAmericaPage({ params }: { params: { slug: string } }) {
+export default function SouthAmericaPage() {
   return (
     <div className="bg-background text-foreground">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
