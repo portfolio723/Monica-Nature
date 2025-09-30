@@ -76,7 +76,7 @@ function AnimatedImage({ alt, src, ratio, placeholder }: AnimatedImageProps) {
 				alt={alt}
 				src={imgSrc}
 				className={cn(
-					'size-full rounded-lg object-cover opacity-0 transition-opacity duration-1000 ease-in-out',
+					'size-full rounded-lg object-cover transition-opacity duration-1000 ease-in-out',
 					{
 						'opacity-100': !isLoading,
 					},
