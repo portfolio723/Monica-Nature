@@ -112,8 +112,7 @@ const STEPS_CONFIG = [
   { id: 1, title: 'Personal Info', icon: <UserIcon />, header: 'Tell us about yourself' },
   { id: 2, title: 'Preferences', icon: <MapPinIcon />, header: 'Where would you like to explore?' },
   { id: 3, title: 'Experiences', icon: <HeartIcon />, header: 'What calls to your soul?' },
-  { id: 4, title: 'Budget', icon: <DollarSignIcon />, header: "Let's talk details" },
-  { id: 5, title: 'Review', icon: <CheckCircleIcon />, header: 'Your adventure awaits!' },
+  { id: 4, title: 'Final Details', icon: <DollarSignIcon />, header: "Let's talk details" },
 ];
 
 const INTEREST_CATEGORIES = [
@@ -129,7 +128,18 @@ const INTEREST_CATEGORIES = [
   { id: 'other', label: 'Other' },
 ];
 
-const CURRENCIES = ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'CHF', 'INR'];
+const CURRENCIES = [
+    'AED', 'AFN', 'ALL', 'AMD', 'ANG', 'AOA', 'ARS', 'AUD', 'AWG', 'AZN', 'BAM', 'BBD', 'BDT', 'BGN', 'BHD', 'BIF', 'BMD', 
+    'BND', 'BOB', 'BRL', 'BSD', 'BTN', 'BWP', 'BYN', 'BZD', 'CAD', 'CDF', 'CHF', 'CLP', 'CNY', 'COP', 'CRC', 'CUP', 'CVE', 
+    'CZK', 'DJF', 'DKK', 'DOP', 'DZD', 'EGP', 'ERN', 'ETB', 'EUR', 'FJD', 'FKP', 'FOK', 'GBP', 'GEL', 'GGP', 'GHS', 'GIP', 
+    'GMD', 'GNF', 'GTQ', 'GYD', 'HKD', 'HNL', 'HRK', 'HTG', 'HUF', 'IDR', 'ILS', 'IMP', 'INR', 'IQD', 'IRR', 'ISK', 'JEP', 
+    'JMD', 'JOD', 'JPY', 'KES', 'KGS', 'KHR', 'KID', 'KMF', 'KRW', 'KWD', 'KYD', 'KZT', 'LAK', 'LBP', 'LKR', 'LRD', 'LSL', 
+    'LYD', 'MAD', 'MDL', 'MGA', 'MKD', 'MMK', 'MNT', 'MOP', 'MRU', 'MUR', 'MVR', 'MWK', 'MXN', 'MYR', 'MZN', 'NAD', 'NGN', 
+    'NIO', 'NOK', 'NPR', 'NZD', 'OMR', 'PAB', 'PEN', 'PGK', 'PHP', 'PKR', 'PLN', 'PYG', 'QAR', 'RON', 'RSD', 'RUB', 'RWF', 
+    'SAR', 'SBD', 'SCR', 'SDG', 'SEK', 'SGD', 'SHP', 'SLE', 'SLL', 'SOS', 'SRD', 'SSP', 'STN', 'SYP', 'SZL', 'THB', 'TJS', 
+    'TMT', 'TND', 'TOP', 'TRY', 'TTD', 'TVD', 'TWD', 'TZS', 'UAH', 'UGX', 'USD', 'UYU', 'UZS', 'VES', 'VND', 'VUV', 'WST', 
+    'XAF', 'XCD', 'XDR', 'XOF', 'XPF', 'YER', 'ZAR', 'ZMW', 'ZWL'
+];
 
 const INITIAL_FORM_DATA: FormData = {
   pronouns: '',
@@ -267,7 +277,7 @@ const Step3: React.FC<Step3Props> = ({ data, handleInterestChange, errors }) => 
   </div>
 );
 
-const Step4: React.FC<Step4Props> = ({ data, handleChange, errors }) => (
+const Step4: React.FC<StepProps> = ({ data, handleChange, errors }) => (
     <div className="space-y-8">
         <div>
             <label className="block text-sm font-medium text-[--text-dark] mb-2">Select your travel style {errors.travelStyle && <span className="text-[--error]">*</span>}</label>
@@ -296,24 +306,6 @@ const Step4: React.FC<Step4Props> = ({ data, handleChange, errors }) => (
                     <InputField id="budgetMin" label="Min Budget" type="number" value={data.budgetMin} onChange={handleChange} error={errors.budgetMin} placeholder="e.g., 2000" />
                     <InputField id="budgetMax" label="Max Budget" type="number" value={data.budgetMax} onChange={handleChange} error={errors.budgetMax} placeholder="e.g., 5000" />
                 </div>
-            </div>
-        </div>
-    </div>
-);
-
-
-const Step5: React.FC<Step5Props> = ({ data, handleChange }) => (
-    <div className="space-y-6">
-        <div>
-            <h3 className="text-lg font-semibold text-[--text-dark] border-b pb-2 mb-3">Review Your Details</h3>
-            <div className="text-sm space-y-2 text-[--text-muted]">
-                <p><strong>Name:</strong> {data.firstName} {data.lastName}</p>
-                <p><strong>Email:</strong> {data.email}</p>
-                <p><strong>Destination:</strong> {data.places} in {data.destination}</p>
-                <p><strong>Dates:</strong> {data.startDate} to {data.endDate}</p>
-                <p><strong>Travel Style:</strong> {data.travelStyle} ({data.companion})</p>
-                <p><strong>Interests:</strong> {data.interests.join(', ')}</p>
-                <p><strong>Budget:</strong> {data.budgetMin} - {data.budgetMax} {data.currency}</p>
             </div>
         </div>
         <TextAreaField 
@@ -385,7 +377,7 @@ export default function ItineraryPage() {
   
   const handleNext = () => {
     if (validateStep()) {
-      if (currentStep < 5) {
+      if (currentStep < 4) {
         setCurrentStep(prev => prev + 1);
       }
     }
@@ -532,7 +524,7 @@ export default function ItineraryPage() {
                       <div className="flex items-center">
                           {STEPS_CONFIG.map((step, index) => (
                               <React.Fragment key={step.id}>
-                                  <div className="flex flex-col items-center w-1/5">
+                                  <div className="flex flex-col items-center w-1/4">
                                       <div className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${currentStep > step.id ? 'bg-[--success] border-[--success] text-white' : currentStep === step.id ? 'bg-white border-[--warm-accent]' : 'bg-gray-100 border-gray-300'}`}>
                                           {currentStep > step.id ? <CheckIcon /> : step.icon}
                                       </div>
@@ -550,7 +542,6 @@ export default function ItineraryPage() {
                       {currentStep === 2 && <Step2 data={formData} handleChange={handleChange} errors={errors} />}
                       {currentStep === 3 && <Step3 data={formData} handleInterestChange={handleInterestChange} errors={errors} />}
                       {currentStep === 4 && <Step4 data={formData} handleChange={handleChange} errors={errors} />}
-                      {currentStep === 5 && <Step5 data={formData} handleChange={handleChange} />}
                   </div>
 
                   {/* Navigation Buttons */}
@@ -563,7 +554,7 @@ export default function ItineraryPage() {
                       >
                           <ArrowLeftIcon/> Previous
                       </button>
-                      {currentStep < 5 ? (
+                      {currentStep < 4 ? (
                           <button type="button" onClick={handleNext} className="px-8 py-3 bg-[--forest-primary] text-white font-semibold rounded-lg hover:bg-[--forest-light] transition-colors shadow-md w-full sm:w-auto justify-center">
                               Next Step
                           </button>
@@ -581,3 +572,5 @@ export default function ItineraryPage() {
     </>
   );
 }
+
+    
