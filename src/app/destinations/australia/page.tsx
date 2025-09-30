@@ -10,7 +10,7 @@ const oceaniaDestinations = [
     bestSeason: 'March - May, September - November',
     highlights: 'Great Barrier Reef, Uluru, Sydney, Great Ocean Road',
     natureFocus: 'Endemic species, coral reefs, diverse landscapes',
-    href: '#',
+    href: '/destinations/australia/australia',
   },
   {
     name: 'New Zealand',
@@ -19,7 +19,7 @@ const oceaniaDestinations = [
     bestSeason: 'October - April',
     highlights: 'Fiordland, Rotorua, Auckland, Queenstown',
     natureFocus: 'Dramatic landscapes, geothermal features, adventure activities',
-    href: '#',
+    href: '/destinations/australia/new-zealand',
   },
   {
     name: 'Fiji',
@@ -68,7 +68,7 @@ const oceaniaDestinations = [
   },
 ];
 
-export default function AustraliaPage({ params }: { params: { slug: string } }) {
+export default function AustraliaPage() {
   return (
     <div className="bg-background text-foreground">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
@@ -98,3 +98,4 @@ export default function AustraliaPage({ params }: { params: { slug: string } }) 
     </div>
   );
 }
+    

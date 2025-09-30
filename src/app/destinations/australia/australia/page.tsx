@@ -4,45 +4,45 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { placeholderImages } from '@/lib/placeholder-images';
 
-const antarcticaLocations = [
+const australiaLocations = [
   {
-    id: 'antarctic-peninsula',
-    name: 'Antarctic Peninsula',
-    image: placeholderImages.find((img) => img.id === 'antarctica-peninsula'),
-    region: 'Gateway to the White Continent',
-    bestTime: 'November - March',
-    duration: '10-14 days (expedition cruise)',
-    highlights: 'Lemaire Channel, Deception Island`s volcanic caldera, massive penguin colonies (Gentoo, Adélie, Chinstrap)',
-    natureElements: 'Pristine icebergs of immense scale and beauty, abundant whale and seal sightings',
-    activities: 'Zodiac cruising, kayaking among ice floes, shore landings to visit wildlife, polar plunge',
+    id: 'great-barrier-reef',
+    name: 'Great Barrier Reef',
+    image: placeholderImages.find((img) => img.id === 'australia-reef'),
+    region: 'Queensland',
+    bestTime: 'June - October',
+    duration: '3-5 days',
+    highlights: 'World`s largest coral reef system, incredible marine biodiversity, Heart Reef',
+    natureElements: 'Vibrant coral gardens, tropical islands (Whitsundays), diverse marine life including turtles and reef sharks',
+    activities: 'Snorkeling, diving, scenic flights, sailing',
   },
   {
-    id: 'south-georgia',
-    name: 'South Georgia Island',
-    image: placeholderImages.find((img) => img.id === 'antarctica-south-georgia'),
-    region: 'Sub-Antarctic',
-    bestTime: 'November - March',
-    duration: 'Included in longer 18-24 day cruises',
-    highlights: 'Home to the world`s largest King Penguin colonies, massive elephant and fur seal breeding beaches',
-    natureElements: 'Often called the "Serengeti of the Southern Ocean" for its staggering wildlife density',
-    activities: 'Wildlife photography, visiting historic whaling stations (Grytviken), hiking',
+    id: 'uluru',
+    name: 'Uluru-Kata Tjuta National Park',
+    image: placeholderImages.find((img) => img.id === 'australia-uluru'),
+    region: 'Northern Territory (The Red Centre)',
+    bestTime: 'May - September',
+    duration: '2-3 days',
+    highlights: 'The iconic sandstone monolith of Uluru, the domed rock formations of Kata Tjuta, powerful sunrises and sunsets',
+    natureElements: 'Vast desert landscapes, significant spiritual and cultural importance to Indigenous Australians',
+    activities: 'Base walk around Uluru, cultural tours with Anangu guides, stargazing',
   },
 ];
 
-export default function AntarcticaPage() {
+export default function AustraliaCountryPage() {
   return (
     <div className="bg-background text-foreground">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-            Antarctica: Journey to the Last Frontier
+            Australia: Land of Unique Wildlife
           </h1>
           <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
-            Embark on an expedition to the world&apos;s most remote and pristine wilderness, a continent of ice and snow ruled by penguins, whales, and seals.
+            From the underwater wonders of the Great Barrier Reef to the spiritual heart of the outback, Australia is a continent of staggering scale and diversity.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          {antarcticaLocations.map((location) => (
+          {australiaLocations.map((location) => (
             <div
               key={location.id}
               className="group overflow-hidden rounded-lg bg-card shadow-lg transition-all duration-300 hover:shadow-2xl"
@@ -81,7 +81,7 @@ export default function AntarcticaPage() {
                 </div>
                 <div className="mt-6 text-right">
                   <Link href="/itinerary" passHref>
-                    <Button>Plan an Expedition to the Peninsula</Button>
+                    <Button>Plan a Trip to {location.name}</Button>
                   </Link>
                 </div>
               </div>

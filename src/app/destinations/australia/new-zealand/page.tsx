@@ -4,45 +4,45 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { placeholderImages } from '@/lib/placeholder-images';
 
-const antarcticaLocations = [
+const newZealandLocations = [
   {
-    id: 'antarctic-peninsula',
-    name: 'Antarctic Peninsula',
-    image: placeholderImages.find((img) => img.id === 'antarctica-peninsula'),
-    region: 'Gateway to the White Continent',
-    bestTime: 'November - March',
-    duration: '10-14 days (expedition cruise)',
-    highlights: 'Lemaire Channel, Deception Island`s volcanic caldera, massive penguin colonies (Gentoo, Adélie, Chinstrap)',
-    natureElements: 'Pristine icebergs of immense scale and beauty, abundant whale and seal sightings',
-    activities: 'Zodiac cruising, kayaking among ice floes, shore landings to visit wildlife, polar plunge',
+    id: 'fiordland',
+    name: 'Fiordland National Park',
+    image: placeholderImages.find((img) => img.id === 'new-zealand-fiordland'),
+    region: 'South Island',
+    bestTime: 'October - April',
+    duration: '3-4 days',
+    highlights: 'The majestic Milford Sound and the dramatic Doubtful Sound, towering waterfalls',
+    natureElements: 'Glacier-carved fiords, lush rainforests, and rugged granite peaks',
+    activities: 'Overnight cruises, kayaking, hiking (Milford Track), scenic flights',
   },
   {
-    id: 'south-georgia',
-    name: 'South Georgia Island',
-    image: placeholderImages.find((img) => img.id === 'antarctica-south-georgia'),
-    region: 'Sub-Antarctic',
-    bestTime: 'November - March',
-    duration: 'Included in longer 18-24 day cruises',
-    highlights: 'Home to the world`s largest King Penguin colonies, massive elephant and fur seal breeding beaches',
-    natureElements: 'Often called the "Serengeti of the Southern Ocean" for its staggering wildlife density',
-    activities: 'Wildlife photography, visiting historic whaling stations (Grytviken), hiking',
+    id: 'queenstown',
+    name: 'Queenstown & The Southern Alps',
+    image: placeholderImages.find((img) => img.id === 'new-zealand-queenstown'),
+    region: 'South Island',
+    bestTime: 'Year-round (seasonal activities)',
+    duration: '3-5 days',
+    highlights: 'Adventure capital of the world, stunning mountain scenery around Lake Wakatipu',
+    natureElements: 'Dramatic mountain ranges (The Remarkables), pristine alpine lakes',
+    activities: 'Hiking, bungee jumping, skiing, wine tasting in nearby Central Otago',
   },
 ];
 
-export default function AntarcticaPage() {
+export default function NewZealandPage() {
   return (
     <div className="bg-background text-foreground">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-            Antarctica: Journey to the Last Frontier
+            New Zealand: Middle Earth Adventures
           </h1>
           <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
-            Embark on an expedition to the world&apos;s most remote and pristine wilderness, a continent of ice and snow ruled by penguins, whales, and seals.
+            Discover a land of jaw-dropping scenery, where ancient glaciers have carved fiords and adventure awaits around every corner.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          {antarcticaLocations.map((location) => (
+          {newZealandLocations.map((location) => (
             <div
               key={location.id}
               className="group overflow-hidden rounded-lg bg-card shadow-lg transition-all duration-300 hover:shadow-2xl"
@@ -81,7 +81,7 @@ export default function AntarcticaPage() {
                 </div>
                 <div className="mt-6 text-right">
                   <Link href="/itinerary" passHref>
-                    <Button>Plan an Expedition to the Peninsula</Button>
+                    <Button>Plan a Trip to {location.name}</Button>
                   </Link>
                 </div>
               </div>
@@ -92,5 +92,4 @@ export default function AntarcticaPage() {
     </div>
   );
 }
-
     

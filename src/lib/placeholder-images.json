@@ -315,7 +315,7 @@
     {
       "id": "namibia-etosha",
       "description": "Wildlife gathering at a waterhole in Etosha.",
-      "imageUrl": "https://images.unsplash.com/photo-1674656569138-05ab7b13ee17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxFdG9zaGElMjB3aWxkbGlmZXxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1674656569138-05ab7b13ee17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxFdG9zaGElMjB3aWxkbGlmZXxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "Etosha wildlife"
     },
     {
@@ -345,7 +345,7 @@
     {
       "id": "iceland-glacier-lagoon",
       "description": "Icebergs in Jökulsárlón glacier lagoon.",
-      "imageUrl": "https://images.unsplash.com/photo-1506702727213-ae22879868aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxJY2VsYW5kJTIwbGFnb29ufGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1506702727213-ae22879868aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxJY2VsYW5kJTIwbGFnb29ufGVufDB8fHx8MTc1OTIxMDgzMnww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "Iceland lagoon"
     },
     {
@@ -363,7 +363,7 @@
     {
       "id": "switzerland-jungfrau",
       "description": "A train journey in the Jungfrau region.",
-      "imageUrl": "https://images.unsplash.com/photo-1571274793214-675177edf552?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxKdW5nZnJhdSUyMHJlZ2lvbnxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1571274793214-675177edf552?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxKdW5nZnJhdSUyMHJlZ2lvbnxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "Jungfrau region"
     },
     {
@@ -381,7 +381,7 @@
     {
       "id": "croatia-plitvice",
       "description": "Waterfalls at Plitvice Lakes National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1589312225511-b16301a1d309?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxQbGl0dmljZSUyMExha2VzfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1589312225511-b16301a1d309?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxQbGl0dmljZSUyMExha2VzfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "Plitvice Lakes"
     },
     {
@@ -411,7 +411,7 @@
     {
       "id": "portugal-algarve",
       "description": "The sea caves of the Algarve coast.",
-      "imageUrl": "https://images.unsplash.com/photo-1661714160477-a6c4b0b67547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBbGdhcnZlJTIwY29hc3R8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1661714160477-a6c4b0b67547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBbGdhcnZlJTIwY29hc3R8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Algarve coast"
     },
     {
@@ -429,62 +429,98 @@
     {
       "id": "canada-banff",
       "description": "Moraine Lake in Banff National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1630618357937-bb2aa9c8c911?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxCYW5mZiUyMGxha2V8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1630618357937-bb2aa9c8c911?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxCYW5mZiUyMGxha2V8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Banff lake"
     },
     {
       "id": "canada-jasper",
       "description": "Spirit Island in Maligne Lake, Jasper National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1628972797643-c55fc7356572?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxKYXNwZXIlMjBpc2xhbmR8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1628972797643-c55fc7356572?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxKYXNwZXIlMjBpc2xhbmR8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Jasper island"
     },
     {
       "id": "costa-rica-arenal",
       "description": "Arenal Volcano with surrounding rainforest.",
-      "imageUrl": "https://images.unsplash.com/photo-1658604872041-172a440e6d78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBcmVuYWwlMjB2b2xjYW5vfGVufDB8fHx8MTc1OTIxMTI3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1658604872041-172a440e6d78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBcmVuYWwlMjB2b2xjYW5vfGVufDB8fHx8MTc1OTIxMTI3MHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Arenal volcano"
     },
     {
       "id": "costa-rica-monteverde",
       "description": "A hanging bridge in the Monteverde Cloud Forest.",
-      "imageUrl": "https://images.unsplash.com/photo-1710028267890-b63a84536044?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xvdWQlMjBmb3Jlc3R8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1710028267890-b63a84536044?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xvdWQlMjBmb3Jlc3R8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "cloud forest"
     },
     {
       "id": "peru-machu-picchu",
       "description": "The ancient Inca city of Machu Picchu.",
-      "imageUrl": "https://images.unsplash.com/photo-1543385426-191664295b58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxNYWNodSUyMFBpY2NodXxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1543385426-191664295b58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxNYWNodSUyMFBpY2NodXxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Machu Picchu"
     },
     {
       "id": "peru-amazon",
       "description": "A river winding through the Peruvian Amazon.",
-      "imageUrl": "https://images.unsplash.com/photo-1618344322727-2256d3abdd1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBbWF6b24lMjByaXZlcnxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1618344322727-2256d3abdd1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBbWF6b24lMjByaXZlcnxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Amazon river"
     },
     {
       "id": "argentina-patagonia",
       "description": "The Fitz Roy mountain range in Patagonia.",
-      "imageUrl": "https://images.unsplash.com/photo-1684419317250-795cf91929a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxQYXRhZ29uaWElMjBtb3VudGFpbnN8ZW58MHx8fHwxNzU5MTk1Nzc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1684419317250-795cf91929a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxQYXRhZ29uaWElMjBtb3VudGFpbnN8ZW58MHx8fHwxNzU5MTk1Nzc1fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Patagonia mountains"
     },
     {
       "id": "argentina-iguazu",
       "description": "The powerful Iguazu Falls.",
-      "imageUrl": "https://images.unsplash.com/photo-1587845305438-af995d62a37e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxJZ3VhenUlMjBGYWxsc3xlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1587845305438-af995d62a37e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxJZ3VhenUlMjBGYWxsc3xlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Iguazu Falls"
     },
     {
       "id": "brazil-rio",
       "description": "Sugarloaf Mountain in Rio de Janeiro.",
-      "imageUrl": "https://images.unsplash.com/photo-1747049061948-c7ad486d9bdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSaW8lMjBsYW5kbWFya3xlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1747049061948-c7ad486d9bdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSaW8lMjBsYW5kbWFya3xlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Rio landmark"
     },
     {
       "id": "brazil-pantanal",
       "description": "A jaguar in the Pantanal wetlands.",
-      "imageUrl": "https://images.unsplash.com/photo-1753851021630-891b5c9e1a8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxQYW50YW5hbCUyMGphZ3VhcnxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1753851021630-891b5c9e1a8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxQYW50YW5hbCUyMGphZ3VhcnxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Pantanal jaguar"
+    },
+    {
+      "id": "australia-reef",
+      "description": "The Great Barrier Reef from above.",
+      "imageUrl": "https://images.unsplash.com/photo-1704179375531-04984e85743b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8R3JlYXQlMjBCYXJyaWVyJTIwUmVlZnxlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Great Barrier Reef"
+    },
+    {
+      "id": "australia-uluru",
+      "description": "Uluru at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1628359253483-7a792d64024a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxVbHVydXxlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "Uluru"
+    },
+    {
+      "id": "new-zealand-fiordland",
+      "description": "Milford Sound in Fiordland National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1640891515239-014902313a2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxGaW9yZGxhbmQlMjBOYXRpb25hbCUyMFBhcmt8ZW58MHx8fHwxNzU5MjExNjg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Fiordland National Park"
+    },
+    {
+      "id": "new-zealand-queenstown",
+      "description": "Lake Wakatipu and The Remarkables in Queenstown.",
+      "imageUrl": "https://images.unsplash.com/photo-1738416403669-e0e64c39f010?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxRdWVlbnN0b3dufGVufDB8fHx8MTc1OTIxMTY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Queenstown"
+    },
+    {
+      "id": "antarctica-peninsula",
+      "description": "Kayaking among icebergs on the Antarctic Peninsula.",
+      "imageUrl": "https://images.unsplash.com/photo-1692295627254-43400a455a1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBbnRhcmN0aWMlMjBQZW5pbnN1bGF8ZW58MHx8fHwxNzU5MjExNjg0fDA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "Antarctic Peninsula"
+    },
+    {
+      "id": "antarctica-south-georgia",
+      "description": "A massive colony of king penguins in South Georgia.",
+      "imageUrl": "https://images.unsplash.com/photo-1704646736203-09756627603c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxTb3V0aCUyMEdlb3JnaWElMjBwZW5ndWluc3xlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "South Georgia penguins"
     }
   ]
 }
