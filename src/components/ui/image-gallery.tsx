@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { useInView } from 'framer-motion';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 export function ImageGallery() {
@@ -58,8 +57,6 @@ interface AnimatedImageProps {
 }
 
 function AnimatedImage({ alt, src, ratio, placeholder }: AnimatedImageProps) {
-	const ref = React.useRef(null);
-	const isInView = useInView(ref, { once: true });
 	const [isLoading, setIsLoading] = React.useState(true);
 
 	const [imgSrc, setImgSrc] = React.useState(src);
@@ -72,17 +69,16 @@ function AnimatedImage({ alt, src, ratio, placeholder }: AnimatedImageProps) {
 
 	return (
 		<AspectRatio
-			ref={ref}
 			ratio={ratio}
-			className="bg-accent relative size-full rounded-lg border"
+			className="bg-muted relative size-full rounded-lg border"
 		>
 			<img
 				alt={alt}
 				src={imgSrc}
 				className={cn(
-					'size-full rounded-lg object-cover opacity-0 transition-all duration-1000 ease-in-out',
+					'size-full rounded-lg object-cover opacity-0 transition-opacity duration-1000 ease-in-out',
 					{
-						'opacity-100': isInView && !isLoading,
+						'opacity-100': !isLoading,
 					},
 				)}
 				onLoad={() => setIsLoading(false)}
