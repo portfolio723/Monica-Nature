@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -8,9 +7,11 @@ const asiaDestinations = [
     flag: '🇮🇳',
     tagline: 'Land of Ancient Wonders & Spiritual Journeys',
     bestSeason: 'October - March',
-    highlights: 'Taj Mahal, Rajasthan Palaces, Kerala Backwaters, Himalayan Treks',
-    natureFocus: 'Tigers, elephants, diverse ecosystems from deserts to rainforests',
-    href: '#',
+    highlights:
+      'Taj Mahal, Rajasthan Palaces, Kerala Backwaters, Himalayan Treks',
+    natureFocus:
+      'Tigers, elephants, diverse ecosystems from deserts to rainforests',
+    href: '/destinations/asia/india',
   },
   {
     name: 'Japan',
@@ -19,7 +20,7 @@ const asiaDestinations = [
     bestSeason: 'March-May (Cherry Blossoms), September-November',
     highlights: 'Mount Fuji, Cherry Blossoms, Hot Springs, Ancient Temples',
     natureFocus: 'Seasonal beauty, mountain landscapes, forest bathing',
-    href: '#',
+    href: '/destinations/asia/japan',
   },
   {
     name: 'Thailand',
@@ -28,7 +29,7 @@ const asiaDestinations = [
     bestSeason: 'November - March',
     highlights: 'Phi Phi Islands, Chiang Mai Mountains, Bangkok Temples',
     natureFocus: 'Tropical rainforests, coral reefs, exotic wildlife',
-    href: '#',
+    href: '/destinations/asia/thailand',
   },
   {
     name: 'Nepal',
@@ -37,7 +38,7 @@ const asiaDestinations = [
     bestSeason: 'September-November, March-May',
     highlights: 'Everest Region, Annapurna Circuit, Kathmandu Valley',
     natureFocus: 'Himalayan peaks, diverse flora/fauna, alpine landscapes',
-    href: '#',
+    href: '/destinations/asia/nepal',
   },
   {
     name: 'Sri Lanka',
@@ -46,16 +47,17 @@ const asiaDestinations = [
     bestSeason: 'December - March (West/South), May - September (East/North)',
     highlights: 'Tea Plantations, Ancient Cities, Wildlife Parks, Beaches',
     natureFocus: 'Leopards, elephants, tropical rainforests, coastal beauty',
-    href: '#',
+    href: '/destinations/asia/sri-lanka',
   },
   {
     name: 'Indonesia',
     flag: '🇮🇩',
     tagline: '17,000 Islands of Wonder',
     bestSeason: 'April - October',
-    highlights: 'Bali, Komodo Dragons, Orangutans in Borneo, Volcanic Landscapes',
+    highlights:
+      'Bali, Komodo Dragons, Orangutans in Borneo, Volcanic Landscapes',
     natureFocus: 'Marine biodiversity, tropical rainforests, unique wildlife',
-    href: '#',
+    href: '/destinations/asia/indonesia',
   },
   {
     name: 'Singapore',
@@ -64,27 +66,45 @@ const asiaDestinations = [
     bestSeason: 'Year-round (Tropical Climate)',
     highlights: 'Gardens by the Bay, Sentosa Island, Urban Nature Parks',
     natureFocus: 'Urban biodiversity, tropical gardens, sustainable city planning',
-    href: '#',
+    href: '/destinations/asia/singapore',
   },
 ];
 
-export default function AsiaPage({ params }: { params: { slug: string } }) {
+export default function AsiaPage() {
   return (
     <div className="bg-background text-foreground">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">Discover Asia&apos;s Natural & Cultural Treasures</h1>
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">From the Himalayas to tropical islands, Asia offers the world&apos;s most diverse landscapes and richest cultural heritage.</p>
+          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
+            Discover Asia&apos;s Natural & Cultural Treasures
+          </h1>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
+            From the Himalayas to tropical islands, Asia offers the world&apos;s
+            most diverse landscapes and richest cultural heritage.
+          </p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {asiaDestinations.map((dest) => (
-            <div key={dest.name} className="flex flex-col rounded-lg bg-card p-6 shadow-md transition-shadow hover:shadow-xl">
-              <h2 className="mb-2 text-2xl font-bold">{dest.flag} {dest.name}</h2>
-              <p className="mb-2 text-sm font-semibold text-primary">{dest.tagline}</p>
-              <p className="mb-4 text-xs text-muted-foreground"><strong>Best Season:</strong> {dest.bestSeason}</p>
+            <div
+              key={dest.name}
+              className="flex flex-col rounded-lg bg-card p-6 shadow-md transition-shadow hover:shadow-xl"
+            >
+              <h2 className="mb-2 text-2xl font-bold">
+                {dest.flag} {dest.name}
+              </h2>
+              <p className="mb-2 text-sm font-semibold text-primary">
+                {dest.tagline}
+              </p>
+              <p className="mb-4 text-xs text-muted-foreground">
+                <strong>Best Season:</strong> {dest.bestSeason}
+              </p>
               <div className="flex-grow">
-                <p className="mb-2"><strong>Highlights:</strong> {dest.highlights}</p>
-                <p><strong>Nature Focus:</strong> {dest.natureFocus}</p>
+                <p className="mb-2">
+                  <strong>Highlights:</strong> {dest.highlights}
+                </p>
+                <p>
+                  <strong>Nature Focus:</strong> {dest.natureFocus}
+                </p>
               </div>
               <div className="mt-6">
                 <Link href={dest.href} passHref>

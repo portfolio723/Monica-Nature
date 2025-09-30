@@ -89,6 +89,174 @@
       "description": "The Golden Gate Bridge in San Francisco.",
       "imageUrl": "https://images.unsplash.com/photo-1588272947922-21cbc34dc3a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxOb3J0aCUyMEFtZXJpY2F8ZW58MHx8fHwxNzU5MTI4MTIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "north america landmark"
+    },
+    {
+      "id": "india-taj-mahal",
+      "description": "The Taj Mahal at sunrise.",
+      "imageUrl": "https://images.unsplash.com/photo-1585506942812-e72b29cef752?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxUYWolMjBNYWhhbHxlbnwwfHx8fDE3NTkyMDMyNTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Taj Mahal"
+    },
+    {
+      "id": "india-rajasthan",
+      "description": "A fort in Rajasthan.",
+      "imageUrl": "https://images.unsplash.com/photo-1709338573282-2ca4e80f6f76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSYWphc3RoYW4lMjBmb3J0fGVufDB8fHx8MTc1OTEyNDkwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Rajasthan fort"
+    },
+    {
+      "id": "india-kerala",
+      "description": "Kerala backwaters with a houseboat.",
+      "imageUrl": "https://images.unsplash.com/photo-1624554305378-0f440dd3a8c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxLZXJhbGElMjBiYWNrd2F0ZXJzfGVufDB8fHx8MTc1OTEyNDkwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Kerala backwaters"
+    },
+    {
+      "id": "india-himalayas",
+      "description": "The Himalayas in India.",
+      "imageUrl": "https://images.unsplash.com/photo-1622620755713-09c035f100f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxJbmRpYW4lMjBIaW1hbGF5YXN8ZW58MHx8fHwxNzU5MjEwNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Indian Himalayas"
+    },
+    {
+      "id": "japan-mt-fuji",
+      "description": "Mount Fuji with cherry blossoms.",
+      "imageUrl": "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxNb3VudCUyMEZ1aml8ZW58MHx8fHwxNzU5MDgzMjY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Mount Fuji"
+    },
+    {
+      "id": "japan-kyoto",
+      "description": "A temple in Kyoto.",
+      "imageUrl": "https://images.unsplash.com/photo-1568080549864-b4505167e242?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxLeW90byUyMHRlbXBsZXxlbnwwfHx8fDE3NTkxOTMxMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Kyoto temple"
+    },
+    {
+      "id": "japan-hokkaido",
+      "description": "Snowy landscape in Hokkaido.",
+      "imageUrl": "https://images.unsplash.com/photo-1709459991430-459d35fbe03e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxIb2trYWlkbyUyMHNub3d8ZW58MHx8fHwxNzU5MjEwNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Hokkaido snow"
+    },
+    {
+      "id": "japan-hot-springs",
+      "description": "A Japanese onsen (hot spring).",
+      "imageUrl": "https://images.unsplash.com/photo-1706017595998-91459e6bfd4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxKYXBhbmVzZSUyMG9uc2VufGVufDB8fHx8MTc1OTIxMDUzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Japanese onsen"
+    },
+    {
+      "id": "thailand-phi-phi",
+      "description": "The Phi Phi Islands.",
+      "imageUrl": "https://images.unsplash.com/photo-1534008897995-27a23e859048?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxQaGklMjBQaGklMjBJc2xhbmRzfGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Phi Phi Islands"
+    },
+    {
+      "id": "thailand-chiang-mai",
+      "description": "Elephants in Chiang Mai.",
+      "imageUrl": "https://images.unsplash.com/photo-1476915961312-8bd9504357c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxDaGlhbmclMjBNYWklMjBlbGVwaGFudHN8ZW58MHx8fHwxNzU5MjEwNTM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Chiang Mai elephants"
+    },
+    {
+      "id": "thailand-bangkok",
+      "description": "A temple in Bangkok.",
+      "imageUrl": "https://images.unsplash.com/photo-1563492065599-3520f775eeed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxCYW5na29rJTIwdGVtcGxlfGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Bangkok temple"
+    },
+    {
+      "id": "thailand-beaches",
+      "description": "A beach in Thailand.",
+      "imageUrl": "https://images.unsplash.com/photo-1537956965359-7573183d1f57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxUaGFpbGFuZCUyMGJlYWNofGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Thailand beach"
+    },
+    {
+      "id": "nepal-everest",
+      "description": "Mount Everest.",
+      "imageUrl": "https://images.unsplash.com/photo-1676471049029-f93852da351d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxNb3VudCUyMEV2ZXJlc3R8ZW58MHx8fHwxNzU5MjEwNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Mount Everest"
+    },
+    {
+      "id": "nepal-annapurna",
+      "description": "The Annapurna circuit.",
+      "imageUrl": "https://images.unsplash.com/photo-1650223032589-aa0161ca433a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBbm5hcHVybmElMjBjaXJjdWl0fGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Annapurna circuit"
+    },
+    {
+      "id": "nepal-kathmandu",
+      "description": "A stupa in Kathmandu.",
+      "imageUrl": "https://images.unsplash.com/photo-1636803655232-84134e58338f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxLYXRobWFuZHUlMjBzdHVwYXxlbnwwfHx8fDE3NTkyMTA1MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Kathmandu stupa"
+    },
+    {
+      "id": "nepal-chitwan",
+      "description": "A rhino in Chitwan National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1636030217464-0f6a06405fd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxDaGl0d2FuJTIwcmhpbm98ZW58MHx8fHwxNzU5MjEwNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Chitwan rhino"
+    },
+    {
+      "id": "sri-lanka-sigiriya",
+      "description": "Sigiriya rock fortress.",
+      "imageUrl": "https://images.unsplash.com/photo-1673289244138-76c7a4d38444?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8U2lnaXJpeWElMjBmb3J0cmVzc3xlbnwwfHx8fDE3NTkyMTA1MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Sigiriya fortress"
+    },
+    {
+      "id": "sri-lanka-tea-plantations",
+      "description": "Tea plantations in Sri Lanka.",
+      "imageUrl": "https://images.unsplash.com/photo-1491497895121-1334fc14d8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZWElMjBwbGFudGF0aW9uc3xlbnwwfHx8fDE3NTkxODEzNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tea plantations"
+    },
+    {
+      "id": "sri-lanka-yala",
+      "description": "A leopard in Yala National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1742987746429-208e7a588a46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxZYWxhJTIwbGVvcGFyZHxlbnwwfHx8fDE3NTkyMTA1MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Yala leopard"
+    },
+    {
+      "id": "sri-lanka-beaches",
+      "description": "A beach in Sri Lanka.",
+      "imageUrl": "https://images.unsplash.com/photo-1589373797397-d19670f47549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxTcmklMjBMYW5rYSUyMGJlYWNofGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Sri Lanka beach"
+    },
+    {
+      "id": "indonesia-bali",
+      "description": "A temple in Bali.",
+      "imageUrl": "https://images.unsplash.com/photo-1704253411612-e4deb715dcd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxCYWxpJTIwdGVtcGxlfGVufDB8fHx8MTc1OTE2ODM1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Bali temple"
+    },
+    {
+      "id": "indonesia-komodo",
+      "description": "Komodo dragons.",
+      "imageUrl": "https://images.unsplash.com/photo-1648726442622-5cd3abeccaa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxLb21vZG8lMjBkcmFnb258ZW58MHx8fHwxNzU5MjEwNTM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Komodo dragon"
+    },
+    {
+      "id": "indonesia-borobudur",
+      "description": "Borobudur temple.",
+      "imageUrl": "https://images.unsplash.com/photo-1588312578101-cacee14bb0ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Qm9yb2J1ZHVyJTIwdGVtcGxlfGVufDB8fHx8MTc1OTIxMDUzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Borobudur temple"
+    },
+    {
+      "id": "indonesia-raja-ampat",
+      "description": "Raja Ampat islands.",
+      "imageUrl": "https://images.unsplash.com/photo-1570789210967-2cac24afeb00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSYWphJTIwQW1wYXR8ZW58MHx8fHwxNzU5MjEwNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Raja Ampat"
+    },
+    {
+      "id": "singapore-gardens",
+      "description": "Gardens by the Bay.",
+      "imageUrl": "https://images.unsplash.com/photo-1730353902724-d4bc289d13e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8R2FyZGVucyUyMEJheXxlbnwwfHx8fDE3NTkyMTA1MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Gardens Bay"
+    },
+    {
+      "id": "singapore-skyline",
+      "description": "The Singapore skyline.",
+      "imageUrl": "https://images.unsplash.com/photo-1727859146476-c60c7f8f9764?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxTaW5nYXBvcmUlMjBza3lsaW5lfGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Singapore skyline"
+    },
+    {
+      "id": "singapore-food",
+      "description": "A hawker centre in Singapore.",
+      "imageUrl": "https://images.unsplash.com/photo-1739857829959-78c5a13d11f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoYXdrZXIlMjBjZW50cmV8ZW58MHx8fHwxNzU5MjEwNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hawker centre"
+    },
+    {
+      "id": "singapore-jewel",
+      "description": "The Jewel at Changi Airport.",
+      "imageUrl": "https://images.unsplash.com/photo-1690306163617-cd37a17b2dec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxKZXdlbCUyMENoYW5naXxlbnwwfHx8fDE3NTkyMTA1MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Jewel Changi"
     }
   ]
 }
