@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Check } from 'lucide-react';
 
 // --- TYPE DEFINITIONS ---
 interface FormData {
@@ -19,8 +18,8 @@ interface FormData {
   companion: string;
   interests: string[];
   travelStyle: string;
-  budgetMin: number;
-  budgetMax: number;
+  budgetMin: string;
+  budgetMax: string;
   currency: string;
   details: string;
 }
@@ -44,6 +43,17 @@ interface FormErrors {
   currency?: string;
   details?: string;
 }
+
+// --- ICONS (Inline SVGs to replace Lucide React) ---
+const UserIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>;
+const MapPinIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>;
+const HeartIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>;
+const DollarSignIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>;
+const CheckCircleIcon = (props: React.SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>;
+const ArrowLeftIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>;
+const CheckIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>;
+const Check = CheckIcon;
+
 
 interface InputFieldProps {
   id: string;
@@ -83,7 +93,6 @@ interface StepProps {
 }
 
 interface Step4Props extends StepProps {
-    handleSliderChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 interface Step3Props {
@@ -97,15 +106,6 @@ interface Step5Props {
     handleChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-
-// --- ICONS (Inline SVGs to replace Lucide React) ---
-const UserIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>;
-const MapPinIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>;
-const HeartIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>;
-const DollarSignIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>;
-const CheckCircleIcon = (props: React.SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>;
-const ArrowLeftIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>;
-const CheckIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>;
 
 // --- FORM DATA & CONFIGURATION ---
 const STEPS_CONFIG = [
@@ -129,6 +129,8 @@ const INTEREST_CATEGORIES = [
   { id: 'other', label: 'Other' },
 ];
 
+const CURRENCIES = ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'CHF', 'INR'];
+
 const INITIAL_FORM_DATA: FormData = {
   pronouns: '',
   firstName: '',
@@ -143,8 +145,8 @@ const INITIAL_FORM_DATA: FormData = {
   companion: 'Solo',
   interests: [],
   travelStyle: 'Mid-range',
-  budgetMin: 2000,
-  budgetMax: 5000,
+  budgetMin: '',
+  budgetMax: '',
   currency: 'USD',
   details: '',
 };
@@ -265,7 +267,7 @@ const Step3: React.FC<Step3Props> = ({ data, handleInterestChange, errors }) => 
   </div>
 );
 
-const Step4: React.FC<Step4Props> = ({ data, handleChange, handleSliderChange, errors }) => (
+const Step4: React.FC<Step4Props> = ({ data, handleChange, errors }) => (
     <div className="space-y-8">
         <div>
             <label className="block text-sm font-medium text-[--text-dark] mb-2">Select your travel style {errors.travelStyle && <span className="text-[--error]">*</span>}</label>
@@ -284,19 +286,15 @@ const Step4: React.FC<Step4Props> = ({ data, handleChange, handleSliderChange, e
             <label className="block text-sm font-medium text-[--text-dark] mb-2">
                 What&apos;s your estimated budget?
             </label>
-             <div className="flex items-center justify-between font-bold text-lg text-[--forest-primary] mb-4">
-                <span>{new Intl.NumberFormat('en-US', { style: 'currency', currency: data.currency, minimumFractionDigits: 0 }).format(data.budgetMin)}</span>
-                <span>to</span>
-                <span>{new Intl.NumberFormat('en-US', { style: 'currency', currency: data.currency, minimumFractionDigits: 0 }).format(data.budgetMax)}</span>
-            </div>
-            <div className="space-y-4">
-                 <div>
-                    <label htmlFor="budgetMin" className="text-xs">From</label>
-                    <input type="range" id="budgetMin" name="budgetMin" min="500" max="10000" step="100" value={data.budgetMin} onChange={handleSliderChange} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="sm:col-span-1">
+                    <SelectField id="currency" label="Currency" value={data.currency} onChange={handleChange} required>
+                        {CURRENCIES.map(c => <option key={c} value={c}>{c}</option>)}
+                    </SelectField>
                 </div>
-                 <div>
-                    <label htmlFor="budgetMax" className="text-xs">To</label>
-                    <input type="range" id="budgetMax" name="budgetMax" min="500" max="10000" step="100" value={data.budgetMax} onChange={handleSliderChange} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" />
+                <div className="sm:col-span-2 grid grid-cols-2 gap-4">
+                    <InputField id="budgetMin" label="Min Budget" type="number" value={data.budgetMin} onChange={handleChange} error={errors.budgetMin} placeholder="e.g., 2000" />
+                    <InputField id="budgetMax" label="Max Budget" type="number" value={data.budgetMax} onChange={handleChange} error={errors.budgetMax} placeholder="e.g., 5000" />
                 </div>
             </div>
         </div>
@@ -351,19 +349,6 @@ export default function ItineraryPage() {
       });
   };
 
-  const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const { name, value } = e.target;
-      let { budgetMin, budgetMax } = formData;
-
-      if (name === 'budgetMin') {
-          budgetMin = Math.min(parseInt(value, 10), budgetMax - 500);
-      } else { // budgetMax
-          budgetMax = Math.max(parseInt(value, 10), budgetMin + 500);
-      }
-      
-      setFormData(prev => ({...prev, budgetMin, budgetMax}));
-  };
-
   const validateStep = () => {
     const newErrors: FormErrors = {};
     switch (currentStep) {
@@ -384,6 +369,13 @@ export default function ItineraryPage() {
       case 3:
           if(formData.interests.length === 0) newErrors.interests = 'Please select at least one interest.';
           break;
+      case 4:
+        if (!formData.budgetMin) newErrors.budgetMin = 'Min budget is required.';
+        if (!formData.budgetMax) newErrors.budgetMax = 'Max budget is required.';
+        if (formData.budgetMin && formData.budgetMax && Number(formData.budgetMin) > Number(formData.budgetMax)) {
+            newErrors.budgetMax = 'Max budget must be greater than min budget.';
+        }
+        break;
       default:
         break;
     }
@@ -557,7 +549,7 @@ export default function ItineraryPage() {
                       {currentStep === 1 && <Step1 data={formData} handleChange={handleChange} errors={errors} />}
                       {currentStep === 2 && <Step2 data={formData} handleChange={handleChange} errors={errors} />}
                       {currentStep === 3 && <Step3 data={formData} handleInterestChange={handleInterestChange} errors={errors} />}
-                      {currentStep === 4 && <Step4 data={formData} handleChange={handleChange} handleSliderChange={handleSliderChange} errors={errors} />}
+                      {currentStep === 4 && <Step4 data={formData} handleChange={handleChange} errors={errors} />}
                       {currentStep === 5 && <Step5 data={formData} handleChange={handleChange} />}
                   </div>
 
@@ -589,5 +581,3 @@ export default function ItineraryPage() {
     </>
   );
 }
-
-    
