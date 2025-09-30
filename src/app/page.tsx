@@ -4,6 +4,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import Lenis from '@studio-freight/lenis';
 import { ZoomParallax } from '@/components/ui/zoom-parallax';
+import { useScroll, useTransform } from 'framer-motion';
 
 export default function Home() {
   React.useEffect(() => {
@@ -16,40 +17,82 @@ export default function Home() {
 
     requestAnimationFrame(raf);
   }, []);
+  
+  const container = React.useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'end end'],
+  });
+
+  const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
+  const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
+  const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
+  const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
+  const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
 
   const images = [
     {
       src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
       alt: 'Modern architecture building',
+      scale: scale4,
     },
     {
       src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
       alt: 'Urban cityscape at sunset',
+      scale: scale5,
+      top: '-30vh',
+      left: '5vw',
+      width: '35vw',
+      height: '30vh',
     },
     {
       src: 'https://images.unsplash.com/photo-1557683316-973673baf926?w=800&h=800&fit=crop&crop=entropy&auto=format&q=80',
       alt: 'Abstract geometric pattern',
+      scale: scale6,
+      top: '-10vh',
+      left: '-25vw',
+      width: '20vw',
+      height: '45vh',
     },
     {
       src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
       alt: 'Mountain landscape',
+      scale: scale5,
+      left: '27.5vw',
+      width: '25vw',
+      height: '25vh',
     },
     {
       src: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=800&fit=crop&crop=entropy&auto=format&q=80',
       alt: 'Minimalist design elements',
+      scale: scale6,
+      top: '27.5vh',
+      left: '5vw',
+      width: '20vw',
+      height: '25vh',
     },
     {
       src: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
       alt: 'Ocean waves and beach',
+      scale: scale8,
+      top: '27.5vh',
+      left: '-22.5vw',
+      width: '30vw',
+      height: '25vh',
     },
     {
       src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
       alt: 'Forest trees and sunlight',
+      scale: scale9,
+      top: '22.5vh',
+      left: '25vw',
+      width: '15vw',
+      height: '15vh',
     },
   ];
 
   return (
-    <main className="min-h-screen w-full bg-background">
+    <main ref={container} className="min-h-screen w-full bg-background">
       <div className="relative flex h-[50vh] items-center justify-center px-4">
         {/* Radial spotlight */}
         <div

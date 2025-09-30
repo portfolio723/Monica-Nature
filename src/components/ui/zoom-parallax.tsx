@@ -1,17 +1,22 @@
 'use client';
 
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
 
-interface ImageProps {
+interface CustomImageProps {
   src: string;
   alt?: string;
+  scale?: MotionValue<number>;
+  top?: string;
+  left?: string;
+  width?: string;
+  height?: string;
 }
 
 interface ZoomParallaxProps {
-  /** Array of images to be displayed in the parallax effect max 7 images */
-  images: ImageProps[];
+  /** Array of images to be displayed in the parallax effect */
+  images: CustomImageProps[];
 }
 
 export function ZoomParallax({ images }: ZoomParallaxProps) {
@@ -21,72 +26,16 @@ export function ZoomParallax({ images }: ZoomParallaxProps) {
     offset: ['start start', 'end end'],
   });
 
-  const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
-  const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
-  const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
-  const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
-  const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
-
-  const scales = [scale4, scale5, scale6, scale5, scale6, scale8, scale9];
-
-  const pictures = [
-    {
-      scale: scale4,
-    },
-    {
-      scale: scale5,
-      top: '-30vh',
-      left: '5vw',
-      width: '35vw',
-      height: '30vh',
-    },
-    {
-      scale: scale6,
-      top: '-10vh',
-      left: '-25vw',
-      width: '20vw',
-      height: '45vh',
-    },
-    {
-      scale: scale5,
-      left: '27.5vw',
-      width: '25vw',
-      height: '25vh',
-    },
-    {
-      scale: scale6,
-      top: '27.5vh',
-      left: '5vw',
-      width: '20vw',
-      height: '25vh',
-    },
-    {
-      scale: scale8,
-      top: '27.5vh',
-      left: '-22.5vw',
-      width: '30vw',
-      height: '25vh',
-    },
-    {
-      scale: scale9,
-      top: '22.5vh',
-      left: '25vw',
-      width: '15vw',
-      height: '15vh',
-    },
-  ];
+  const defaultScale = useTransform(scrollYProgress, [0, 1], [1, 4]);
 
   return (
     <div ref={container} className="relative h-[300vh]">
       <div className="sticky top-0 h-screen overflow-hidden">
-        {images.map(({ src, alt }, index) => {
-          if (index >= pictures.length) return null;
-          const { scale, top, left, width, height } = pictures[index];
-
+        {images.map(({ src, alt, scale, top, left, width, height }, index) => {
           return (
             <motion.div
               key={index}
-              style={{ scale }}
+              style={{ scale: scale || defaultScale }}
               className="absolute top-0 flex h-full w-full items-center justify-center"
             >
               <div
