@@ -73,7 +73,7 @@
       "imageHint": "europe street"
     },
     {
-      "id": "destination-oceania",
+      "id": "destination-australia",
       "description": "The Sydney Opera House in Australia.",
       "imageUrl": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhdXN0cmFsaWF8ZW58MHx8fHwxNzU5MTI3NDUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "australia landmark"
@@ -153,43 +153,43 @@
     {
       "id": "thailand-chiang-mai",
       "description": "Elephants in Chiang Mai.",
-      "imageUrl": "https://images.unsplash.com/photo-1476915961312-8bd9504357c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxDaGlhbmclMjBNYWklMjBlbGVwaGFudHN8ZW58MHx8fHwxNzU5MjEwNTM1fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1476915961312-8bd9504357c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxDaGlhbmclMjBNYWklMjBlbGVwaGFudHN8ZW58MHx8fHwxNzU5MjEwNTM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Chiang Mai elephants"
     },
     {
       "id": "thailand-bangkok",
       "description": "A temple in Bangkok.",
-      "imageUrl": "https://images.unsplash.com/photo-1563492065599-3520f775eeed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxCYW5na29rJTIwdGVtcGxlfGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1563492065599-3520f775eeed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxCYW5na29rJTIwdGVtcGxlfGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Bangkok temple"
     },
     {
       "id": "thailand-beaches",
       "description": "A beach in Thailand.",
-      "imageUrl": "https://images.unsplash.com/photo-1537956965359-7573183d1f57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxUaGFpbGFuZCUyMGJlYWNofGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1537956965359-7573183d1f57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxUaGFpbGFuZCUyMGJlYWNofGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Thailand beach"
     },
     {
       "id": "nepal-everest",
       "description": "Mount Everest.",
-      "imageUrl": "https://images.unsplash.com/photo-1676471049029-f93852da351d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxNb3VudCUyMEV2ZXJlc3R8ZW58MHx8fHwxNzU5MjEwNTM0fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1676471049029-f93852da351d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxNb3VudCUyMEV2ZXJlc3R8ZW58MHx8fHwxNzU5MjEwNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Mount Everest"
     },
     {
       "id": "nepal-annapurna",
       "description": "The Annapurna circuit.",
-      "imageUrl": "https://images.unsplash.com/photo-1650223032589-aa0161ca433a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBbm5hcHVybmElMjBjaXJjdWl0fGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1650223032589-aa0161ca433a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBbm5hcHVybmElMjBjaXJjdWl0fGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Annapurna circuit"
     },
     {
       "id": "nepal-kathmandu",
       "description": "A stupa in Kathmandu.",
-      "imageUrl": "https://images.unsplash.com/photo-1636803655232-84134e58338f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxLYXRobWFuZHUlMjBzdHVwYXxlbnwwfHx8fDE3NTkyMTA1MzR8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1636803655232-84134e58338f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxLYXRobWFuZHUlMjBzdHVwYXxlbnwwfHx8fDE3NTkyMTA1MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Kathmandu stupa"
     },
     {
       "id": "nepal-chitwan",
       "description": "A rhino in Chitwan National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1636030217464-0f6a06405fd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxDaGl0d2FuJTIwcmhpbm98ZW58MHx8fHwxNzU5MjEwNTM0fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1636030217464-0f6a06405fd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxDaGl0d2FuJTIwcmhpbm98ZW58MHx8fHwxNzU5MjEwNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Chitwan rhino"
     },
     {
@@ -201,7 +201,7 @@
     {
       "id": "sri-lanka-tea-plantations",
       "description": "Tea plantations in Sri Lanka.",
-      "imageUrl": "https://images.unsplash.com/photo-1491497895121-1334fc14d8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZWElMjBwbGFudGF0aW9uc3xlbnwwfHx8fDE3NTkxODEzNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1491497895121-1334fc14d8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZWElMjBwbGFudGF0aW9uc3xlbnwwfHx8fDE3NTkxODEzNjF8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "tea plantations"
     },
     {
@@ -213,19 +213,19 @@
     {
       "id": "sri-lanka-beaches",
       "description": "A beach in Sri Lanka.",
-      "imageUrl": "https://images.unsplash.com/photo-1589373797397-d19670f47549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxTcmklMjBMYW5rYSUyMGJlYWNofGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1589373797397-d19670f47549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxTcmklMjBMYW5rYSUyMGJlYWNofGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Sri Lanka beach"
     },
     {
       "id": "indonesia-bali",
       "description": "A temple in Bali.",
-      "imageUrl": "https://images.unsplash.com/photo-1704253411612-e4deb715dcd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxCYWxpJTIwdGVtcGxlfGVufDB8fHx8MTc1OTE2ODM1NXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1704253411612-e4deb715dcd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxCYWxpJTIwdGVtcGxlfGVufDB8fHx8MTc1OTE2ODM1NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Bali temple"
     },
     {
       "id": "indonesia-komodo",
       "description": "Komodo dragons.",
-      "imageUrl": "https://images.unsplash.com/photo-1648726442622-5cd3abeccaa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxLb21vZG8lMjBkcmFnb258ZW58MHx8fHwxNzU5MjEwNTM1fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1648726442622-5cd3abeccaa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxLb21vZG8lMjBkcmFnb258ZW58MHx8fHwxNzU5MjEwNTM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Komodo dragon"
     },
     {
@@ -243,7 +243,7 @@
     {
       "id": "singapore-gardens",
       "description": "Gardens by the Bay.",
-      "imageUrl": "https://images.unsplash.com/photo-1730353902724-d4bc289d13e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8R2FyZGVucyUyMEJheXxlbnwwfHx8fDE3NTkyMTA1MzR8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1730353902724-d4bc289d13e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8R2FyZGVucyUyMEJheXxlbnwwfHx8fDE3NTkyMTA1MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Gardens Bay"
     },
     {
@@ -261,13 +261,13 @@
     {
       "id": "singapore-jewel",
       "description": "The Jewel at Changi Airport.",
-      "imageUrl": "https://images.unsplash.com/photo-1690306163617-cd37a17b2dec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxKZXdlbCUyMENoYW5naXxlbnwwfHx8fDE3NTkyMTA1MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1690306163617-cd37a17b2dec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxKZXdlbCUyMENoYW5naXxlbnwwfHx8fDE3NTkyMTA1MzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Jewel Changi"
     },
     {
       "id": "kenya-masai-mara",
       "description": "Wildebeest migration in Masai Mara.",
-      "imageUrl": "https://images.unsplash.com/photo-1548942719-33bc7c093437?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxNYXNhaSUyME1hcmF8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1548942719-33bc7c093437?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxNYXNhaSUyME1hcmF8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Masai Mara"
     },
     {
@@ -297,13 +297,13 @@
     {
       "id": "south-africa-cape-town",
       "description": "Table Mountain overlooking Cape Town.",
-      "imageUrl": "https://images.unsplash.com/photo-1606799955515-85468ee78c26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxDYXBlJTIwVG93bnxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1606799955515-85468ee78c26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxDYXBlJTIwVG93bnxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Cape Town"
     },
     {
       "id": "botswana-okavango",
       "description": "A mokoro canoe trip in the Okavango Delta.",
-      "imageUrl": "https://images.unsplash.com/photo-1627759501315-28407b7cac86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxPa2F2YW5nbyUyMERlbHRhfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1627759501315-28407b7cac86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxPa2F2YW5nbyUyMERlbHRhfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Okavango Delta"
     },
     {
@@ -531,19 +531,19 @@
     {
       "id": "oceania-fiji",
       "description": "A tropical beach in Fiji.",
-      "imageUrl": "https://images.unsplash.com/photo-1542914852-19574349b178?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmaWppJTIwYmVhY2h8ZW58MHx8fHwxNzU5NDAzNTM3fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1542914852-19574349b178?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmaWppJTIwYmVhY2h8ZW58MHx8fHwxNzU5NDAzNTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fiji beach"
     },
     {
       "id": "caribbean-cuba",
       "description": "Vintage cars in Havana, Cuba.",
-      "imageUrl": "https://images.unsplash.com/photo-1595825732145-c6e000285a85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjdWJhJTIwY2Fyc3xlbnwwfHx8fDE3NTk0MDM1NjN8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1595825732145-c6e000285a85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjdWJhJTIwY2Fyc3xlbnwwfHx8fDE3NTk0MDM1NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cuba cars"
     },
     {
       "id": "caribbean-barbados",
       "description": "A stunning beach in Barbados.",
-      "imageUrl": "https://images.unsplash.com/photo-1574365538964-f6735515c0b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYXJiYWRvcyUyMGJlYWNofGVufDB8fHx8fDE3NTk0MDM1NjN8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1574365538964-f6735515c0b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYXJiYWRvcyUyMGJlYWNofGVufDB8fHx8fDE3NTk0MDM1NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "barbados beach"
     },
     {
@@ -585,8 +585,32 @@
     {
       "id": "blog-northern-lights",
       "description": "The Northern Lights over a snowy landscape.",
-      "imageUrl": "https://images.unsplash.com/photo-1579201157678-a242a244b34e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxOb3J0aGVybiUyMExpZ2h0c3xlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1579201157678-a242a244b34e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxOb3J0aGVybiUyMExpZ2h0c3xlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Northern Lights"
+    },
+    {
+      "id": "oceania-australia",
+      "description": "The Great Barrier Reef from above.",
+      "imageUrl": "https://images.unsplash.com/photo-1704179375531-04984e8c743b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8R3JlYXQlMjBCYXJyaWVyJTIwUmVlZnxlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Great Barrier Reef"
+    },
+    {
+      "id": "oceania-uluru",
+      "description": "Uluru at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1628359253483-7a792d64024a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxVbHVydXxlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "Uluru"
+    },
+    {
+      "id": "oceania-fiordland",
+      "description": "Milford Sound in Fiordland National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1640891515239-014902313a2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxGaW9yZGxhbmQlMjBOYXRpb25hbCUyMFBhcmt8ZW58MHx8fHwxNzU5MjExNjg0fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Fiordland National Park"
+    },
+    {
+      "id": "oceania-queenstown",
+      "description": "Lake Wakatipu and The Remarkables in Queenstown.",
+      "imageUrl": "https://images.unsplash.com/photo-1738416403669-e0e64c39f010?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxRdWVlbnN0b3dufGVufDB8fHx8MTc1OTIxMTY4NHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Queenstown"
     }
   ]
 }

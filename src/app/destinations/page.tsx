@@ -11,6 +11,9 @@ const destinationImages = {
   asia: placeholderImages.find((img) => img.id === 'destination-asia'),
   europe: placeholderImages.find((img) => img.id === 'destination-europe'),
   australia: placeholderImages.find(
+    (img) => img.id === 'destination-australia'
+  ),
+  oceania: placeholderImages.find(
     (img) => img.id === 'destination-oceania'
   ),
   southAmerica: placeholderImages.find(
@@ -74,12 +77,19 @@ const continents = [
     cta: 'Explore Antarctica',
     href: '/destinations/antarctica',
   },
-    {
+  {
     name: 'CARIBBEAN',
     image: destinationImages.caribbean,
     quote: 'Find your paradise in turquoise waters and vibrant cultures',
     cta: 'Discover the Caribbean',
     href: '/destinations/caribbean',
+  },
+  {
+    name: 'OCEANIA',
+    image: destinationImages.oceania,
+    quote: 'Discover island paradises and unique wildlife',
+    cta: 'Explore Oceania',
+    href: '/destinations/oceania',
   },
 ];
 
