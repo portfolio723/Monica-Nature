@@ -17,6 +17,7 @@ interface FormData {
   endDate: string;
   companion: string;
   interests: string[];
+  otherInterest: string;
   travelStyle: string;
   budgetMin: string;
   budgetMax: string;
@@ -37,6 +38,7 @@ interface FormErrors {
   endDate?: string;
   companion?: string;
   interests?: string;
+  otherInterest?: string;
   travelStyle?: string;
   budgetMin?: string;
   budgetMax?: string;
@@ -94,6 +96,7 @@ interface StepProps {
 
 interface Step3Props {
     data: FormData;
+    handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
     handleInterestChange: (interestId: string) => void;
     errors: FormErrors;
 }
@@ -115,9 +118,9 @@ const INTEREST_CATEGORIES = [
   { id: 'culture', label: 'Culture & History' },
   { id: 'food', label: 'Food & Lifestyle' },
   { id: 'urban', label: 'Urban & Modern' },
+  { id: 'other', label: 'Other' },
   { id: 'arts', label: 'Arts & Creativity' },
   { id: 'photo', label: 'Photography & Scenic' },
-  { id: 'other', label: 'Other' },
 ];
 
 const CURRENCIES = [
@@ -146,6 +149,7 @@ const INITIAL_FORM_DATA: FormData = {
   endDate: '',
   companion: 'Solo',
   interests: [],
+  otherInterest: '',
   travelStyle: 'Mid-range',
   budgetMin: '',
   budgetMax: '',
@@ -250,24 +254,42 @@ const Step2: React.FC<StepProps> = ({ data, handleChange, errors }) => (
   </div>
 );
 
-const Step3: React.FC<Step3Props> = ({ data, handleInterestChange, errors }) => (
-  <div>
-    <label className="block text-sm font-medium text-gray-700 mb-2">Select your interests {errors.interests && <span className="text-red-500">*</span>}</label>
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-      {INTEREST_CATEGORIES.map(interest => (
-        <button
-          key={interest.id}
-          type="button"
-          onClick={() => handleInterestChange(interest.id)}
-          className={`p-4 border rounded-lg text-center transition-all duration-200 ${data.interests.includes(interest.id) ? 'bg-green-700 text-white border-green-800' : 'bg-white hover:bg-gray-200'}`}
-        >
-          <span className="text-sm font-semibold">{interest.label}</span>
-        </button>
-      ))}
+const Step3: React.FC<Step3Props> = ({ data, handleChange, handleInterestChange, errors }) => (
+  <div className="space-y-6">
+    <div>
+      <label className="block text-sm font-medium text-gray-700 mb-2">Select your interests {errors.interests && <span className="text-red-500">*</span>}</label>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {INTEREST_CATEGORIES.map(interest => (
+          <button
+            key={interest.id}
+            type="button"
+            onClick={() => handleInterestChange(interest.id)}
+            className={`p-4 border rounded-lg text-center transition-all duration-200 ${data.interests.includes(interest.id) ? 'bg-green-700 text-white border-green-800' : 'bg-white hover:bg-gray-200'}`}
+          >
+            <span className="text-sm font-semibold">{interest.label}</span>
+          </button>
+        ))}
+      </div>
+      {errors.interests && <p className="text-xs text-red-500 mt-2">{errors.interests}</p>}
     </div>
-     {errors.interests && <p className="text-xs text-red-500 mt-2">{errors.interests}</p>}
+    
+    {data.interests.includes('other') && (
+      <div>
+        <InputField
+          id="otherInterest"
+          label="Please specify your other interests"
+          type="text"
+          value={data.otherInterest}
+          onChange={handleChange}
+          error={errors.otherInterest}
+          placeholder="e.g., Volunteering, learning a language"
+          required
+        />
+      </div>
+    )}
   </div>
 );
+
 
 const Step4: React.FC<StepProps> = ({ data, handleChange, errors }) => (
     <div className="space-y-8">
@@ -352,6 +374,7 @@ export default function ItineraryPage() {
         break;
       case 3:
           if(formData.interests.length === 0) newErrors.interests = 'Please select at least one interest.';
+          if(formData.interests.includes('other') && !formData.otherInterest) newErrors.otherInterest = 'Please specify your interest.';
           break;
       case 4:
         if (!formData.budgetMin) newErrors.budgetMin = 'Min budget is required.';
@@ -507,7 +530,7 @@ export default function ItineraryPage() {
                 <div className="min-h-[300px] mb-8">
                     {currentStep === 1 && <Step1 data={formData} handleChange={handleChange} errors={errors} />}
                     {currentStep === 2 && <Step2 data={formData} handleChange={handleChange} errors={errors} />}
-                    {currentStep === 3 && <Step3 data={formData} handleInterestChange={handleInterestChange} errors={errors} />}
+                    {currentStep === 3 && <Step3 data={formData} handleChange={handleChange} handleInterestChange={handleInterestChange} errors={errors} />}
                     {currentStep === 4 && <Step4 data={formData} handleChange={handleChange} errors={errors} />}
                 </div>
 
