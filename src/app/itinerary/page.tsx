@@ -53,8 +53,8 @@ const HeartIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" heigh
 const DollarSignIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>;
 const CheckCircleIcon = (props: React.SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>;
 const ArrowLeftIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>;
-const CheckIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>;
-const Check = CheckIcon;
+const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M20 6 9 17l-5-5"/></svg>;
+const Check = (props: React.SVGProps<SVGSVGElement>) => <CheckIcon {...props} />;
 
 
 interface InputFieldProps {
@@ -118,10 +118,12 @@ const INTEREST_CATEGORIES = [
   { id: 'culture', label: 'Culture & History' },
   { id: 'food', label: 'Food & Lifestyle' },
   { id: 'urban', label: 'Urban & Modern' },
-  { id: 'other', label: 'Other' },
   { id: 'arts', label: 'Arts & Creativity' },
   { id: 'photo', label: 'Photography & Scenic' },
 ];
+
+const OTHER_INTEREST = { id: 'other', label: 'Other' };
+
 
 const CURRENCIES = [
     'AED', 'AFN', 'ALL', 'AMD', 'ANG', 'AOA', 'ARS', 'AUD', 'AWG', 'AZN', 'BAM', 'BBD', 'BDT', 'BGN', 'BHD', 'BIF', 'BMD', 
@@ -254,41 +256,49 @@ const Step2: React.FC<StepProps> = ({ data, handleChange, errors }) => (
   </div>
 );
 
-const Step3: React.FC<Step3Props> = ({ data, handleChange, handleInterestChange, errors }) => (
-  <div className="space-y-6">
-    <div>
-      <label className="block text-sm font-medium text-gray-700 mb-2">Select your interests {errors.interests && <span className="text-red-500">*</span>}</label>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-        {INTEREST_CATEGORIES.map(interest => (
-          <button
-            key={interest.id}
-            type="button"
-            onClick={() => handleInterestChange(interest.id)}
-            className={`p-4 border rounded-lg text-center transition-all duration-200 ${data.interests.includes(interest.id) ? 'bg-green-700 text-white border-green-800' : 'bg-white hover:bg-gray-200'}`}
-          >
-            <span className="text-sm font-semibold">{interest.label}</span>
-          </button>
-        ))}
-      </div>
-      {errors.interests && <p className="text-xs text-red-500 mt-2">{errors.interests}</p>}
-    </div>
-    
-    {data.interests.includes('other') && (
-      <div>
-        <InputField
-          id="otherInterest"
-          label="Please specify your other interests"
-          type="text"
-          value={data.otherInterest}
-          onChange={handleChange}
-          error={errors.otherInterest}
-          placeholder="e.g., Volunteering, learning a language"
-          required
-        />
-      </div>
-    )}
-  </div>
-);
+const Step3: React.FC<Step3Props> = ({ data, handleChange, handleInterestChange, errors }) => {
+    const midIndex = Math.ceil(INTEREST_CATEGORIES.length / 2);
+    const firstHalf = INTEREST_CATEGORIES.slice(0, midIndex);
+    const secondHalf = INTEREST_CATEGORIES.slice(midIndex);
+
+    const allInterests = [...firstHalf, OTHER_INTEREST, ...secondHalf];
+
+    return (
+        <div className="space-y-6">
+            <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Select your interests {errors.interests && <span className="text-red-500">*</span>}</label>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {allInterests.map(interest => (
+                        <button
+                            key={interest.id}
+                            type="button"
+                            onClick={() => handleInterestChange(interest.id)}
+                            className={`p-4 border rounded-lg text-center transition-all duration-200 ${data.interests.includes(interest.id) ? 'bg-green-700 text-white border-green-800' : 'bg-white hover:bg-gray-200'}`}
+                        >
+                            <span className="text-sm font-semibold">{interest.label}</span>
+                        </button>
+                    ))}
+                </div>
+                {errors.interests && <p className="text-xs text-red-500 mt-2">{errors.interests}</p>}
+            </div>
+
+            {data.interests.includes('other') && (
+                <div className="pt-4">
+                    <InputField
+                        id="otherInterest"
+                        label="Please specify your other interests"
+                        type="text"
+                        value={data.otherInterest}
+                        onChange={handleChange}
+                        error={errors.otherInterest}
+                        placeholder="e.g., Volunteering, learning a language"
+                        required
+                    />
+                </div>
+            )}
+        </div>
+    );
+};
 
 
 const Step4: React.FC<StepProps> = ({ data, handleChange, errors }) => (
@@ -400,7 +410,7 @@ export default function ItineraryPage() {
 
   const handlePrev = () => {
     if (currentStep > 1) {
-      setCurrentStep(prev => prev - 1);
+      setCurrentStep(prev => prev + 1);
     }
   };
 
@@ -561,3 +571,5 @@ export default function ItineraryPage() {
     </div>
   );
 }
+
+    
