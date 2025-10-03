@@ -45,12 +45,14 @@ export default function Header() {
             ))}
           </nav>
           <div className="hidden md:block">
-            <Button className="bg-black text-white rounded-full pl-6 pr-2 py-2.5 flex items-center gap-2 hover:bg-gray-800">
-              Contact
-              <span className="bg-white text-black rounded-full p-1.5">
-                <ArrowRight size={16} />
-              </span>
-            </Button>
+            <Link href="/contact" passHref>
+              <Button className="bg-black text-white rounded-full pl-6 pr-2 py-2.5 flex items-center gap-2 hover:bg-gray-800">
+                Contact
+                <span className="bg-white text-black rounded-full p-1.5">
+                  <ArrowRight size={16} />
+                </span>
+              </Button>
+            </Link>
           </div>
           <div className="md:hidden">
             <Button
@@ -77,12 +79,14 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Button className="bg-black text-white rounded-full pl-6 pr-2 py-2.5 flex items-center gap-2 hover:bg-gray-800">
-              Contact
-              <span className="bg-white text-black rounded-full p-1.5">
-                <ArrowRight size={16} />
-              </span>
-            </Button>
+            <Link href="/contact" passHref>
+              <Button className="bg-black text-white rounded-full pl-6 pr-2 py-2.5 flex items-center gap-2 hover:bg-gray-800">
+                Contact
+                <span className="bg-white text-black rounded-full p-1.5">
+                  <ArrowRight size={16} />
+                </span>
+              </Button>
+            </Link>
           </nav>
         </div>
       )}
