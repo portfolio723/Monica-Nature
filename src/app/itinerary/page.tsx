@@ -92,18 +92,10 @@ interface StepProps {
     errors: FormErrors;
 }
 
-interface Step4Props extends StepProps {
-}
-
 interface Step3Props {
     data: FormData;
     handleInterestChange: (interestId: string) => void;
     errors: FormErrors;
-}
-
-interface Step5Props {
-    data: FormData;
-    handleChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
 
@@ -572,5 +564,3 @@ export default function ItineraryPage() {
     </>
   );
 }
-
-    
