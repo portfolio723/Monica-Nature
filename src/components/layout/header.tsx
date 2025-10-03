@@ -13,7 +13,7 @@ const navLinks = [
   { href: '/destinations', label: 'Destinations' },
   { href: '/itinerary', label: 'Itinerary' },
   { href: '/faq', label: 'Faq' },
-  { href: '#', label: 'Blog' },
+  { href: '/blog', label: 'Blog' },
 ];
 
 export default function Header() {

@@ -10,7 +10,7 @@ const navLinks = [
   { href: '/itinerary', label: 'Itinerary' },
   { href: '/faq', label: 'Faq' },
   { href: '/contact', label: 'Contact' },
-  { href: '#', label: 'Blog' },
+  { href: '/blog', label: 'Blog' },
 ];
 
 const legalLinks = [
