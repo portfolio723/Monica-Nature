@@ -425,7 +425,7 @@ export default function ItineraryPage() {
   ];
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 bg-cream-white">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
         :root {
@@ -450,117 +450,115 @@ export default function ItineraryPage() {
             cursor: pointer; border-radius: 50%;
         }
       `}</style>
-      <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 bg-cream-white">
-        <div className="w-full max-w-6xl mx-auto space-y-12 sm:space-y-16">
-          {/* Hero Section */}
-          <section className="text-center py-8 sm:py-12">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-[--forest-primary] mb-4">Design Your Perfect Nature Adventure</h1>
-            <p className="max-w-3xl mx-auto text-base sm:text-lg text-[--text-muted] mb-8">
-              We craft custom itineraries that match your style of travel. Whether you crave adventure, luxury, or a slow, relaxing escape, we take care of the planning so you can simply enjoy the journey.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm sm:text-base text-[--forest-light]">
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5"/>
-                <span>24-hour response guarantee</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5"/>
-                <span>1,200+ successful trips</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5"/>
-                <span>Expert local guides</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5"/>
-                <span>100% personalized</span>
-              </div>
+      <div className="w-full max-w-6xl mx-auto space-y-12 sm:space-y-16">
+        {/* Hero Section */}
+        <section className="text-center py-8 sm:py-12">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-[--forest-primary] mb-4">Design Your Perfect Nature Adventure</h1>
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-[--text-muted] mb-8">
+            We craft custom itineraries that match your style of travel. Whether you crave adventure, luxury, or a slow, relaxing escape, we take care of the planning so you can simply enjoy the journey.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm sm:text-base text-[--forest-light]">
+            <div className="flex items-center gap-2">
+              <Check className="w-5 h-5"/>
+              <span>24-hour response guarantee</span>
             </div>
-          </section>
-
-          {/* Process Overview Section */}
-          <section>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[--forest-primary] mb-8 sm:mb-12">Your Journey to the Perfect Trip</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {processSteps.map((step, index) => (
-                <div key={index} className={`p-6 rounded-lg bg-white shadow-lg ${index >= 3 ? 'lg:col-span-1' : ''} ${index === 3 ? 'md:col-span-2 lg:col-start-1' : ''} ${index === 4 ? 'md:col-span-2 lg:col-start-2' : ''}`}>
-                  <h3 className="text-lg sm:text-xl font-bold text-[--forest-dark]">{index + 1}. {step.title}</h3>
-                  <p className="text-sm sm:text-base text-[--warm-accent] font-semibold mb-3">{step.subtitle}</p>
-                  <p className="text-sm text-[--text-muted] mb-4">{step.description}</p>
-                  <ul className="space-y-2 text-sm">
-                    {step.details.map((detail, i) => (
-                      <li key={i} className="flex items-start">
-                        <Check className="w-4 h-4 mr-2 mt-1 text-[--success] shrink-0" />
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            <div className="flex items-center gap-2">
+              <Check className="w-5 h-5"/>
+              <span>1,200+ successful trips</span>
             </div>
-          </section>
+            <div className="flex items-center gap-2">
+              <Check className="w-5 h-5"/>
+              <span>Expert local guides</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="w-5 h-5"/>
+              <span>100% personalized</span>
+            </div>
+          </div>
+        </section>
 
-          {/* Form Section */}
-          <section className="w-full max-w-4xl mx-auto">
-            
-            {isSubmitted ? (
-                <div className="bg-white p-6 sm:p-8 md:p-12 rounded-2xl shadow-lg text-center">
-                    <CheckCircleIcon className="w-12 h-12 sm:w-16 sm:h-16 text-[--success] mx-auto mb-4"/>
-                    <h2 className="text-xl sm:text-2xl font-bold text-[--forest-dark]">Thank You!</h2>
-                    <p className="text-[--text-muted] mt-2 text-base sm:text-lg">Your travel request has been submitted. We will get back to you within 24 hours with your personalized itinerary.</p>
+        {/* Process Overview Section */}
+        <section>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[--forest-primary] mb-8 sm:mb-12">Your Journey to the Perfect Trip</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {processSteps.map((step, index) => (
+              <div key={index} className={`p-6 rounded-lg bg-white shadow-lg ${index >= 3 ? 'lg:col-span-1' : ''} ${index === 3 ? 'md:col-span-2 lg:col-start-1' : ''} ${index === 4 ? 'md:col-span-2 lg:col-start-2' : ''}`}>
+                <h3 className="text-lg sm:text-xl font-bold text-[--forest-dark]">{index + 1}. {step.title}</h3>
+                <p className="text-sm sm:text-base text-[--warm-accent] font-semibold mb-3">{step.subtitle}</p>
+                <p className="text-sm text-[--text-muted] mb-4">{step.description}</p>
+                <ul className="space-y-2 text-sm">
+                  {step.details.map((detail, i) => (
+                    <li key={i} className="flex items-start">
+                      <Check className="w-4 h-4 mr-2 mt-1 text-[--success] shrink-0" />
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Form Section */}
+        <section className="w-full max-w-4xl mx-auto">
+          
+          {isSubmitted ? (
+              <div className="bg-white p-6 sm:p-8 md:p-12 rounded-2xl shadow-lg text-center">
+                  <CheckCircleIcon className="w-12 h-12 sm:w-16 sm:h-16 text-[--success] mx-auto mb-4"/>
+                  <h2 className="text-xl sm:text-2xl font-bold text-[--forest-dark]">Thank You!</h2>
+                  <p className="text-[--text-muted] mt-2 text-base sm:text-lg">Your travel request has been submitted. We will get back to you within 24 hours with your personalized itinerary.</p>
+              </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="bg-white p-4 sm:p-6 md:p-10 rounded-2xl shadow-lg">
+                {/* Progress Bar */}
+                <div className="mb-8">
+                    <div className="flex items-center">
+                        {STEPS_CONFIG.map((step, index) => (
+                            <React.Fragment key={step.id}>
+                                <div className="flex flex-col items-center w-1/4">
+                                    <div className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${currentStep > step.id ? 'bg-[--success] border-[--success] text-white' : currentStep === step.id ? 'bg-white border-[--warm-accent]' : 'bg-gray-100 border-gray-300'}`}>
+                                        {currentStep > step.id ? <CheckIcon /> : step.icon}
+                                    </div>
+                                    <p className={`text-xs mt-2 text-center transition-colors hidden sm:block ${currentStep >= step.id ? 'text-[--forest-dark] font-semibold' : 'text-[--text-muted]'}`}>{step.title}</p>
+                                </div>
+                                {index < STEPS_CONFIG.length - 1 && <div className={`flex-1 h-1 mx-1 sm:mx-2 transition-colors duration-500 ${currentStep > step.id ? 'bg-[--success]' : 'bg-gray-300'}`}></div>}
+                            </React.Fragment>
+                        ))}
+                    </div>
                 </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="bg-white p-4 sm:p-6 md:p-10 rounded-2xl shadow-lg">
-                  {/* Progress Bar */}
-                  <div className="mb-8">
-                      <div className="flex items-center">
-                          {STEPS_CONFIG.map((step, index) => (
-                              <React.Fragment key={step.id}>
-                                  <div className="flex flex-col items-center w-1/4">
-                                      <div className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${currentStep > step.id ? 'bg-[--success] border-[--success] text-white' : currentStep === step.id ? 'bg-white border-[--warm-accent]' : 'bg-gray-100 border-gray-300'}`}>
-                                          {currentStep > step.id ? <CheckIcon /> : step.icon}
-                                      </div>
-                                      <p className={`text-xs mt-2 text-center transition-colors hidden sm:block ${currentStep >= step.id ? 'text-[--forest-dark] font-semibold' : 'text-[--text-muted]'}`}>{step.title}</p>
-                                  </div>
-                                  {index < STEPS_CONFIG.length - 1 && <div className={`flex-1 h-1 mx-1 sm:mx-2 transition-colors duration-500 ${currentStep > step.id ? 'bg-[--success]' : 'bg-gray-300'}`}></div>}
-                              </React.Fragment>
-                          ))}
-                      </div>
-                  </div>
 
-                  <h2 className="text-xl sm:text-2xl font-bold text-[--forest-dark] mb-4">{currentStepConfig?.header}</h2>
-                  <div className="min-h-[300px] mb-8">
-                      {currentStep === 1 && <Step1 data={formData} handleChange={handleChange} errors={errors} />}
-                      {currentStep === 2 && <Step2 data={formData} handleChange={handleChange} errors={errors} />}
-                      {currentStep === 3 && <Step3 data={formData} handleInterestChange={handleInterestChange} errors={errors} />}
-                      {currentStep === 4 && <Step4 data={formData} handleChange={handleChange} errors={errors} />}
-                  </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-[--forest-dark] mb-4">{currentStepConfig?.header}</h2>
+                <div className="min-h-[300px] mb-8">
+                    {currentStep === 1 && <Step1 data={formData} handleChange={handleChange} errors={errors} />}
+                    {currentStep === 2 && <Step2 data={formData} handleChange={handleChange} errors={errors} />}
+                    {currentStep === 3 && <Step3 data={formData} handleInterestChange={handleInterestChange} errors={errors} />}
+                    {currentStep === 4 && <Step4 data={formData} handleChange={handleChange} errors={errors} />}
+                </div>
 
-                  {/* Navigation Buttons */}
-                  <div className="flex justify-between items-center pt-6 border-t flex-col-reverse sm:flex-row gap-4 sm:gap-0">
-                      <button
-                          type="button"
-                          onClick={handlePrev}
-                          disabled={currentStep === 1}
-                          className="flex items-center gap-2 px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors w-full sm:w-auto justify-center"
-                      >
-                          <ArrowLeftIcon/> Previous
-                      </button>
-                      {currentStep < 4 ? (
-                          <button type="button" onClick={handleNext} className="px-8 py-3 bg-[--forest-primary] text-white font-semibold rounded-lg hover:bg-[--forest-light] transition-colors shadow-md w-full sm:w-auto justify-center">
-                              Next Step
-                          </button>
-                      ) : (
-                          <button type="submit" className="px-8 py-3 bg-[--warm-accent] text-[--forest-dark] font-semibold rounded-lg hover:opacity-90 transition-opacity shadow-md w-full sm:w-auto justify-center">
-                              Send My Travel Request
-                          </button>
-                      )}
-                  </div>
-              </form>
-              )}
-          </section>
-        </div>
+                {/* Navigation Buttons */}
+                <div className="flex justify-between items-center pt-6 border-t flex-col-reverse sm:flex-row gap-4 sm:gap-0">
+                    <button
+                        type="button"
+                        onClick={handlePrev}
+                        disabled={currentStep === 1}
+                        className="flex items-center gap-2 px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors w-full sm:w-auto justify-center"
+                    >
+                        <ArrowLeftIcon/> Previous
+                    </button>
+                    {currentStep < 4 ? (
+                        <button type="button" onClick={handleNext} className="px-8 py-3 bg-[--forest-primary] text-white font-semibold rounded-lg hover:bg-[--forest-light] transition-colors shadow-md w-full sm:w-auto justify-center">
+                            Next Step
+                        </button>
+                    ) : (
+                        <button type="submit" className="px-8 py-3 bg-[--warm-accent] text-[--forest-dark] font-semibold rounded-lg hover:opacity-90 transition-opacity shadow-md w-full sm:w-auto justify-center">
+                            Send My Travel Request
+                        </button>
+                    )}
+                </div>
+            </form>
+            )}
+        </section>
       </div>
-    </>
+    </div>
   );
 }
