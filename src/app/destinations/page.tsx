@@ -10,7 +10,7 @@ const destinationImages = {
   ),
   asia: placeholderImages.find((img) => img.id === 'destination-asia'),
   europe: placeholderImages.find((img) => img.id === 'destination-europe'),
-  oceania: placeholderImages.find(
+  australia: placeholderImages.find(
     (img) => img.id === 'destination-oceania'
   ),
   southAmerica: placeholderImages.find(
@@ -40,11 +40,11 @@ const continents = [
     href: '/destinations/asia',
   },
   {
-    name: 'OCEANIA',
-    image: destinationImages.oceania,
+    name: 'AUSTRALIA',
+    image: destinationImages.australia,
     quote: 'Witness nature&apos;s artistry in the land down under',
-    cta: 'Experience Oceania',
-    href: '/destinations/oceania',
+    cta: 'Experience Australia',
+    href: '/destinations/australia',
   },
   {
     name: 'EUROPE',
