@@ -73,7 +73,7 @@
       "imageHint": "europe street"
     },
     {
-      "id": "destination-australia",
+      "id": "destination-oceania",
       "description": "The Sydney Opera House in Australia.",
       "imageUrl": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhdXN0cmFsaWF8ZW58MHx8fHwxNzU5MTI3NDUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "australia landmark"
@@ -89,6 +89,12 @@
       "description": "The Golden Gate Bridge in San Francisco.",
       "imageUrl": "https://images.unsplash.com/photo-1588272947922-21cbc34dc3a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxOb3J0aCUyMEFtZXJpY2F8ZW58MHx8fHwxNzU5MTI4MTIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "north america landmark"
+    },
+    {
+      "id": "destination-caribbean",
+      "description": "A beautiful beach in the Caribbean.",
+      "imageUrl": "https://images.unsplash.com/photo-1510007552823-3349d9c84962?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjYXJpYmJlYW4lMjBiZWFjaHxlbnwwfHx8fDE3NTk0MDMyNTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "caribbean beach"
     },
     {
       "id": "india-taj-mahal",
@@ -405,7 +411,7 @@
     {
       "id": "portugal-azores",
       "description": "The crater lake of Sete Cidades in the Azores.",
-      "imageUrl": "https://images.unsplash.com/photo-1581925865466-ffed044c0c64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxBem9yZXN8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1581925865466-ffed044c0c64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxBem9yZXN8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Azores"
     },
     {
@@ -429,31 +435,31 @@
     {
       "id": "canada-banff",
       "description": "Moraine Lake in Banff National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1630618357937-bb2aa9c8c911?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxCYW5mZiUyMGxha2V8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1630618357937-bb2aa9c8c911?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxCYW5mZiUyMGxha2V8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Banff lake"
     },
     {
       "id": "canada-jasper",
       "description": "Spirit Island in Maligne Lake, Jasper National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1628972797643-c55fc7356572?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxKYXNwZXIlMjBpc2xhbmR8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1628972797643-c55fc7356572?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxKYXNwZXIlMjBpc2xhbmR8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Jasper island"
     },
     {
       "id": "costa-rica-arenal",
       "description": "Arenal Volcano with surrounding rainforest.",
-      "imageUrl": "https://images.unsplash.com/photo-1658604872041-172a440e6d78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBcmVuYWwlMjB2b2xjYW5vfGVufDB8fHx8MTc1OTIxMTI3MHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1658604872041-172a440e6d78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBcmVuYWwlMjB2b2xjYW5vfGVufDB8fHx8MTc1OTIxMTI3MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Arenal volcano"
     },
     {
       "id": "costa-rica-monteverde",
       "description": "A hanging bridge in the Monteverde Cloud Forest.",
-      "imageUrl": "https://images.unsplash.com/photo-1710028267890-b63a84536044?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xvdWQlMjBmb3Jlc3R8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1710028267890-b63a84536044?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xvdWQlMjBmb3Jlc3R8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cloud forest"
     },
     {
       "id": "peru-machu-picchu",
       "description": "The ancient Inca city of Machu Picchu.",
-      "imageUrl": "https://images.unsplash.com/photo-1543385426-191664295b58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxNYWNodSUyMFBpY2NodXxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1543385426-191664295b58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxNYWNodSUyMFBpY2NodXxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Machu Picchu"
     },
     {
@@ -465,47 +471,47 @@
     {
       "id": "argentina-patagonia",
       "description": "The Fitz Roy mountain range in Patagonia.",
-      "imageUrl": "https://images.unsplash.com/photo-1684419317250-795cf91929a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxQYXRhZ29uaWElMjBtb3VudGFpbnN8ZW58MHx8fHwxNzU5MTk1Nzc1fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1684419317250-795cf91929a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxQYXRhZ29uaWElMjBtb3VudGFpbnN8ZW58MHx8fHwxNzU5MTk1Nzc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Patagonia mountains"
     },
     {
       "id": "argentina-iguazu",
       "description": "The powerful Iguazu Falls.",
-      "imageUrl": "https://images.unsplash.com/photo-1587845305438-af995d62a37e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxJZ3VhenUlMjBGYWxsc3xlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1587845305438-af995d62a37e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxJZ3VhenUlMjBGYWxsc3xlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Iguazu Falls"
     },
     {
       "id": "brazil-rio",
       "description": "Sugarloaf Mountain in Rio de Janeiro.",
-      "imageUrl": "https://images.unsplash.com/photo-1747049061948-c7ad486d9bdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSaW8lMjBsYW5kbWFya3xlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1747049061948-c7ad486d9bdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSaW8lMjBsYW5kbWFya3xlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Rio landmark"
     },
     {
       "id": "brazil-pantanal",
       "description": "A jaguar in the Pantanal wetlands.",
-      "imageUrl": "https://images.unsplash.com/photo-1753851021630-891b5c9e1a8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxQYW50YW5hbCUyMGphZ3VhcnxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1753851021630-891b5c9e1a8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxQYW50YW5hbCUyMGphZ3VhcnxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Pantanal jaguar"
     },
     {
-      "id": "australia-reef",
+      "id": "oceania-australia",
       "description": "The Great Barrier Reef from above.",
-      "imageUrl": "https://images.unsplash.com/photo-1704179375531-04984e85743b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8R3JlYXQlMjBCYXJyaWVyJTIwUmVlZnxlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1704179375531-04984e8c743b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8R3JlYXQlMjBCYXJyaWVyJTIwUmVlZnxlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Great Barrier Reef"
     },
     {
-      "id": "australia-uluru",
+      "id": "oceania-uluru",
       "description": "Uluru at sunset.",
       "imageUrl": "https://images.unsplash.com/photo-1628359253483-7a792d64024a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxVbHVydXxlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "Uluru"
     },
     {
-      "id": "new-zealand-fiordland",
+      "id": "oceania-fiordland",
       "description": "Milford Sound in Fiordland National Park.",
       "imageUrl": "https://images.unsplash.com/photo-1640891515239-014902313a2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxGaW9yZGxhbmQlMjBOYXRpb25hbCUyMFBhcmt8ZW58MHx8fHwxNzU5MjExNjg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Fiordland National Park"
     },
     {
-      "id": "new-zealand-queenstown",
+      "id": "oceania-queenstown",
       "description": "Lake Wakatipu and The Remarkables in Queenstown.",
       "imageUrl": "https://images.unsplash.com/photo-1738416403669-e0e64c39f010?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxRdWVlbnN0b3dufGVufDB8fHx8MTc1OTIxMTY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Queenstown"
@@ -521,6 +527,30 @@
       "description": "A massive colony of king penguins in South Georgia.",
       "imageUrl": "https://images.unsplash.com/photo-1704646736203-09756627603c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxTb3V0aCUyMEdlb3JnaWElMjBwZW5ndWluc3xlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "South Georgia penguins"
+    },
+    {
+      "id": "oceania-fiji",
+      "description": "A tropical beach in Fiji.",
+      "imageUrl": "https://images.unsplash.com/photo-1542914852-19574349b178?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmaWppJTIwYmVhY2h8ZW58MHx8fHwxNzU5NDAzNTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fiji beach"
+    },
+    {
+      "id": "caribbean-cuba",
+      "description": "Vintage cars in Havana, Cuba.",
+      "imageUrl": "https://images.unsplash.com/photo-1595825732145-c6e000285a85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjdWJhJTIwY2Fyc3xlbnwwfHx8fDE3NTk0MDM1NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cuba cars"
+    },
+    {
+      "id": "caribbean-barbados",
+      "description": "A stunning beach in Barbados.",
+      "imageUrl": "https://images.unsplash.com/photo-1574365538964-f6735515c0b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYXJiYWRvcyUyMGJlYWNofGVufDB8fHx8fDE3NTk0MDM1NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "barbados beach"
+    },
+    {
+      "id": "caribbean-jamaica",
+      "description": "A waterfall in Jamaica.",
+      "imageUrl": "https://images.unsplash.com/photo-1614777749005-24a434c44569?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYW1haWNhJTIwd2F0ZXJmYWxsfGVufDB8fHx8fDE3NTk0MDM1NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jamaica waterfall"
     }
   ]
 }

@@ -10,14 +10,17 @@ const destinationImages = {
   ),
   asia: placeholderImages.find((img) => img.id === 'destination-asia'),
   europe: placeholderImages.find((img) => img.id === 'destination-europe'),
-  australia: placeholderImages.find(
-    (img) => img.id === 'destination-australia'
+  oceania: placeholderImages.find(
+    (img) => img.id === 'destination-oceania'
   ),
   southAmerica: placeholderImages.find(
     (img) => img.id === 'destination-south-america'
   ),
   northAmerica: placeholderImages.find(
     (img) => img.id === 'destination-north-america'
+  ),
+  caribbean: placeholderImages.find(
+    (img) => img.id === 'destination-caribbean'
   ),
 };
 
@@ -37,11 +40,11 @@ const continents = [
     href: '/destinations/asia',
   },
   {
-    name: 'AUSTRALIA & OCEANIA',
-    image: destinationImages.australia,
+    name: 'OCEANIA',
+    image: destinationImages.oceania,
     quote: 'Witness nature&apos;s artistry in the land down under',
     cta: 'Experience Oceania',
-    href: '/destinations/australia',
+    href: '/destinations/oceania',
   },
   {
     name: 'EUROPE',
@@ -71,6 +74,13 @@ const continents = [
     cta: 'Explore Antarctica',
     href: '/destinations/antarctica',
   },
+    {
+    name: 'CARIBBEAN',
+    image: destinationImages.caribbean,
+    quote: 'Find your paradise in turquoise waters and vibrant cultures',
+    cta: 'Discover the Caribbean',
+    href: '/destinations/caribbean',
+  },
 ];
 
 export default function DestinationsPage() {
@@ -79,7 +89,7 @@ export default function DestinationsPage() {
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8 sm:py-16">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl mb-4">
-            Explore Nature&apos;s Wonders Across 7 Continents
+            Explore Nature&apos;s Wonders Across the Globe
           </h1>
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-muted-foreground mb-6">
             From the mystical temples of Asia to the pristine wilderness of
