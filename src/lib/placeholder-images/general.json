@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -26,9 +27,9 @@
     },
     {
       "id": "about-hero",
-      "description": "A hero image of a beach at sunset.",
-      "imageUrl": "https://images.unsplash.com/photo-1588001832198-c15cff59b078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWFjaCUyMHN1bnNldHxlbnwwfHx8fDE3NTkwMjkyMTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "beach sunset"
+      "description": "A hero image of a beautiful sea.",
+      "imageUrl": "https://images.unsplash.com/photo-1503756234508-e32369269deb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxM3x8c2VhfGVufDB8fHx8MTc1OTY3ODI3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sea waves"
     },
     {
       "id": "about-traveler",
