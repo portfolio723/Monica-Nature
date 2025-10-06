@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
           </p>
 
           <p>
-            Monica`s Nature ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services.
+            Monica`s Nature (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services.
           </p>
 
           <h2 className="text-2xl font-bold mt-8">1. Information We Collect</h2>

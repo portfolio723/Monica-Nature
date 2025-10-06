@@ -12,7 +12,7 @@ export default function TermsOfUsePage() {
           </p>
 
           <p>
-            Welcome to Monica`s Nature. These Terms of Use ("Terms") govern your access to and use of our website and services. By using our website, you agree to be bound by these Terms.
+            Welcome to Monica`s Nature. These Terms of Use (&quot;Terms&quot;) govern your access to and use of our website and services. By using our website, you agree to be bound by these Terms.
           </p>
 
           <h2 className="text-2xl font-bold mt-8">1. Our Services</h2>

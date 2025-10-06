@@ -3,6 +3,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import Image from 'next/image';
 
 export function ImageGallery() {
 	return (
@@ -72,9 +73,10 @@ function AnimatedImage({ alt, src, ratio, placeholder }: AnimatedImageProps) {
 			ratio={ratio}
 			className="bg-muted relative size-full rounded-lg border"
 		>
-			<img
+			<Image
 				alt={alt}
 				src={imgSrc}
+				fill
 				className={cn(
 					'size-full rounded-lg object-cover transition-opacity duration-1000 ease-in-out',
 					{
