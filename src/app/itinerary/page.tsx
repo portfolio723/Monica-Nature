@@ -50,7 +50,7 @@ interface FormErrors {
 const UserIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>;
 const MapPinIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>;
 const HeartIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>;
-const DollarSignIcon = () => <svg xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>;
+const DollarSignIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>;
 const CheckCircleIcon = (props: React.SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>;
 const ArrowLeftIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>;
 const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M20 6 9 17l-5-5"/></svg>;
@@ -257,18 +257,12 @@ const Step2: React.FC<StepProps> = ({ data, handleChange, errors }) => (
 );
 
 const Step3: React.FC<Step3Props> = ({ data, handleChange, handleInterestChange, errors }) => {
-    const midIndex = Math.ceil(INTEREST_CATEGORIES.length / 2);
-    const firstHalf = INTEREST_CATEGORIES.slice(0, midIndex);
-    const secondHalf = INTEREST_CATEGORIES.slice(midIndex);
-
-    const allInterests = [...firstHalf, OTHER_INTEREST, ...secondHalf];
-
     return (
         <div className="space-y-6">
             <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Select your interests {errors.interests && <span className="text-red-500">*</span>}</label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    {allInterests.map(interest => (
+                    {INTEREST_CATEGORIES.map(interest => (
                         <button
                             key={interest.id}
                             type="button"
@@ -282,23 +276,32 @@ const Step3: React.FC<Step3Props> = ({ data, handleChange, handleInterestChange,
                 {errors.interests && <p className="text-xs text-red-500 mt-2">{errors.interests}</p>}
             </div>
 
+            <div className="flex justify-center sm:col-start-2">
+                 <button
+                    type="button"
+                    onClick={() => handleInterestChange(OTHER_INTEREST.id)}
+                    className={`w-full sm:w-1/3 p-4 border rounded-lg text-center transition-all duration-200 ${data.interests.includes(OTHER_INTEREST.id) ? 'bg-green-700 text-white border-green-800' : 'bg-white hover:bg-gray-200'}`}
+                >
+                    <span className="text-sm font-semibold">{OTHER_INTEREST.label}</span>
+                </button>
+            </div>
+
             {data.interests.includes('other') && (
                 <div className="pt-4">
-                    <InputField
+                    <TextAreaField
                         id="otherInterest"
                         label="Please specify your other interests"
-                        type="text"
                         value={data.otherInterest}
                         onChange={handleChange}
                         error={errors.otherInterest}
                         placeholder="e.g., Volunteering, learning a language"
-                        required
                     />
                 </div>
             )}
         </div>
     );
 };
+
 
 
 const Step4: React.FC<StepProps> = ({ data, handleChange, errors }) => (
