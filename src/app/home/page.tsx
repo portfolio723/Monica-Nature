@@ -2,10 +2,11 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
 
 export default function HomePage() {
+  const router = useRouter();
   return (
     <main className="min-h-screen w-full bg-background">
       <section className="relative flex h-[80vh] flex-col items-center justify-center overflow-hidden text-center lg:h-[95vh]">
@@ -16,7 +17,7 @@ export default function HomePage() {
           playsInline
           className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
         >
-          <source src="/hg.mp4" type="video/mp4" />
+          <source src="./hg.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 z-0 bg-black opacity-50"></div>
@@ -31,14 +32,10 @@ export default function HomePage() {
             tours that respect the planet.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/destinations" passHref>
-              <Button size="lg">Explore Destinations</Button>
-            </Link>
-            <Link href="/itinerary" passHref>
-              <Button size="lg" variant="secondary">
+            <Button onClick={() => router.push('/destinations')} size="lg">Explore Destinations</Button>
+            <Button onClick={() => router.push('/itinerary')} size="lg" variant="secondary">
                 Plan Your Trip
-              </Button>
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
