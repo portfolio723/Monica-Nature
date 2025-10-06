@@ -26,23 +26,23 @@ const actionTypes = {
   REMOVE_TOAST: "REMOVE_TOAST",
 } as const
 
-type ActionType = typeof actionTypes
+type ActionType = (typeof actionTypes)[keyof typeof actionTypes]
 
 type Action =
   | {
-      type: ActionType["ADD_TOAST"]
+      type: ActionType
       toast: ToasterToast
     }
   | {
-      type: ActionType["UPDATE_TOAST"]
+      type: ActionType
       toast: Partial<ToasterToast>
     }
   | {
-      type: ActionType["DISMISS_TOAST"]
+      type: ActionType
       toastId?: ToasterToast["id"]
     }
   | {
-      type: ActionType["REMOVE_TOAST"]
+      type: ActionType
       toastId?: ToasterToast["id"]
     }
 

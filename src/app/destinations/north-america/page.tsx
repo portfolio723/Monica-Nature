@@ -98,7 +98,17 @@ const centralAmericaDestinations = [
   },
 ];
 
-const DestinationCard = ({ dest }: { dest: any }) => (
+interface Destination {
+  name: string;
+  flag: string;
+  tagline: string;
+  bestSeason: string;
+  highlights: string;
+  natureFocus: string;
+  href: string;
+}
+
+const DestinationCard = ({ dest }: { dest: Destination }) => (
   <div
     key={dest.name}
     className="flex flex-col rounded-lg bg-card p-6 shadow-md transition-shadow hover:shadow-xl"
