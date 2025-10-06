@@ -1,0 +1,22 @@
+{
+  "placeholderImages": [
+    {
+      "id": "destination-antarctica",
+      "description": "An iceberg in Antarctica.",
+      "imageUrl": "https://images.unsplash.com/photo-1551415923-37f2305be118?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhbnRhcmN0aWNhJTIwaWNlYmVyZ3xlbnwwfHx8fDE3NTkxMjY5MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "antarctica iceberg"
+    },
+    {
+      "id": "antarctica-peninsula",
+      "description": "Kayaking among icebergs on the Antarctic Peninsula.",
+      "imageUrl": "https://images.unsplash.com/photo-1692295627254-43400a455a1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBbnRhcmN0aWMlMjBQZW5pbnN1bGF8ZW58MHx8fHwxNzU5MjExNjg0fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Antarctic Peninsula"
+    },
+    {
+      "id": "antarctica-south-georgia",
+      "description": "A massive colony of king penguins in South Georgia.",
+      "imageUrl": "https://images.unsplash.com/photo-1704646736203-09756627603c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxTb3V0aCUyMEdlb3JnaWElMjBwZW5ndWluc3xlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "South Georgia penguins"
+    }
+  ]
+}

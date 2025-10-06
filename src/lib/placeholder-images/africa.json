@@ -1,0 +1,118 @@
+{
+  "placeholderImages": [
+    {
+      "id": "destination-africa",
+      "description": "A scenic view of an African coastline with boats.",
+      "imageUrl": "https://images.unsplash.com/photo-1570042707124-b9b4cce5f884?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWZyaWNhJTIwY29hc3RsaW5lfGVufDB8fHx8MTc1OTEyNjkzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "africa coastline"
+    },
+    {
+      "id": "kenya-masai-mara",
+      "description": "Wildebeest migration in Masai Mara.",
+      "imageUrl": "https://images.unsplash.com/photo-1548942719-33bc7c093437?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxNYXNhaSUyME1hcmF8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Masai Mara"
+    },
+    {
+      "id": "kenya-amboseli",
+      "description": "Elephants with Mount Kilimanjaro in the background.",
+      "imageUrl": "https://images.unsplash.com/photo-1644325486782-94cc7f50e1f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxBbWJvc2VsaSUyMGVsZXBoYW50c3xlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Amboseli elephants"
+    },
+    {
+      "id": "tanzania-serengeti",
+      "description": "A lion resting on a rock in the Serengeti.",
+      "imageUrl": "https://images.unsplash.com/photo-1689479665651-f867d1029de6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxTZXJlbmdldGklMjBsaW9ufGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Serengeti lion"
+    },
+    {
+      "id": "tanzania-ngorongoro",
+      "description": "The Ngorongoro Crater from a viewpoint.",
+      "imageUrl": "https://images.unsplash.com/photo-1600637468460-1fa84e8eddea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxOZ29yb25nb3JvJTIwQ3JhdGVyfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Ngorongoro Crater"
+    },
+    {
+      "id": "south-africa-kruger",
+      "description": "A leopard in a tree in Kruger National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1680526092287-ce094b75ac03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxLcnVnZXIlMjBsZW9wYXJkfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Kruger leopard"
+    },
+    {
+      "id": "south-africa-cape-town",
+      "description": "Table Mountain overlooking Cape Town.",
+      "imageUrl": "https://images.unsplash.com/photo-1606799955515-85468ee78c26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxDYXBlJTIwVG93bnxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Cape Town"
+    },
+    {
+      "id": "botswana-okavango",
+      "description": "A mokoro canoe trip in the Okavango Delta.",
+      "imageUrl": "https://images.unsplash.com/photo-1627759501315-28407b7cac86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxPa2F2YW5nbyUyMERlbHRhfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Okavango Delta"
+    },
+    {
+      "id": "botswana-chobe",
+      "description": "A large herd of elephants in Chobe National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1694952751871-4c60120ec470?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxDaG9iZSUyMGVsZXBoYW50c3xlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Chobe elephants"
+    },
+    {
+      "id": "namibia-sossusvlei",
+      "description": "The iconic red dunes of Sossusvlei.",
+      "imageUrl": "https://images.unsplash.com/photo-1747252363487-d4a217840b99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxTb3NzdXN2bGVpJTIwZHVuZXN8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Sossusvlei dunes"
+    },
+    {
+      "id": "namibia-etosha",
+      "description": "Wildlife gathering at a waterhole in Etosha.",
+      "imageUrl": "https://images.unsplash.com/photo-1674656569138-05ab7b13ee17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxFdG9zaGElMjB3aWxkbGlmZXxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Etosha wildlife"
+    },
+    {
+      "id": "rwanda-volcanoes",
+      "description": "A silverback gorilla in Volcanoes National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1667504319000-8133f9021cf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxSd2FuZGElMjBnb3JpbGxhfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Rwanda gorilla"
+    },
+    {
+      "id": "madagascar-baobabs",
+      "description": "The Avenue of the Baobabs at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1597426061335-e50c8697630b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBdmVudWUlMjBCYW9iYWJzfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Avenue Baobabs"
+    },
+    {
+      "id": "africa-egypt-pyramids",
+      "description": "The Pyramids of Giza at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1572093414999-3d0f73ac8c6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxHeXphJTIwcHlyYW1pZHN8ZW58MHx8fHwxNzU5NTE3MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Giza pyramids"
+    },
+    {
+      "id": "africa-egypt-red-sea",
+      "description": "Coral reef in the Red Sea.",
+      "imageUrl": "https://images.unsplash.com/photo-1618331139155-93b584a28f7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxSZWQlMjBTZWElMjBjb3JhbHxlbnwwfHx8fDE3NTk1MTcwMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Red Sea coral"
+    },
+    {
+      "id": "africa-morocco-atlas",
+      "description": "A village in the High Atlas Mountains.",
+      "imageUrl": "https://images.unsplash.com/photo-1610632383358-2e8d13b3b4a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBdGxhcyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NTk1MTcwMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Atlas mountains"
+    },
+    {
+      "id": "africa-morocco-sahara",
+      "description": "Sand dunes in the Sahara Desert.",
+      "imageUrl": "https://images.unsplash.com/photo-1543418215-46d1b32f509c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxTYWhhcmElMjBkZXNlcnR8ZW58MHx8fHwxNzU5NTE3MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Sahara desert"
+    },
+    {
+      "id": "africa-ethiopia-simien",
+      "description": "Gelada baboons in the Simien Mountains.",
+      "imageUrl": "https://images.unsplash.com/photo-1634149022479-715d7e8b2cde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxTaW1pZW4lMjBNb3VudGFpbnN8ZW58MHx8fHwxNzU5NTE3MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Simien Mountains"
+    },
+    {
+      "id": "africa-ethiopia-danakil",
+      "description": "The colorful landscape of the Danakil Depression.",
+      "imageUrl": "https://images.unsplash.com/photo-1582883693743-9a3d463d123d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxEYW5ha2lsJTIwRGVwcmVzc2lvbnxlbnwwfHx8fDE3NTk1MTcwMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Danakil Depression"
+    }
+  ]
+}

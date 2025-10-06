@@ -1,0 +1,88 @@
+{
+  "placeholderImages": [
+    {
+      "id": "cosmic-background",
+      "description": "A background image of a cosmic scene.",
+      "imageUrl": "https://images.unsplash.com/photo-1677357623576-7c8aab08da22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3NtaWMlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc1OTEyMjExOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cosmic background"
+    },
+    {
+      "id": "video-poster",
+      "description": "A poster image for the video.",
+      "imageUrl": "https://images.unsplash.com/photo-1656542198209-4758a1afc42f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzcGFjZSUyMG5lYnVsYXxlbnwwfHx8fDE3NTkwMzUzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "space nebula"
+    },
+    {
+      "id": "underwater-image",
+      "description": "An image of a diver underwater.",
+      "imageUrl": "https://images.unsplash.com/photo-1682687982501-1e58ab814714?q=80&w=1280&auto=format&fit=crop",
+      "imageHint": "underwater diver"
+    },
+    {
+      "id": "landscape-background",
+      "description": "A background image of a misty landscape.",
+      "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1920&auto=format&fit=crop",
+      "imageHint": "misty landscape"
+    },
+    {
+      "id": "about-hero",
+      "description": "A hero image of a beach at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1588001832198-c15cff59b078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWFjaCUyMHN1bnNldHxlbnwwfHx8fDE3NTkwMjkyMTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beach sunset"
+    },
+    {
+      "id": "about-traveler",
+      "description": "A person with a red travel backpack.",
+      "imageUrl": "https://images.unsplash.com/photo-1575844264771-892081089af5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0cmF2ZWwlMjBiYWNrcGFja3xlbnwwfHx8fDE3NTkwNzI4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "travel backpack"
+    },
+    {
+      "id": "about-vision",
+      "description": "A person sitting on a beach looking at a pier.",
+      "imageUrl": "https://images.unsplash.com/photo-1598286987813-892de84d3ede?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxiZWFjaCUyMHBpZXJ8ZW58MHx8fHwxNzU5MTI1NTUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beach pier"
+    },
+    {
+      "id": "about-mission",
+      "description": "A person drawing on a travel map.",
+      "imageUrl": "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cmF2ZWwlMjBtYXB8ZW58MHx8fHwxNzU5MDI4MDUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "travel map"
+    },
+    {
+      "id": "blog-wildlife",
+      "description": "A gorilla in the wild.",
+      "imageUrl": "https://images.unsplash.com/photo-1667504319000-8133f9021cf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxSd2FuZGElMjBnb3JpbGxhfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wildlife gorilla"
+    },
+    {
+      "id": "blog-hiking-patagonia",
+      "description": "Two people hiking on a mountain trail.",
+      "imageUrl": "https://images.unsplash.com/photo-1551632811-561732d1e306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaWtpbmd8ZW58MHx8fHwxNzU5NTE2MDgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hiking"
+    },
+    {
+      "id": "blog-costa-rica-forest",
+      "description": "A hanging bridge in the Monteverde cloud forest.",
+      "imageUrl": "https://images.unsplash.com/photo-1710028267890-b63a84536044?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xvdWQlMjBmb3Jlc3R8ZW58MHx8fHwxNzU5MjExMjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cloud forest"
+    },
+    {
+      "id": "blog-packing-light",
+      "description": "A person packing a backpack.",
+      "imageUrl": "https://images.unsplash.com/photo-1575844264771-892081089af5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0cmF2ZWwlMjBiYWNrcGFja3xlbnwwfHx8fDE3NTkwNzI4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "travel backpack"
+    },
+    {
+      "id": "blog-barrier-reef",
+      "description": "A clownfish in the Great Barrier Reef.",
+      "imageUrl": "https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "clownfish reef"
+    },
+    {
+      "id": "blog-northern-lights",
+      "description": "The Northern Lights over a snowy landscape.",
+      "imageUrl": "https://images.unsplash.com/photo-1579201157678-a242a244b34e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxOb3J0aGVybiUyMExpZ2h0c3xlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Northern Lights"
+    }
+  ]
+}

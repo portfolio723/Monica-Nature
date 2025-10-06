@@ -1,0 +1,46 @@
+{
+  "placeholderImages": [
+    {
+      "id": "destination-south-america",
+      "description": "Machu Picchu in Peru.",
+      "imageUrl": "https://images.unsplash.com/photo-1526392060635-9d6019884377?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb3V0aCUyMGFtZXJpY2ElMjBsYW5kbWFya3xlbnwwfHx8fDE3NTkyMTIzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "south america landmark"
+    },
+    {
+      "id": "peru-machu-picchu",
+      "description": "The ancient Inca city of Machu Picchu.",
+      "imageUrl": "https://images.unsplash.com/photo-1543385426-191664295b58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxNYWNodSUyMFBpY2NodXxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Machu Picchu"
+    },
+    {
+      "id": "peru-amazon",
+      "description": "A river winding through the Peruvian Amazon.",
+      "imageUrl": "https://images.unsplash.com/photo-1618344322727-2256d3abdd1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBbWF6b24lMjByaXZlcnxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Amazon river"
+    },
+    {
+      "id": "argentina-patagonia",
+      "description": "The Fitz Roy mountain range in Patagonia.",
+      "imageUrl": "https://images.unsplash.com/photo-1684419317250-795cf91929a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxQYXRhZ29uaWElMjBtb3VudGFpbnN8ZW58MHx8fHwxNzU5MTk1Nzc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Patagonia mountains"
+    },
+    {
+      "id": "argentina-iguazu",
+      "description": "The powerful Iguazu Falls.",
+      "imageUrl": "https://images.unsplash.com/photo-1587845305438-af995d62a37e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxJZ3VhenUlMjBGYWxsc3xlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Iguazu Falls"
+    },
+    {
+      "id": "brazil-rio",
+      "description": "Sugarloaf Mountain in Rio de Janeiro.",
+      "imageUrl": "https://images.unsplash.com/photo-1747049061948-c7ad486d9bdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSaW8lMjBsYW5kbWFya3xlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Rio landmark"
+    },
+    {
+      "id": "brazil-pantanal",
+      "description": "A jaguar in the Pantanal wetlands.",
+      "imageUrl": "https://images.unsplash.com/photo-1753851021630-891b5c9e1a8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxQYW50YW5hbCUyMGphZ3VhcnxlbnwwfHx8fDE3NTkyMTEyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Pantanal jaguar"
+    }
+  ]
+}

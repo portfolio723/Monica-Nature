@@ -1,0 +1,40 @@
+{
+  "placeholderImages": [
+    {
+      "id": "destination-oceania",
+      "description": "Discover island paradises and unique wildlife",
+      "imageUrl": "https://images.unsplash.com/photo-1542914852-19574349b178?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmaWppJTIwYmVhY2h8ZW58MHx8fHwxNzU5NDAzNTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fiji beach"
+    },
+    {
+      "id": "oceania-fiji",
+      "description": "A tropical beach in Fiji.",
+      "imageUrl": "https://images.unsplash.com/photo-1542914852-19574349b178?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmaWppJTIwYmVhY2h8ZW58MHx8fHwxNzU5NDAzNTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fiji beach"
+    },
+    {
+      "id": "oceania-australia",
+      "description": "The Great Barrier Reef from above.",
+      "imageUrl": "https://images.unsplash.com/photo-1704179375531-04984e8c743b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8R3JlYXQlMjBCYXJyaWVyJTIwUmVlZnxlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Great Barrier Reef"
+    },
+    {
+      "id": "oceania-uluru",
+      "description": "Uluru at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1628359253483-7a792d64024a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxVbHVydXxlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Uluru"
+    },
+    {
+      "id": "oceania-fiordland",
+      "description": "Milford Sound in Fiordland National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1640891515239-014902313a2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxGaW9yZGxhbmQlMjBOYXRpb25hbCUyMFBhcmt8ZW58MHx8fHwxNzU5MjExNjg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Fiordland National Park"
+    },
+    {
+      "id": "oceania-queenstown",
+      "description": "Lake Wakatipu and The Remarkables in Queenstown.",
+      "imageUrl": "https://images.unsplash.com/photo-1738416403669-e0e64c39f010?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxRdWVlbnN0b3dufGVufDB8fHx8MTc1OTIxMTY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Queenstown"
+    }
+  ]
+}

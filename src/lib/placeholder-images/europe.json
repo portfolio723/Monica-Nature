@@ -1,0 +1,94 @@
+{
+  "placeholderImages": [
+    {
+      "id": "destination-europe",
+      "description": "A scenic view of a European street.",
+      "imageUrl": "https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxFdXJvcGV8ZW58MHx8fHwxNzU5MTI3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "europe street"
+    },
+    {
+      "id": "norway-fjords",
+      "description": "A view of the Geirangerfjord.",
+      "imageUrl": "https://images.unsplash.com/photo-1508592931388-95bc7b61033d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxOb3J3YXklMjBmam9yZHxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Norway fjord"
+    },
+    {
+      "id": "norway-lofoten",
+      "description": "The fishing villages of the Lofoten Islands.",
+      "imageUrl": "https://images.unsplash.com/photo-1505246464763-5f59c5b9a2d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxMb2ZvdGVuJTIwaXNsYW5kc3xlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Lofoten islands"
+    },
+    {
+      "id": "iceland-glacier-lagoon",
+      "description": "Icebergs in Jökulsárlón glacier lagoon.",
+      "imageUrl": "https://images.unsplash.com/photo-1506702727213-ae22879868aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxJY2VsYW5kJTIwbGFnb29ufGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Iceland lagoon"
+    },
+    {
+      "id": "iceland-northern-lights",
+      "description": "The aurora borealis over a mountain.",
+      "imageUrl": "https://images.unsplash.com/photo-1579201157678-a242a244b34e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxOb3J0aGVybiUyMExpZ2h0c3xlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Northern Lights"
+    },
+    {
+      "id": "switzerland-matterhorn",
+      "description": "The Matterhorn peak at sunrise.",
+      "imageUrl": "https://images.unsplash.com/photo-1545161296-d9c2c241f2ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxNYXR0ZXJob3JufGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Matterhorn"
+    },
+    {
+      "id": "switzerland-jungfrau",
+      "description": "A train journey in the Jungfrau region.",
+      "imageUrl": "https://images.unsplash.com/photo-1571274793214-675177edf552?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxKdW5nZnJhdSUyMHJlZ2lvbnxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Jungfrau region"
+    },
+    {
+      "id": "italy-dolomites",
+      "description": "The dramatic peaks of the Dolomites.",
+      "imageUrl": "https://images.unsplash.com/photo-1564574662330-73fb2940ff5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxEb2xvbWl0ZXN8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Dolomites"
+    },
+    {
+      "id": "italy-amalfi",
+      "description": "The colorful cliffside village of Positano on the Amalfi Coast.",
+      "imageUrl": "https://images.unsplash.com/photo-1610574138412-7bf28ade0222?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxBbWFsZmklMjBDb2FzdHxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Amalfi Coast"
+    },
+    {
+      "id": "croatia-plitvice",
+      "description": "Waterfalls at Plitvice Lakes National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1589312225511-b16301a1d309?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxQbGl0dmljZSUyMExha2VzfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Plitvice Lakes"
+    },
+    {
+      "id": "croatia-dalmatian",
+      "description": "A sailboat along the Dalmatian Coast.",
+      "imageUrl": "https://images.unsplash.com/photo-1659946729505-28e5e98464ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8RGFsbWF0aWFuJTIwQ29hc3R8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Dalmatian Coast"
+    },
+    {
+      "id": "scotland-skye",
+      "description": "The Old Man of Storr on the Isle of Skye.",
+      "imageUrl": "https://images.unsplash.com/photo-1698937612554-bdc512cbe402?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxJc2xlJTIwU2t5ZXxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Isle Skye"
+    },
+    {
+      "id": "scotland-highlands",
+      "description": "A moody landscape in the Scottish Highlands.",
+      "imageUrl": "https://images.unsplash.com/photo-1593174816092-c5bfb7a5a206?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8U2NvdHRpc2glMjBIaWdobGFuZHN8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Scottish Highlands"
+    },
+    {
+      "id": "portugal-azores",
+      "description": "The crater lake of Sete Cidades in the Azores.",
+      "imageUrl": "https://images.unsplash.com/photo-1581925865466-ffed044c0c64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxBem9yZXN8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Azores"
+    },
+    {
+      "id": "portugal-algarve",
+      "description": "The sea caves of the Algarve coast.",
+      "imageUrl": "https://images.unsplash.com/photo-1661714160477-a6c4b0b67547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBbGdhcnZlJTIwY29hc3R8ZW58MHx8fHwxNzU5MjEwODMyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "Algarve coast"
+    }
+  ]
+}
