@@ -65,12 +65,57 @@ const africaDestinations = [
     natureFocus: 'Unique endemic species, lemurs, diverse ecosystems',
     href: '/destinations/africa/madagascar',
   },
+  {
+    name: 'Egypt',
+    flag: '🇪🇬',
+    tagline: 'Ancient Wonders & Red Sea Reefs',
+    bestSeason: 'October - April',
+    highlights: 'Pyramids of Giza, Nile River cruises, Red Sea coral reefs',
+    natureFocus: 'Desert landscapes, vibrant marine ecosystems, oases',
+    href: '/destinations/africa/egypt',
+  },
+  {
+    name: 'Morocco',
+    flag: '🇲🇦',
+    tagline: 'Atlas Mountains & Sahara Dunes',
+    bestSeason: 'March - May, September - November',
+    highlights: 'High Atlas trekking, Sahara desert camps, vibrant souks',
+    natureFocus: 'Mountain ranges, vast deserts, unique Argan forests',
+    href: '/destinations/africa/morocco',
+  },
+  {
+    name: 'Ethiopia',
+    flag: '🇪🇹',
+    tagline: 'The Roof of Africa',
+    bestSeason: 'October - June',
+    highlights: 'Simien Mountains, Danakil Depression, source of the Blue Nile',
+    natureFocus: 'Endemic wildlife, volcanic landscapes, high-altitude plateaus',
+    href: '/destinations/africa/ethiopia',
+  },
+  {
+    name: 'Zambia',
+    flag: '🇿🇲',
+    tagline: 'The Real Africa, Land of the Smoke That Thunders',
+    bestSeason: 'May - October',
+    highlights: 'Victoria Falls, South Luangwa National Park, Lower Zambezi',
+    natureFocus: 'Walking safaris, abundant leopards, pristine river ecosystems',
+    href: '#',
+  },
+  {
+    name: 'Zimbabwe',
+    flag: '🇿🇼',
+    tagline: 'A World of Wonders',
+    bestSeason: 'May - October',
+    highlights: 'Victoria Falls, Hwange National Park, Mana Pools',
+    natureFocus: 'Large elephant herds, wild dog populations, diverse birdlife',
+    href: '#',
+  },
 ];
 
 export default function AfricaPage() {
   return (
     <div className="bg-background text-foreground">
-      <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 py-12 sm:py-16 md:py-24">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
             Africa: Where Wildlife Roams Wild &amp; Free
@@ -80,7 +125,7 @@ export default function AfricaPage() {
             wildlife, diverse landscapes, and vibrant cultures.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {africaDestinations.map((dest) => (
             <div
               key={dest.name}
@@ -95,7 +140,7 @@ export default function AfricaPage() {
               <p className="mb-4 text-xs text-muted-foreground">
                 <strong>Best Season:</strong> {dest.bestSeason}
               </p>
-              <div className="flex-grow">
+              <div className="flex-grow text-sm">
                 <p className="mb-2">
                   <strong>Highlights:</strong> {dest.highlights}
                 </p>
@@ -115,5 +160,3 @@ export default function AfricaPage() {
     </div>
   );
 }
-
-    

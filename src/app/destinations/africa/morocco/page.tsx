@@ -1,0 +1,93 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { placeholderImages } from '@/lib/placeholder-images';
+
+const moroccoLocations = [
+  {
+    id: 'atlas-mountains',
+    name: 'High Atlas Mountains',
+    image: placeholderImages.find((img) => img.id === 'africa-morocco-atlas'),
+    region: 'Central Morocco',
+    bestTime: 'April - May, September - October',
+    duration: '3-5 days',
+    highlights: 'Trekking to Mount Toubkal (North Africa`s highest peak), exploring Berber villages, stunning mountain passes',
+    natureElements: 'Rugged mountain landscapes, green valleys, and traditional terraced farms',
+    activities: 'Hiking, trekking, cultural tours, photography',
+  },
+  {
+    id: 'sahara-desert',
+    name: 'Sahara Desert',
+    image: placeholderImages.find((img) => img.id === 'africa-morocco-sahara'),
+    region: 'Southeastern Morocco (Merzouga)',
+    bestTime: 'October - May',
+    duration: '2-3 days',
+    highlights: 'Camel trekking over the Erg Chebbi dunes, spending a night in a desert camp, watching sunrise and sunset over the sand',
+    natureElements: 'Vast expanse of golden sand dunes, starlit night skies',
+    activities: 'Camel safaris, sandboarding, stargazing, cultural encounters with nomads',
+  },
+];
+
+export default function MoroccoPage() {
+  return (
+    <div className="bg-background text-foreground">
+      <div className="container mx-auto px-4 py-12 sm:py-16 md:py-24">
+        <div className="mb-12 text-center">
+          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
+            Morocco: Atlas Mountains & Sahara Dunes
+          </h1>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
+            From the soaring peaks of the High Atlas to the endless dunes of the Sahara, Morocco is a land of dramatic natural beauty and rich culture.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+          {moroccoLocations.map((location) => (
+            <div
+              key={location.id}
+              className="group overflow-hidden rounded-lg bg-card shadow-lg transition-all duration-300 hover:shadow-2xl"
+            >
+              <div className="relative h-80 w-full">
+                {location.image && (
+                  <Image
+                    src={location.image.imageUrl}
+                    alt={location.image.description}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    data-ai-hint={location.image.imageHint}
+                  />
+                )}
+              </div>
+              <div className="p-6">
+                <h3 className="mb-2 text-2xl font-bold">{location.name}</h3>
+                <p className="mb-1 text-sm font-semibold text-primary">
+                  {location.region}
+                </p>
+                <div className="mb-4 space-y-1 text-xs text-muted-foreground">
+                  <p>
+                    <strong>Best Season:</strong> {location.bestTime}
+                  </p>
+                  <p>
+                    <strong>Suggested Duration:</strong> {location.duration}
+                  </p>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <p>
+                    <strong>Highlights:</strong> {location.highlights}
+                  </p>
+                  <p>
+                    <strong>Nature & Activities:</strong> {location.natureElements}. {location.activities}.
+                  </p>
+                </div>
+                <div className="mt-6 text-right">
+                  <Link href="/itinerary" passHref>
+                    <Button>Plan a Trip to {location.name}</Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
