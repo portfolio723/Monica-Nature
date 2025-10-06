@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "destination-caribbean",
-      "description": "A beautiful beach in the Caribbean.",
-      "imageUrl": "https://images.unsplash.com/photo-1610421498669-b0c5112675b3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "caribbean beach"
+      "description": "A boat floating on crystal clear turquoise water in the Caribbean.",
+      "imageUrl": "https://images.unsplash.com/photo-1571174215966-b271b37b6a97?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "caribbean boat"
     },
     {
       "id": "caribbean-cuba",
@@ -15,13 +15,13 @@
     {
       "id": "caribbean-barbados",
       "description": "A stunning beach in Barbados.",
-      "imageUrl": "https://images.unsplash.com/photo-1574365538964-f6735515c0b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYXJiYWRvcyUyMGJlYWNofGVufDB8fHx8fDE3NTk0MDM1NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1574365538964-f6735515c0b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYXJiYWRvcyUyMGJlYWNofGVufDB8fHx8fDE3NTk0MDM1NjN8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "barbados beach"
     },
     {
       "id": "caribbean-jamaica",
       "description": "A waterfall in Jamaica.",
-      "imageUrl": "https://images.unsplash.com/photo-1614777749005-24a434c44569?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYW1haWNhJTIwd2F0ZXJmYWxsfGVufDB8fHx8fDE3NTk0MDM1NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1614777749005-24a434c44569?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYW1haWNhJTIwd2F0ZXJmYWxsfGVufDB8fHx8fDE3NTk0MDM1NjN8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "jamaica waterfall"
     }
   ]
