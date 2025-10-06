@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -27,31 +28,31 @@
     {
       "id": "tanzania-ngorongoro",
       "description": "The Ngorongoro Crater from a viewpoint.",
-      "imageUrl": "https://images.unsplash.com/photo-1600637468460-1fa84e8eddea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxOZ29yb25nb3JvJTIwQ3JhdGVyfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1600637468460-1fa84e8eddea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxOZ29yb25nb3JvJTIwQ3JhdGVyfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Ngorongoro Crater"
     },
     {
       "id": "south-africa-kruger",
       "description": "A leopard in a tree in Kruger National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1680526092287-ce094b75ac03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxLcnVnZXIlMjBsZW9wYXJkfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1680526092287-ce094b75ac03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxLcnVnZXIlMjBsZW9wYXJkfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Kruger leopard"
     },
     {
       "id": "south-africa-cape-town",
       "description": "Table Mountain overlooking Cape Town.",
-      "imageUrl": "https://images.unsplash.com/photo-1606799955515-85468ee78c26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxDYXBlJTIwVG93bnxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1606799955515-85468ee78c26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxDYXBlJTIwVG93bnxlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Cape Town"
     },
     {
       "id": "botswana-okavango",
       "description": "A mokoro canoe trip in the Okavango Delta.",
-      "imageUrl": "https://images.unsplash.com/photo-1627759501315-28407b7cac86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxPa2F2YW5nbyUyMERlbHRhfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1627759501315-28407b7cac86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxPa2F2YW5nbyUyMERlbHRhfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Okavango Delta"
     },
     {
       "id": "botswana-chobe",
       "description": "A large herd of elephants in Chobe National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1694952751871-4c60120ec470?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxDaG9iZSUyMGVsZXBoYW50c3xlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1694952751871-4c60120ec470?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxDaG9iZSUyMGVsZXBoYW50c3xlbnwwfHx8fDE3NTkyMTA4MzJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Chobe elephants"
     },
     {
@@ -69,19 +70,19 @@
     {
       "id": "rwanda-volcanoes",
       "description": "A silverback gorilla in Volcanoes National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1667504319000-8133f9021cf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxSd2FuZGElMjBnb3JpbGxhfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1667504319000-8133f9021cf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxSd2FuZGElMjBnb3JpbGxhfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Rwanda gorilla"
     },
     {
       "id": "madagascar-baobabs",
       "description": "The Avenue of the Baobabs at sunset.",
-      "imageUrl": "https://images.unsplash.com/photo-1597426061335-e50c8697630b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBdmVudWUlMjBCYW9iYWJzfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1597426061335-e50c8697630b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBdmVudWUlMjBCYW9iYWJzfGVufDB8fHx8MTc1OTIxMDgzMnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Avenue Baobabs"
     },
     {
       "id": "africa-egypt-pyramids",
       "description": "The Pyramids of Giza at sunset.",
-      "imageUrl": "https://images.unsplash.com/photo-1572093414999-3d0f73ac8c6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxHeXphJTIwcHlyYW1pZHN8ZW58MHx8fHwxNzU5NTE3MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1572093414999-3d0f73ac8c6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxHeXphJTIwcHlyYW1pZHN8ZW58MHx8fHwxNzU5NTE3MDMyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Giza pyramids"
     },
     {
@@ -93,26 +94,62 @@
     {
       "id": "africa-morocco-atlas",
       "description": "A village in the High Atlas Mountains.",
-      "imageUrl": "https://images.unsplash.com/photo-1610632383358-2e8d13b3b4a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBdGxhcyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NTk1MTcwMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1610632383358-2e8d13b3b4a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBdGxhcyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NTk1MTcwMzJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Atlas mountains"
     },
     {
       "id": "africa-morocco-sahara",
       "description": "Sand dunes in the Sahara Desert.",
-      "imageUrl": "https://images.unsplash.com/photo-1543418215-46d1b32f509c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxTYWhhcmElMjBkZXNlcnR8ZW58MHx8fHwxNzU5NTE3MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1543418215-46d1b32f509c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxTYWhhcmElMjBkZXNlcnR8ZW58MHx8fHwxNzU5NTE3MDMyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Sahara desert"
     },
     {
       "id": "africa-ethiopia-simien",
       "description": "Gelada baboons in the Simien Mountains.",
-      "imageUrl": "https://images.unsplash.com/photo-1634149022479-715d7e8b2cde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxTaW1pZW4lMjBNb3VudGFpbnN8ZW58MHx8fHwxNzU5NTE3MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1634149022479-715d7e8b2cde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxTaW1pZW4lMjBNb3VudGFpbnN8ZW58MHx8fHwxNzU5NTE3MDMyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Simien Mountains"
     },
     {
       "id": "africa-ethiopia-danakil",
       "description": "The colorful landscape of the Danakil Depression.",
-      "imageUrl": "https://images.unsplash.com/photo-1582883693743-9a3d463d123d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxEYW5ha2lsJTIwRGVwcmVzc2lvbnxlbnwwfHx8fDE3NTk1MTcwMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1582883693743-9a3d463d123d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxEYW5ha2lsJTIwRGVwcmVzc2lvbnxlbnwwfHx8fDE3NTk1MTcwMzJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Danakil Depression"
+    },
+    {
+      "id": "algeria-tassili",
+      "description": "Prehistoric rock art in Tassili n`Ajjer, Algeria",
+      "imageUrl": "https://images.unsplash.com/photo-1604725333534-735492a5a5d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxUYXNzaWxpJTIwbiUyNUMyJUI0QWpqZXJ8ZW58MHx8fHwxNzYwMDEyMzgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Tassili n`Ajjer rock art"
+    },
+    {
+      "id": "algeria-casbah",
+      "description": "The narrow streets of the Casbah of Algiers, Algeria",
+      "imageUrl": "https://images.unsplash.com/photo-1628087955610-833327570414?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDYXNiYWglMjBvZiUyMEFsZ2llcnN8ZW58MHx8fHwxNzYwMDEyMzgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Casbah Algiers streets"
+    },
+    {
+      "id": "zambia-victoria-falls",
+      "description": "Aerial view of Victoria Falls on the Zambezi River.",
+      "imageUrl": "https://images.unsplash.com/photo-1602081593810-7453a5578714?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxWaWN0b3JpYSUyMEZhbGxzfGVufDB8fHx8MTc2MDAxMjM4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Victoria Falls aerial"
+    },
+    {
+      "id": "zambia-south-luangwa",
+      "description": "A leopard resting in a tree in South Luangwa National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1557050543-4d5f4e078aa6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxTb3V0aCUyMEx1YW5nd2ElMjBOYXRpb25hbCUyMFBhcmslMjBsZW9wYXJkfGVufDB8fHx8MTc2MDAxMjM4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "South Luangwa leopard"
+    },
+    {
+      "id": "zimbabwe-hwange",
+      "description": "Elephants at a waterhole in Hwange National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1631432168344-32b7245c6138?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxId2FuZ2UlMjBOYXRpb25hbCUyMFBhcmslMjBlbGVwaGFudHN8ZW58MHx8fHwxNzYwMDEyMzgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Hwange elephants"
+    },
+    {
+      "id": "zimbabwe-mana-pools",
+      "description": "An elephant stands on its hind legs to reach for acacia pods in Mana Pools.",
+      "imageUrl": "https://images.unsplash.com/photo-1601726778738-9e533519c99e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxNYW5hJTIwUG9vbHMlMjBOYXRpb25hbCUyMFBhcmslMjBlbGVwaGFudHxlbnwwfHx8fDE3NjAwMTIzODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Mana Pools elephant"
     }
   ]
 }

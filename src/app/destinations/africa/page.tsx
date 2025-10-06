@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 const africaDestinations = [
-  { name: 'Algeria', flag: '🇩🇿', tagline: 'Gateway to the Sahara', bestSeason: 'March - May, September - November', highlights: 'Tassili n`Ajjer, Algiers Casbah, Roman ruins', natureFocus: 'Vast desert landscapes, prehistoric rock art', href: '#' },
+  { name: 'Algeria', flag: '🇩🇿', tagline: 'Gateway to the Sahara', bestSeason: 'March - May, September - November', highlights: 'Tassili n`Ajjer, Algiers Casbah, Roman ruins', natureFocus: 'Vast desert landscapes, prehistoric rock art', href: '/destinations/africa/algeria' },
   { name: 'Angola', flag: '🇦🇴', tagline: 'Emerging from the Ashes', bestSeason: 'June - September', highlights: 'Kalandula Falls, Kissama National Park, colonial architecture', natureFocus: 'Diverse wildlife, dramatic waterfalls, coastline', href: '#' },
   { name: 'Benin', flag: '🇧🇯', tagline: 'Cradle of Voodoo', bestSeason: 'November - February', highlights: 'Ouidah, Royal Palaces of Abomey, Ganvie stilt village', natureFocus: 'Voodoo culture, slave trade history, unique wildlife', href: '#' },
   {
@@ -142,7 +142,7 @@ const africaDestinations = [
     bestSeason: 'May - October',
     highlights: 'Victoria Falls, South Luangwa National Park, Lower Zambezi',
     natureFocus: 'Walking safaris, abundant leopards, pristine river ecosystems',
-    href: '#',
+    href: '/destinations/africa/zambia',
   },
   {
     name: 'Zimbabwe',
@@ -151,7 +151,7 @@ const africaDestinations = [
     bestSeason: 'May - October',
     highlights: 'Victoria Falls, Hwange National Park, Mana Pools',
     natureFocus: 'Large elephant herds, wild dog populations, diverse birdlife',
-    href: '#',
+    href: '/destinations/africa/zimbabwe',
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 

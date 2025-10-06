@@ -1,0 +1,104 @@
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { placeholderImages } from '@/lib/placeholder-images';
+
+const zimbabweLocations = [
+  {
+    id: 'hwange-national-park',
+    name: 'Hwange National Park',
+    image: {
+      id: 'zimbabwe-hwange',
+      description: 'Elephants at a waterhole in Hwange National Park.',
+      imageUrl: 'https://images.unsplash.com/photo-1631432168344-32b7245c6138?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxId2FuZ2UlMjBOYXRpb25hbCUyMFBhcmslMjBlbGVwaGFudHN8ZW58MHx8fHwxNzYwMDEyMzgxfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      imageHint: 'Hwange elephants'
+    },
+    region: 'Matabeleland North',
+    bestTime: 'July - October (dry season)',
+    duration: '3-5 days',
+    highlights: 'Home to one of the world`s largest elephant populations, excellent predator sightings including lions and wild dogs',
+    natureElements: 'Vast landscapes from desert sands to woodlands and granite hills, numerous waterholes attracting wildlife',
+    activities: 'Game drives, walking safaris, visiting painted dog conservation projects',
+  },
+  {
+    id: 'mana-pools',
+    name: 'Mana Pools National Park',
+    image: {
+      id: 'zimbabwe-mana-pools',
+      description: 'An elephant stands on its hind legs to reach for acacia pods in Mana Pools.',
+      imageUrl: 'https://images.unsplash.com/photo-1601726778738-9e533519c99e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxNYW5hJTIwUG9vbHMlMjBOYXRpb25hbCUyMFBhcmslMjBlbGVwaGFudHxlbnwwfHx8fDE3NjAwMTIzODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      imageHint: 'Mana Pools elephant'
+    },
+    region: 'Mashonaland West',
+    bestTime: 'May - October',
+    duration: '4-6 days',
+    highlights: 'UNESCO World Heritage Site known for its raw, remote wilderness and close-up wildlife encounters',
+    natureElements: 'Zambezi River floodplains, ancient acacia trees, four main pools that are remnants of ox-bow lakes',
+    activities: 'Canoeing safaris on the Zambezi River, walking safaris, fishing, game drives',
+  },
+];
+
+export default function ZimbabwePage() {
+  return (
+    <div className="bg-background text-foreground">
+      <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mb-12 text-center">
+          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
+            Zimbabwe: A World of Wonders
+          </h1>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
+            From the vast elephant herds of Hwange to the untamed wilderness of Mana Pools, Zimbabwe offers some of Africa`s most authentic safari experiences.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+          {zimbabweLocations.map((location) => (
+            <div
+              key={location.id}
+              className="group overflow-hidden rounded-lg bg-card shadow-lg transition-all duration-300 hover:shadow-2xl"
+            >
+              <div className="relative h-64 w-full">
+                {location.image && (
+                  <Image
+                    src={location.image.imageUrl}
+                    alt={location.image.description}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    data-ai-hint={location.image.imageHint}
+                  />
+                )}
+              </div>
+              <div className="p-6">
+                <h3 className="mb-2 text-2xl font-bold">{location.name}</h3>
+                <p className="mb-1 text-sm font-semibold text-primary">
+                  {location.region}
+                </p>
+                <div className="mb-4 space-y-1 text-xs text-muted-foreground">
+                  <p>
+                    <strong>Best Season:</strong> {location.bestTime}
+                  </p>
+                  <p>
+                    <strong>Suggested Duration:</strong> {location.duration}
+                  </p>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <p>
+                    <strong>Highlights:</strong> {location.highlights}
+                  </p>
+                  <p>
+                    <strong>Nature & Activities:</strong> {location.natureElements}. {location.activities}.
+                  </p>
+                </div>
+                <div className="mt-6 text-right">
+                  <Link href="/itinerary" passHref>
+                    <Button>Plan a Trip to {location.name}</Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
