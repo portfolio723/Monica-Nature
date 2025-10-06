@@ -30,7 +30,7 @@ export default function HomePage() {
             Discover the world’s most breathtaking natural wonders with curated
             tours that respect the planet.
           </p>
-          <div className="mt-8 flex justify-center gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/destinations" passHref>
               <Button size="lg">Explore Destinations</Button>
             </Link>

@@ -26,7 +26,7 @@ export default function AboutPage() {
         </section>
 
         <section className="py-12 sm:py-16 md:py-24">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12">
               <div className="relative h-80 w-full sm:h-96 md:h-[600px]">
                 {aboutImages.traveler && (
@@ -54,7 +54,7 @@ export default function AboutPage() {
         </section>
 
         <section className="bg-gray-50/50 py-12 sm:py-16 md:py-24">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12">
               <div className="text-center md:text-left">
                 <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
@@ -83,7 +83,7 @@ export default function AboutPage() {
         </section>
 
         <section className="py-12 sm:py-16 md:py-24">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12">
               <div className="relative order-last h-80 w-full md:order-first sm:h-96 md:h-[600px]">
                 {aboutImages.mission && (
