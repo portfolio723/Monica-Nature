@@ -1,9 +1,10 @@
+
 {
   "placeholderImages": [
     {
       "id": "destination-oceania",
       "description": "Discover island paradises and unique wildlife",
-      "imageUrl": "https://images.unsplash.com/photo-1542914852-19574349b178?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmaWppJTIwYmVhY2h8ZW58MHx8fHwxNzU5NDAzNTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1513414653395-3bb68df4b2b3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "fiji beach"
     },
     {
@@ -27,13 +28,13 @@
     {
       "id": "oceania-fiordland",
       "description": "Milford Sound in Fiordland National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1640891515239-014902313a2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxGaW9yZGxhbmQlMjBOYXRpb25hbCUyMFBhcmt8ZW58MHx8fHwxNzU5MjExNjg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1640891515239-014902313a2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxGaW9yZGxhbmQlMjBOYXRpb25hbCUyMFBhcmt8ZW58MHx8fHwxNzU5MjExNjg0fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Fiordland National Park"
     },
     {
       "id": "oceania-queenstown",
       "description": "Lake Wakatipu and The Remarkables in Queenstown.",
-      "imageUrl": "https://images.unsplash.com/photo-1738416403669-e0e64c39f010?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxRdWVlbnN0b3dufGVufDB8fHx8MTc1OTIxMTY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1738416403669-e0e64c39f010?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxRdWVlbnN0b3dufGVufDB8fHx8MTc1OTIxMTY4NHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Queenstown"
     }
   ]
