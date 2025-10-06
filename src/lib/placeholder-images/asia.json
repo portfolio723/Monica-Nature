@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -111,13 +112,13 @@
     {
       "id": "sri-lanka-tea-plantations",
       "description": "Tea plantations in Sri Lanka.",
-      "imageUrl": "https://images.unsplash.com/photo-1491497895121-1334fc14d8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZWElMjBwbGFudGF0aW9uc3xlbnwwfHx8fDE3NTkxODEzNjF8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1491497895121-1334fc14d8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZWElMjBwbGFudGF0aW9uc3xlbnwwfHx8fDE3NTkxODEzNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "tea plantations"
     },
     {
       "id": "sri-lanka-yala",
       "description": "A leopard in Yala National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1742987746429-208e7a588a46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxZYWxhJTIwbGVvcGFyZHxlbnwwfHx8fDE3NTkyMTA1MzR8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1742987746429-208e7a588a46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxZYWxhJTIwbGVvcGFyZHxlbnwwfHx8fDE3NTkyMTA1MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Yala leopard"
     },
     {
@@ -129,7 +130,7 @@
     {
       "id": "indonesia-bali",
       "description": "A temple in Bali.",
-      "imageUrl": "https://images.unsplash.com/photo-1704253411612-e4deb715dcd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxCYWxpJTIwdGVtcGxlfGVufDB8fHx8MTc1OTE2ODM1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1704253411612-e4deb715dcd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8QmFsaSUyMHRlbXBsZXxlbnwwfHx8fDE3NTkxNjgxNTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Bali temple"
     },
     {
@@ -159,7 +160,7 @@
     {
       "id": "singapore-skyline",
       "description": "The Singapore skyline.",
-      "imageUrl": "https://images.unsplash.com/photo-1727859146476-c60c7f8f9764?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxTaW5nYXBvcmUlMjBza3lsaW5lfGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1727859146476-c60c7f8f9764?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxTaW5nYXBvcmUlMjBza3lsaW5lfGVufDB8fHx8MTc1OTIxMDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Singapore skyline"
     },
     {
@@ -173,6 +174,42 @@
       "description": "The Jewel at Changi Airport.",
       "imageUrl": "https://images.unsplash.com/photo-1690306163617-cd37a17b2dec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxKZXdlbCUyMENoYW5naXxlbnwwfHx8fDE3NTkyMTA1MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Jewel Changi"
+    },
+    {
+      "id": "vietnam-ha-long-bay",
+      "description": "Limestone karsts in Ha Long Bay, Vietnam.",
+      "imageUrl": "https://images.unsplash.com/photo-1598427282822-13e75a96d131?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxIYSUyMExvbmclMjBCYXl8ZW58MHx8fHwxNzU5NTE3MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Ha Long Bay"
+    },
+    {
+      "id": "vietnam-hoi-an",
+      "description": "Lanterns in the ancient town of Hoi An.",
+      "imageUrl": "https://images.unsplash.com/photo-1569055878601-344c20575308?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxIb2klMjBBbiUyMGxhbnRlcm5zfGVufDB8fHx8MTc1OTUxNzAzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Hoi An lanterns"
+    },
+    {
+      "id": "korea-jeju-island",
+      "description": "Seongsan Ilchulbong (Sunrise Peak) on Jeju Island.",
+      "imageUrl": "https://images.unsplash.com/photo-1623860221345-39750a9829a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxKZWp1JTIwSXNsYW5kfGVufDB8fHx8MTc1OTUxNzAzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Jeju Island"
+    },
+    {
+      "id": "korea-seoraksan",
+      "description": "Autumn colors in Seoraksan National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1632208191295-36a5c3d280e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxTZW9yYWtzYW4lMjBOYXRpb25hbCUyMFBhcmt8ZW58MHx8fHwxNzU5NTE3MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Seoraksan Park"
+    },
+    {
+      "id": "malaysia-borneo",
+      "description": "An orangutan in the Borneo rainforest.",
+      "imageUrl": "https://images.unsplash.com/photo-1568556633633-8a39d1d643d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxCb3JuZW8lMjByYWluZm9yZXN0fGVufDB8fHx8MTc1OTUxNzAzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Borneo rainforest"
+    },
+    {
+      "id": "malaysia-cameron-highlands",
+      "description": "Tea plantations in the Cameron Highlands.",
+      "imageUrl": "https://images.unsplash.com/photo-1626279119992-a1789c6f2a64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDYW1lcm9uJTIwSGlnaGxhbmRzfGVufDB8fHx8MTc1OTUxNzAzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Cameron Highlands"
     }
   ]
 }

@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -68,12 +69,57 @@ const asiaDestinations = [
     natureFocus: 'Urban biodiversity, tropical gardens, sustainable city planning',
     href: '/destinations/asia/singapore',
   },
+  {
+    name: 'Vietnam',
+    flag: '🇻🇳',
+    tagline: 'Timeless Charm & Natural Beauty',
+    bestSeason: 'March - April, September - November',
+    highlights: 'Ha Long Bay, Hoi An Ancient Town, Mekong Delta',
+    natureFocus: 'Karst landscapes, lush rice paddies, diverse ecosystems',
+    href: '#',
+  },
+  {
+    name: 'South Korea',
+    flag: '🇰🇷',
+    tagline: 'Dynamic Culture & Scenic Landscapes',
+    bestSeason: 'March - May, September - November',
+    highlights: 'Jeju Island, Seoraksan National Park, Gyeongju',
+    natureFocus: 'Volcanic islands, dramatic mountains, coastal scenery',
+    href: '#',
+  },
+  {
+    name: 'Malaysia',
+    flag: '🇲🇾',
+    tagline: 'A Fusion of Cultures & Rainforests',
+    bestSeason: 'March - October (West Coast), April - September (East Coast)',
+    highlights: 'Borneo Rainforest, Cameron Highlands, Langkawi',
+    natureFocus: 'Orangutans, ancient rainforests, world-class diving',
+    href: '#',
+  },
+  {
+    name: 'Philippines',
+    flag: '🇵🇭',
+    tagline: 'Archipelago of Natural Wonders',
+    bestSeason: 'November - April',
+    highlights: 'Palawan, Chocolate Hills of Bohol, Rice Terraces of Banaue',
+    natureFocus: 'Pristine beaches, coral reefs, unique geological formations',
+    href: '#',
+  },
+  {
+    name: 'Cambodia',
+    flag: '🇰🇭',
+    tagline: 'Kingdom of Wonder',
+    bestSeason: 'November - April',
+    highlights: 'Angkor Wat, Koh Rong Islands, Cardamom Mountains',
+    natureFocus: 'Ancient temples reclaimed by jungle, rare wildlife',
+    href: '#',
+  },
 ];
 
 export default function AsiaPage() {
   return (
     <div className="bg-background text-foreground">
-      <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 py-12 sm:py-16 md:py-24">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
             Discover Asia&apos;s Natural & Cultural Treasures
@@ -83,7 +129,7 @@ export default function AsiaPage() {
             most diverse landscapes and richest cultural heritage.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {asiaDestinations.map((dest) => (
             <div
               key={dest.name}
