@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -15,7 +16,7 @@
     {
       "id": "australia-uluru",
       "description": "Uluru at sunset.",
-      "imageUrl": "https://images.unsplash.com/photo-1628359253483-7a792d64024a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxVbHVydXxlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1628359253483-7a792d64024a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxVbHVydXxlbnwwfHx8fDE3NTkyMTE2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Uluru"
     },
     {
@@ -29,6 +30,54 @@
       "description": "Lake Wakatipu and The Remarkables in Queenstown.",
       "imageUrl": "https://images.unsplash.com/photo-1738416403669-e0e64c39f010?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxRdWVlbnN0b3dufGVufDB8fHx8MTc1OTIxMTY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Queenstown"
+    },
+    {
+      "id": "australia-nsw",
+      "description": "The Three Sisters rock formation in the Blue Mountains, New South Wales.",
+      "imageUrl": "https://images.unsplash.com/photo-1599884838692-28438a4d7426?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxCbHVlJTIwTW91bnRhaW5zJTIwQXVzdHJhbGlhfGVufDB8fHx8MTc2MDAxMjM4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Blue Mountains"
+    },
+    {
+      "id": "australia-vic",
+      "description": "The Twelve Apostles rock stacks along the Great Ocean Road, Victoria.",
+      "imageUrl": "https://images.unsplash.com/photo-1616191722352-c6b9b33a7a42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxHcmVhdCUyME9jZWFuJTIwUm9hZHxlbnwwfHx8fDE3NjAwMTIzODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Great Ocean Road"
+    },
+    {
+      "id": "australia-qld",
+      "description": "Whitehaven Beach in the Whitsunday Islands, Queensland.",
+      "imageUrl": "https://images.unsplash.com/photo-1590401821435-263729d107a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxXaGl0c3VuZGF5JTIwSXNsYW5kc3xlbnwwfHx8fDE3NjAwMTIzODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Whitsunday Islands"
+    },
+    {
+      "id": "australia-wa",
+      "description": "A whale shark swimming in Ningaloo Reef, Western Australia.",
+      "imageUrl": "https://images.unsplash.com/photo-1634958130985-04d810a82747?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxOaW5nYWxvbyUyMFJlZWYlMjB3aGFsZSUyMHNoYXJrfGVufDB8fHx8MTc2MDAxMjM4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Ningaloo Reef"
+    },
+    {
+      "id": "australia-sa",
+      "description": "Sea lions on a beach on Kangaroo Island, South Australia.",
+      "imageUrl": "https://images.unsplash.com/photo-1598165691233-14c1d68601cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxLYW5nYXJvbyUyMElzbGFuZCUyMHNlYSUyMGxpb25zfGVufDB8fHx8MTc2MDAxMjM4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Kangaroo Island"
+    },
+    {
+      "id": "australia-tas",
+      "description": "Cradle Mountain and Dove Lake in Tasmania.",
+      "imageUrl": "https://images.unsplash.com/photo-1543058375-48b438c82cb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDcmFkbGUlMjBNb3VudGFpbiUyMFRhc21hbmlhfGVufDB8fHx8MTc2MDAxMjM4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Cradle Mountain"
+    },
+    {
+      "id": "australia-nt",
+      "description": "Uluru at sunset in the Northern Territory.",
+      "imageUrl": "https://images.unsplash.com/photo-1528228363413-54157d6b3846?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxVbHVydSUyME5vcnRoZXJuJTIwVGVycml0b3J5fGVufDB8fHx8MTc2MDAxMjM4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Uluru"
+    },
+    {
+      "id": "australia-act",
+      "description": "The city of Canberra and Lake Burley Griffin from Mount Ainslie.",
+      "imageUrl": "https://images.unsplash.com/photo-1591590282035-e11559d3f568?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDYW5iZXJyYSUyMEF1c3RyYWxpYW4lMjBDYXBpdGFsJTIwVGVycml0b3J5fGVufDB8fHx8MTc2MDAxMjM4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Canberra city"
     }
   ]
 }
