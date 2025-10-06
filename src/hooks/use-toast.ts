@@ -26,7 +26,7 @@ const actionTypes = {
   REMOVE_TOAST: "REMOVE_TOAST",
 } as const
 
-type ActionType = keyof typeof actionTypes;
+type ActionType = (typeof actionTypes)[keyof typeof actionTypes];
 
 type Action =
   | {
