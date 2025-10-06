@@ -13,6 +13,7 @@ export default function HomePage() {
           autoPlay 
           loop 
           muted 
+          playsInline
           className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
         >
           <source src="https://storage.googleapis.com/builder-prod-config/studio-files/hg.mp4" type="video/mp4" />
