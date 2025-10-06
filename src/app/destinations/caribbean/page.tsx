@@ -4,13 +4,22 @@ import { Button } from '@/components/ui/button';
 
 const caribbeanDestinations = [
   {
-    name: 'Cuba',
-    flag: '🇨🇺',
-    tagline: 'A Journey Back in Time',
+    name: 'Antigua and Barbuda',
+    flag: '🇦🇬',
+    tagline: 'Land of 365 Beaches',
+    bestSeason: 'December - April',
+    highlights: 'Nelson`s Dockyard, Shirley Heights, pristine white and pink sand beaches',
+    natureFocus: 'Coral reefs, sailing, frigatebird sanctuary',
+    href: '#',
+  },
+  {
+    name: 'The Bahamas',
+    flag: '🇧🇸',
+    tagline: '700 Islands of Paradise',
     bestSeason: 'December - May',
-    highlights: 'Havana`s architecture, Viñales Valley tobacco fields, Trinidad`s colonial streets',
-    natureFocus: 'Pristine coral reefs, lush valleys, unique karst landscapes',
-    href: '/destinations/caribbean/cuba',
+    highlights: 'Swimming with pigs in Exuma, Dean`s Blue Hole, underwater caves',
+    natureFocus: 'Crystal-clear turquoise waters, extensive coral reefs, unique marine life',
+    href: '#',
   },
   {
     name: 'Barbados',
@@ -22,6 +31,51 @@ const caribbeanDestinations = [
     href: '/destinations/caribbean/barbados',
   },
   {
+    name: 'Cuba',
+    flag: '🇨🇺',
+    tagline: 'A Journey Back in Time',
+    bestSeason: 'December - May',
+    highlights: 'Havana`s architecture, Viñales Valley tobacco fields, Trinidad`s colonial streets',
+    natureFocus: 'Pristine coral reefs, lush valleys, unique karst landscapes',
+    href: '/destinations/caribbean/cuba',
+  },
+  {
+    name: 'Dominica',
+    flag: '🇩🇲',
+    tagline: 'The Nature Isle',
+    bestSeason: 'February - April',
+    highlights: 'Morne Trois Pitons National Park, Boiling Lake, Champagne Reef',
+    natureFocus: 'Lush rainforests, volcanic landscapes, hot springs, whale watching',
+    href: '#',
+  },
+  {
+    name: 'Dominican Republic',
+    flag: '🇩🇴',
+    tagline: 'Nature`s Playground',
+    bestSeason: 'December - March',
+    highlights: 'Whale watching in Samaná Bay, 27 Waterfalls of Damajagua, pristine beaches',
+    natureFocus: 'Humpback whale breeding grounds, lush national parks, diverse ecosystems',
+    href: '#',
+  },
+  {
+    name: 'Grenada',
+    flag: '🇬🇩',
+    tagline: 'The Spice Isle',
+    bestSeason: 'January - May',
+    highlights: 'Grand Anse Beach, underwater sculpture park, spice plantations',
+    natureFocus: 'Rainforests, waterfalls, volcanic crater lakes, coral reefs',
+    href: '#',
+  },
+  {
+    name: 'Haiti',
+    flag: '🇭🇹',
+    tagline: 'A Land of Mountains and Art',
+    bestSeason: 'November - March',
+    highlights: 'Citadelle Laferrière, Bassin Bleu waterfalls, vibrant art scene',
+    natureFocus: 'Rugged mountains, pristine coastline, unique culture',
+    href: '#',
+  },
+  {
     name: 'Jamaica',
     flag: '🇯🇲',
     tagline: 'The Heartbeat of the Caribbean',
@@ -31,12 +85,12 @@ const caribbeanDestinations = [
     href: '/destinations/caribbean/jamaica',
   },
   {
-    name: 'The Bahamas',
-    flag: '🇧🇸',
-    tagline: '700 Islands of Paradise',
-    bestSeason: 'December - May',
-    highlights: 'Swimming with pigs in Exuma, Dean`s Blue Hole, underwater caves',
-    natureFocus: 'Crystal-clear turquoise waters, extensive coral reefs, unique marine life',
+    name: 'Saint Kitts and Nevis',
+    flag: '🇰🇳',
+    tagline: 'Two Islands, One Paradise',
+    bestSeason: 'December - April',
+    highlights: 'Brimstone Hill Fortress, Nevis Peak volcano hike, scenic railway',
+    natureFocus: 'Volcanic landscapes, cloud forests, vervet monkeys, coral reefs',
     href: '#',
   },
   {
@@ -49,15 +103,24 @@ const caribbeanDestinations = [
     href: '#',
   },
   {
-    name: 'Dominican Republic',
-    flag: '🇩🇴',
-    tagline: 'Nature`s Playground',
-    bestSeason: 'December - March',
-    highlights: 'Whale watching in Samaná Bay, 27 Waterfalls of Damajagua, pristine beaches',
-    natureFocus: 'Humpback whale breeding grounds, lush national parks, diverse ecosystems',
+    name: 'Saint Vincent and the Grenadines',
+    flag: '🇻🇨',
+    tagline: 'The Jewels of the Caribbean',
+    bestSeason: 'December - April',
+    highlights: 'Tobago Cays Marine Park, La Soufrière volcano, sailing paradise',
+    natureFocus: 'Pristine marine parks, volcanic trails, sea turtle conservation',
     href: '#',
   },
-];
+  {
+    name: 'Trinidad and Tobago',
+    flag: '🇹🇹',
+    tagline: 'Where Carnival and Nature Collide',
+    bestSeason: 'January - May',
+    highlights: 'Asa Wright Nature Centre, Caroni Bird Sanctuary (scarlet ibis), Pitch Lake',
+    natureFocus: 'Exceptional birdwatching, protected rainforests, unique natural asphalt lake',
+    href: '#',
+  },
+].sort((a, b) => a.name.localeCompare(b.name));
 
 export default function CaribbeanPage() {
   return (
@@ -69,7 +132,7 @@ export default function CaribbeanPage() {
             Discover a vibrant mosaic of islands, each with its own unique culture, rhythm, and natural wonders, bathed in turquoise waters.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {caribbeanDestinations.map((dest) => (
             <div
               key={dest.name}
